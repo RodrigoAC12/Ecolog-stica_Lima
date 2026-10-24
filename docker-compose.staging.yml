@@ -1,0 +1,53 @@
+# Independent HTTPS staging environment. Never use development port bindings.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:?required}
+      POSTGRES_USER: ${POSTGRES_USER:?required}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?required}
+    volumes:
+      - staging_postgres:/var/lib/postgresql/data
+    networks: [private]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ./src/backend
+    environment:
+      DATABASE_URL: ${DATABASE_URL:?required}
+      JWT_SECRET: ${JWT_SECRET:?required}
+      BOOTSTRAP_OPERATOR_EMAIL: ${BOOTSTRAP_OPERATOR_EMAIL:?required}
+      BOOTSTRAP_OPERATOR_PASSWORD: ${BOOTSTRAP_OPERATOR_PASSWORD:?required}
+    depends_on:
+      db:
+        condition: service_healthy
+    expose: ["8000"]
+    command: ["sh", "-c", "python -m alembic upgrade head && python -m app.db.seed_demo && python -m uvicorn app.main:app --host 0.0.0.0 --port 8000"]
+    networks: [private]
+
+  gateway:
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile.staging
+    environment:
+      STAGING_DOMAIN: ${STAGING_DOMAIN:?required}
+    ports: ["80:80", "443:443"]
+    volumes:
+      - staging_caddy_data:/data
+      - staging_caddy_config:/config
+    depends_on: [backend]
+    networks: [private, public]
+
+networks:
+  private:
+    internal: true
+  public:
+
+volumes:
+  staging_postgres:
+  staging_caddy_data:
+  staging_caddy_config:

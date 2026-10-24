@@ -1,0 +1,30 @@
+/* Forms and feedback */
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem .85rem; }
+.field { display: flex; flex-direction: column; gap: .45rem; min-width: 0; color: #d6e0dd; font-size: .83rem; font-weight: 650; }
+.field input, .field select {
+  width: 100%; min-width: 0; min-height: 44px; padding: .7rem .75rem;
+  border: 1px solid #52605f; border-radius: 4px; background: #111719; color: #f7fbf9;
+  color-scheme: dark; outline: none; transition: border-color .18s ease, background .18s ease;
+}
+.field input::placeholder { color: #83918d; }
+.field input:hover, .field select:hover { border-color: #7a9087; }
+.field input:focus, .field select:focus { border-color: var(--green); background: #15221c; }
+.field input:invalid { box-shadow: none; }
+.form-grid button, .actions button {
+  border: 1px solid #72f3a8; border-radius: 4px; background: var(--green); color: #082315;
+  padding: .72rem 1.05rem; min-height: 44px; font-weight: 800;
+  transition: background .18s ease, transform .18s ease;
+}
+.form-grid button:hover:not(:disabled), .actions button:hover:not(:disabled) { background: #6cf0a5; transform: translateY(-1px); }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; grid-column: 1 / -1; margin-top: .3rem; }
+.actions button.secondary { color: #edf8f1; background: #2b3535; border-color: #637473; }
+.actions button.secondary:hover { background: #3a4847; }
+.actions button.danger { color: #ffd8d8; background: #3d2225; border-color: #b2686b; }
+.actions button.danger:hover { background: #583034; }
+.notice { padding: .85rem 1rem; margin: 0 0 1.2rem; border-left: 4px solid; background: #1d2d25; color: #baffd5; }
+.notice.error { background: #382427; color: #ffd9d9; border-color: #ff7b80; }
+.notice.success { border-color: var(--green); }
+.check { display: flex; align-items: center; gap: .6rem; color: #e5efea; font-weight: 650; margin-bottom: 1rem; }
+.check input { accent-color: var(--green); width: 18px; height: 18px; }
+.empty-state { border: 1px dashed #52605d; color: var(--muted); padding: 1.5rem; margin: 1rem 0 0; background: #141a1a; }
+

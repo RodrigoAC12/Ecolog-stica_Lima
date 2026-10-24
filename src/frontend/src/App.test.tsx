@@ -22,6 +22,15 @@ beforeEach(() => {
 afterEach(() => { cleanup(); vi.unstubAllGlobals() })
 
 describe('flujos principales', () => {
+  it('incluye acceso por teclado al contenido principal desde el login', async () => {
+    render(<App />)
+    const skip = screen.getByRole('link', { name: 'Saltar al contenido' })
+    expect(skip).toHaveAttribute('href', '#main-content')
+    expect(document.getElementById('main-content')).toHaveAttribute('tabindex', '-1')
+    await userEvent.tab()
+    expect(skip).toHaveFocus()
+  })
+
   it('inicia sesión y muestra un error cuando las credenciales fallan', async () => {
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(json({ detail: 'Credenciales inválidas' }, 401)))
     render(<App />)

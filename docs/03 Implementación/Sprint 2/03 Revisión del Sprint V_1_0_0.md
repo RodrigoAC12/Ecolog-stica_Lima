@@ -1,4 +1,4 @@
-[← Volver al README principal](../../README.md)
+[← Volver al README principal](<../../../README.md>)
 
 # Revisión del Sprint — ECO Sprint 2
 
@@ -12,7 +12,7 @@ Se conserva `V_1_0_0` en el nombre del archivo por exigencia de la consigna; el 
 
 ## Historias de Usuario completadas en este Sprint
 
-**Terminadas según el Definition of Done: ninguna acreditada.** Las cinco historias están implementadas en el commit `53642da` y aparecen en [ECO Sprint 2](../02%20Planificación/04%20Seguimiento%20Jira%20Sprint%202%20V_1_0_3.md). Jira las muestra ahora en `In Review / QA`, pendientes del DoD. El DoD es el único criterio de cierre; BDD se verifica dentro de DoD-10. La tabla separa funcionalidad disponible de una historia terminada.
+**Terminadas según el Definition of Done: ninguna acreditada.** Las cinco historias están implementadas en el commit `53642da` y aparecen en [ECO Sprint 2](<../../02 Planificación/Anexos/Seguimiento Jira Sprint 2 V_1_0_3.md>). Jira las muestra ahora en `In Review / QA`, pendientes del DoD. El DoD es el único criterio de cierre; BDD se verifica dentro de DoD-10. La tabla separa funcionalidad disponible de una historia terminada.
 
 | Historia | Jira | Trabajo disponible para demostrar | Evidencia técnica y límite |
 |---|---|---|---|
@@ -22,9 +22,9 @@ Se conserva `V_1_0_0` en el nombre del archivo por exigencia de la consigna; el 
 | US-014 Consultar cliente | [ECO-20](https://jhonpaitanrcm.atlassian.net/browse/ECO-20) | Ver lista, ficha y filtro de activos; comprobar 404 para ID inexistente. | `test_clients.py` prueba consulta y filtro; pendiente aceptación BDD. |
 | US-015 Actualizar condiciones | [ECO-21](https://jhonpaitanrcm.atlassian.net/browse/ECO-21) | Modificar preferencia o restricción y observar el dato actualizado. | `test_clients.py` prueba actualización y datos inválidos; la utilización futura por el planificador aún no puede demostrarse porque US-016 está fuera de este sprint. |
 
-Los escenarios oficiales se encuentran en la [planificación, US-011 a US-015](../02%20Planificación/01%20Transformando%20a%20ágil%20V_1_0_1.md). La suite backend pasó 14 pruebas con 92,41 % de cobertura total tanto sobre SQLite como sobre PostgreSQL aislado; Vitest pasó 5 pruebas y el build de Vite completó. Docker Compose arrancó los tres servicios; el acceso por `localhost` respondió correctamente. La existencia de pruebas no acredita por sí sola los doce puntos del DoD.
+Los escenarios oficiales se encuentran en la [planificación, US-011 a US-015](<../../02 Planificación/01 Transformando a ágil V_1_0_1.md>). La suite backend pasó 14 pruebas con 92,41 % de cobertura total tanto sobre SQLite como sobre PostgreSQL aislado; Vitest pasó 5 pruebas y el build de Vite completó. Docker Compose arrancó los tres servicios; el acceso por `localhost` respondió correctamente. La existencia de pruebas no acredita por sí sola los doce puntos del DoD.
 
-Para localizar el trabajo sin ambigüedad, el [informe de estado](01%20Informe%20de%20estado%20del%20proyecto%20V_1_0_0.md) relaciona cada historia con su endpoint, archivo de router, servicio, repositorio y prueba, y presenta la evidencia disponible de DoD-01 a DoD-12. El PR #1 está integrado, pero GitHub devolvió cero reviews y cero ejecuciones de workflow asociadas al commit de implementación; no se acredita DoD-04 ni la parte de pipeline de DoD-12.
+Para localizar el trabajo sin ambigüedad, el [informe de estado](<01 Informe de estado del proyecto V_1_0_0.md>) relaciona cada historia con su endpoint, archivo de router, servicio, repositorio y prueba, y presenta la evidencia disponible de DoD-01 a DoD-12. El PR #1 está integrado, pero GitHub devolvió cero reviews y cero ejecuciones de workflow asociadas al commit de implementación; no se acredita DoD-04 ni la parte de pipeline de DoD-12.
 
 ## Demostración del trabajo completado
 
@@ -46,7 +46,7 @@ Tras la demostración, registrar fecha y hora, asistentes, historias efectivamen
 - Revisar fechas y estado del Sprint 2 en Jira; el Sprint Goal ya quedó registrado. Asignar responsables solo después de confirmarlos.
 - Tomar el intervalo de Jira como referencia: inicio **22/09/2026 19:59:45** y fin **06/10/2026 19:59:35** en Lima. Cualquier acción posterior debe replanificarse en Jira; no debe presentarse como trabajo completado dentro del plazo original.
 - Realizar la demostración a interesados y registrar el resultado real de cada historia.
-- Celebrar la retrospectiva del equipo y confirmar las acciones propuestas en el [análisis retrospectivo](04%20Retrospectiva%20del%20Sprint%20V_1_0_0.md).
+- Celebrar la retrospectiva del equipo y confirmar las acciones propuestas en el [análisis retrospectivo](<04 Retrospectiva del Sprint V_1_0_0.md>).
 
 ## Historial de control de cambios
 

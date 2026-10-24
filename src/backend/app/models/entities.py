@@ -2,7 +2,7 @@ from datetime import datetime, timezone
 from decimal import Decimal
 from uuid import UUID, uuid4
 
-from sqlalchemy import CheckConstraint, Column, ForeignKey, Index, Integer, SmallInteger, Numeric, String, Table, Text, DateTime, JSON, text
+from sqlalchemy import CheckConstraint, Column, ForeignKey, Index, Integer, SmallInteger, Numeric, String, Table, Text, DateTime, JSON, text, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy.types import TypeDecorator, Uuid
 from sqlalchemy.dialects.postgresql import JSONB
@@ -109,7 +109,11 @@ class Client(Base):
     restriccion_acceso: Mapped[str | None] = mapped_column(Text)
     estado: Mapped[str] = mapped_column(String(20), nullable=False, default="ACTIVO", server_default=text("'ACTIVO'"))
     creado_en: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False, default=utcnow, server_default=text("CURRENT_TIMESTAMP"))
-    __table_args__ = (CheckConstraint("estado IN ('ACTIVO','INACTIVO')"), Index("idx_clientes_estado", "estado"))
+    __table_args__ = (
+        CheckConstraint("estado IN ('ACTIVO','INACTIVO')"),
+        Index("idx_clientes_estado", "estado"),
+        Index("uq_clientes_email_normalized", func.lower(email), unique=True),
+    )
 
 
 class Order(Base):

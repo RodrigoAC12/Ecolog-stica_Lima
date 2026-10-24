@@ -1,4 +1,4 @@
-[← Volver al README principal](../../README.md)
+[← Volver al README principal](<../../../README.md>)
 
 # Informe de estado del proyecto — Sprint 2
 
@@ -12,7 +12,7 @@ El nombre del archivo conserva `V_1_0_0` porque la consigna exige ese nombre exa
 
 ## Estado general
 
-El incremento técnico de US-011 a US-015 está publicado en la rama `sprint-2` (commit `53642da`) y fue integrado a `main` mediante el PR #1 (`51b8c59`). Amplía la gestión de conductores y clientes sin retirar las operaciones del Sprint 1. La entrega formal continúa **en proceso**: las cinco historias pasaron de `To Do` a `In Review / QA` en Jira el 06/10/2026; el Sprint 2 aún figura como `future`. **El único criterio para declarar una historia terminada es cumplir todos los puntos aplicables del [Definition of Done](../02%20Planificación/01%20Transformando%20a%20ágil%20V_1_0_1.md).** Los escenarios BDD se comprueban dentro de DoD-10; un commit, un merge o una demostración por sí solos no cierran una historia.
+El incremento técnico de US-011 a US-015 está publicado en la rama `sprint-2` (commit `53642da`) y fue integrado a `main` mediante el PR #1 (`51b8c59`). Amplía la gestión de conductores y clientes sin retirar las operaciones del Sprint 1. La entrega formal continúa **en proceso**: las cinco historias pasaron de `To Do` a `In Review / QA` en Jira el 06/10/2026; el Sprint 2 aún figura como `future`. **El único criterio para declarar una historia terminada es cumplir todos los puntos aplicables del [Definition of Done](<../../02 Planificación/01 Transformando a ágil V_1_0_1.md>).** Los escenarios BDD se comprueban dentro de DoD-10; un commit, un merge o una demostración por sí solos no cierran una historia.
 
 ## Historias de Usuario completadas en este Sprint
 
@@ -26,7 +26,7 @@ El incremento técnico de US-011 a US-015 está publicado en la rama `sprint-2` 
 | US-014 / [ECO-20](https://jhonpaitanrcm.atlassian.net/browse/ECO-20) | Lista, filtro de activos y ficha de cliente; 404 si no existe. | Implementada; `In Review / QA` y DoD pendiente. |
 | US-015 / [ECO-21](https://jhonpaitanrcm.atlassian.net/browse/ECO-21) | Actualización de datos y condiciones de entrega; rechazo de correo inválido o duplicado. | Implementada; `In Review / QA` y DoD pendiente. |
 
-La [planificación](../02%20Planificación/01%20Transformando%20a%20ágil%20V_1_0_1.md) define los escenarios oficiales de estas historias. El código incorpora rutas, servicios, repositorios, esquemas y formularios; los pedidos mantienen la regla del Sprint 1 de exigir un cliente activo. El Sprint 2 no incorpora optimización, mapas, emisiones ni reportes.
+La [planificación](<../../02 Planificación/01 Transformando a ágil V_1_0_1.md>) define los escenarios oficiales de estas historias. El código incorpora rutas, servicios, repositorios, esquemas y formularios; los pedidos mantienen la regla del Sprint 1 de exigir un cliente activo. El Sprint 2 no incorpora optimización, mapas, emisiones ni reportes.
 
 ## Evidencia técnica y límites
 
@@ -36,7 +36,7 @@ La [planificación](../02%20Planificación/01%20Transformando%20a%20ágil%20V_1_
 | `python -m pytest -q --cov=app --cov-report=term --cov-fail-under=80` | 14 pruebas aprobadas y **92,41 %** de cobertura total tanto sobre SQLite como sobre PostgreSQL aislado. | Base PostgreSQL temporal creada solo para la suite y eliminada al terminar. Los módulos nuevos de conductores y clientes alcanzaron 96–100 %. |
 | Vitest, build y Compose | 5 pruebas frontend aprobadas; `npm run build` completado; servicios PostgreSQL, backend y frontend activos. | Ejecutados dentro de contenedores el 06/10/2026. `docker compose config --quiet` pasó. |
 | `localhost` | `/health`, `/openapi.json` y frontend respondieron 200; login bootstrap 200; las cuatro listas autenticadas y el proxy Vite respondieron 200; petición sin token 401. | Comprobación HTTP de lectura; las mutaciones se verificaron en la base de prueba aislada. |
-| Jira `ECO board`, sprint ID 37 | 5 historias, 0 `Done`, 5 `In Review / QA`, 5 sin responsable; sprint `future`. Sprint Goal registrado. | Estado comprobado tras las transiciones del 06/10/2026. [Detalle y fuentes](../02%20Planificación/04%20Seguimiento%20Jira%20Sprint%202%20V_1_0_3.md). |
+| Jira `ECO board`, sprint ID 37 | 5 historias, 0 `Done`, 5 `In Review / QA`, 5 sin responsable; sprint `future`. Sprint Goal registrado. | Estado comprobado tras las transiciones del 06/10/2026. [Detalle y fuentes](<../../02 Planificación/Anexos/Seguimiento Jira Sprint 2 V_1_0_3.md>). |
 
 El PR #1 acredita la integración en `main`; no se verificó una aprobación de revisión por pares ni un pipeline satisfactorio. Tampoco constan en esta revisión análisis estático, staging, aceptación BDD por interesados, compatibilidad entre navegadores o evaluación WCAG.
 
@@ -71,28 +71,28 @@ Las rutas usan permisos de lectura o escritura mediante dependencias de FastAPI;
 | 11 · Sin defectos bloqueantes | No hay una comprobación cerrada de defectos críticos asociados a las cinco tarjetas. | Sin evidencia. |
 | 12 · Integración y pipeline | PR #1 fusionado; la consulta de ejecuciones de workflow para `53642da` devolvió `[]`. | Parcial. |
 
-Las consultas de PR, reviews y workflows se hicieron en GitHub el 06/10/2026. No se interpreta `[]` como aprobación tácita. La [revisión del Sprint](03%20Revisión%20del%20Sprint%20V_1_0_0.md) vincula estas brechas con las cinco historias.
+Las consultas de PR, reviews y workflows se hicieron en GitHub el 06/10/2026. No se interpreta `[]` como aprobación tácita. La [revisión del Sprint](<03 Revisión del Sprint V_1_0_0.md>) vincula estas brechas con las cinco historias.
 
 ## Calendario y desviación de seguimiento
 
-Jira programó ECO Sprint 2 del **22/09/2026 a las 19:59:45** al **06/10/2026 a las 19:59:35**, hora de Lima. El commit de implementación está fechado el **06/10 a las 13:53**, el PR se abrió a las **14:08** y se fusionó a las **16:23**. Esas son fechas comprobadas; no se dispone de evidencia para repartir el desarrollo entre los días anteriores. Jira conserva el sprint en `future` pese a que el intervalo programado ya comenzó; las cinco tarjetas ahora están en revisión. Las acciones todavía abiertas carecen de fecha propia en Jira y requieren replanificación si no se completan antes del fin programado; no se les asigna una fecha efectiva ficticia. Véase la [línea de tiempo](../02%20Planificación/04%20Seguimiento%20Jira%20Sprint%202%20V_1_0_3.md).
+Jira programó ECO Sprint 2 del **22/09/2026 a las 19:59:45** al **06/10/2026 a las 19:59:35**, hora de Lima. El commit de implementación está fechado el **06/10 a las 13:53**, el PR se abrió a las **14:08** y se fusionó a las **16:23**. Esas son fechas comprobadas; no se dispone de evidencia para repartir el desarrollo entre los días anteriores. Jira conserva el sprint en `future` pese a que el intervalo programado ya comenzó; las cinco tarjetas ahora están en revisión. Las acciones todavía abiertas carecen de fecha propia en Jira y requieren replanificación si no se completan antes del fin programado; no se les asigna una fecha efectiva ficticia. Véase la [línea de tiempo](<../../02 Planificación/Anexos/Seguimiento Jira Sprint 2 V_1_0_3.md>).
 
-La observación del profesor sobre información técnica insuficiente señala un riesgo de retraso por tiempo de reconstrucción y aclaración. No se recibió una medición de días perdidos; el [registro de impedimentos](02%20Registro%20de%20Impedimentos%20V_1_0_0.md) lo documenta como observación y acción de mejora, sin cuantificarlo como retraso ocurrido.
+La observación del profesor sobre información técnica insuficiente señala un riesgo de retraso por tiempo de reconstrucción y aclaración. No se recibió una medición de días perdidos; el [registro de impedimentos](<02 Registro de Impedimentos V_1_0_0.md>) lo documenta como observación y acción de mejora, sin cuantificarlo como retraso ocurrido.
 
 ## Demostración del trabajo completado
 
-La [revisión del Sprint 2](03%20Revisión%20del%20Sprint%20V_1_0_0.md) contiene un recorrido propuesto de conductores y clientes. **No hay evidencia de una demostración ya realizada ante stakeholders** al corte de este informe, por lo que no se atribuyen asistentes, comentarios ni decisiones.
+La [revisión del Sprint 2](<03 Revisión del Sprint V_1_0_0.md>) contiene un recorrido propuesto de conductores y clientes. **No hay evidencia de una demostración ya realizada ante stakeholders** al corte de este informe, por lo que no se atribuyen asistentes, comentarios ni decisiones.
 
 ## Impedimentos
 
-El [registro de impedimentos](02%20Registro%20de%20Impedimentos%20V_1_0_0.md) documenta la desalineación de Jira frente al código integrado, la ausencia inicial de entregables del Sprint 2, la verificación del entorno ya completada y la falta de evidencia para cerrar el DoD. Incluye impacto, prioridad, estado y acciones propuestas.
+El [registro de impedimentos](<02 Registro de Impedimentos V_1_0_0.md>) documenta la desalineación de Jira frente al código integrado, la ausencia inicial de entregables del Sprint 2, la verificación del entorno ya completada y la falta de evidencia para cerrar el DoD. Incluye impacto, prioridad, estado y acciones propuestas.
 
 ## Pendientes
 
 1. Resolver la discordancia entre fechas y estado `future` del sprint en Jira; asignar responsables confirmados y revisar las evidencias de las cinco tarjetas en `In Review / QA`.
 2. Conservar las salidas de Vitest, build, Compose y pruebas PostgreSQL del 06/10/2026; completar la revisión visual de 360 px y navegadores.
 3. Ejecutar la demostración con interesados y registrar asistentes, casos mostrados, observaciones, decisiones y compromisos reales.
-4. Celebrar la retrospectiva del equipo y confirmar o corregir el [análisis y plan de acción](04%20Retrospectiva%20del%20Sprint%20V_1_0_0.md).
+4. Celebrar la retrospectiva del equipo y confirmar o corregir el [análisis y plan de acción](<04 Retrospectiva del Sprint V_1_0_0.md>).
 5. Completar las evidencias aplicables del DoD antes de declarar US-011 a US-015 como `Done`.
 
 ## Historial de control de cambios

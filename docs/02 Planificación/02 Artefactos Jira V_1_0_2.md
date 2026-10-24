@@ -1,4 +1,4 @@
-[← Volver al README Principal](../../README.md)
+[← Volver al README Principal](<../../README.md>)
 
 # Artefactos Jira
 
@@ -20,7 +20,7 @@ Documentar la configuración operativa de **EcoLogística Lima** en Atlassian Ji
 
 La configuración contempla Épicas, Historias de Usuario, Enablers, Product Backlog, Story Points, Sprint 1, Sprint Goal, tablero Scrum, Timeline/Roadmap y Releases.
 
-Este documento conserva la evidencia histórica del Sprint 1. El equipo actual de cinco integrantes figura en el [README principal](../../README.md); no se conoce la fecha de incorporación del quinto integrante y por ello no se altera la lista original. El estado del Sprint 2 se registra en el [seguimiento separado](04%20Seguimiento%20Jira%20Sprint%202%20V_1_0_3.md).
+Este documento conserva la evidencia histórica del Sprint 1. El equipo actual de cinco integrantes figura en el [README principal](<../../README.md>); no se conoce la fecha de incorporación del quinto integrante y por ello no se altera la lista original. El estado del Sprint 2 se registra en el [seguimiento separado](<Anexos/Seguimiento Jira Sprint 2 V_1_0_3.md>).
 
 ---
 
@@ -61,7 +61,7 @@ La captura del Timeline muestra las cinco épicas y el Sprint 1 en la planificac
 
 
 
-![Evidencia 1 - Roadmap](images/jira/evidencia_01_roadmap.png)
+![Evidencia 1 - Roadmap](<images/jira/evidencia_01_roadmap.png>)
 
 
 ---
@@ -73,7 +73,7 @@ La captura del Backlog muestra US-001 a US-010 dentro de ECO Sprint 1, su estima
 
 
 
-![Evidencia 2 - Backlog](images/jira/evidencia_02_backlog.png)
+![Evidencia 2 - Backlog](<images/jira/evidencia_02_backlog.png>)
 
 
 ---
@@ -91,7 +91,7 @@ El Sprint 1 prioriza capacidades de la Épica **EP-01 – Gestión de Operación
 
 
 
-![Evidencia del Sprint Goal y las historias del Sprint 1 en el Backlog](images/jira/evidencia_02_backlog.png)
+![Evidencia del Sprint Goal y las historias del Sprint 1 en el Backlog](<images/jira/evidencia_02_backlog.png>)
 
 ---
 
@@ -105,7 +105,7 @@ To Do → In Progress → In Review / QA → Done
 
 La captura histórica muestra el Sprint activo en ese momento, las historias visibles, Story Points y elementos en progreso. No se utiliza para afirmar que las historias estén `Done` el 29/09/2026.
 
-![Evidencia 4 - Tablero Scrum](images/jira/evidencia_04_tablero_scrum.png) 
+![Evidencia 4 - Tablero Scrum](<images/jira/evidencia_04_tablero_scrum.png>) 
 
 ---
 
@@ -119,7 +119,7 @@ La captura histórica muestra el Sprint activo en ese momento, las historias vis
 
 
 
-![Evidencia 5 - Release](images/jira/evidencia_05_release.png)
+![Evidencia 5 - Release](<images/jira/evidencia_05_release.png>)
 
 
 ---
@@ -157,7 +157,7 @@ Las capturas guardadas muestran la configuración de Jira en la fase de planific
 3. `evidencia_04_tablero_scrum.png`: tablero con historias en `To Do` e `In Progress` en la fecha de captura.
 4. `evidencia_05_release.png`: release `v1.0.0-MVP` en estado `Unreleased`.
 
-`evidencia_00_resumen.png` conserva la captura anterior del resumen de Jira, que estaba etiquetada erróneamente como Roadmap. No se usa como prueba del Timeline. El estado del código y las verificaciones del 29/09/2026 se registran en el [informe del Sprint 1](../03%20Implementación/Sprint%201/01%20Informe%20de%20estado%20del%20proyecto%20V_1_0_0.md). El [seguimiento de Jira del Sprint 2](04%20Seguimiento%20Jira%20Sprint%202%20V_1_0_3.md) documenta una consulta nueva; no reinterpreta estas capturas históricas como evidencia del Sprint 2.
+`evidencia_00_resumen.png` conserva la captura anterior del resumen de Jira, que estaba etiquetada erróneamente como Roadmap. No se usa como prueba del Timeline. El estado del código y las verificaciones del 29/09/2026 se registran en el [informe del Sprint 1](<../03 Implementación/Sprint 1/01 Informe de estado del proyecto V_1_0_0.md>). El [seguimiento de Jira del Sprint 2](<Anexos/Seguimiento Jira Sprint 2 V_1_0_3.md>) documenta una consulta nueva; no reinterpreta estas capturas históricas como evidencia del Sprint 2.
 
 ---
 
@@ -171,4 +171,4 @@ Las capturas guardadas muestran la configuración de Jira en la fase de planific
 
 ---
 
-[← Volver al README Principal](../../README.md)
+[← Volver al README Principal](<../../README.md>)

@@ -1,0 +1,55 @@
+name: ECO - Dependency audit
+
+on:
+  push:
+    branches: [Pre-Sprint-3]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    name: Audit Python dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pip-audit
+        run: python -m pip install --upgrade pip-audit
+      - name: Audit backend dependency tree
+        run: python -m pip_audit -r src/backend/requirements.txt --format json --output python-audit.json --progress-spinner off
+      - name: Publish audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-dependency-audit
+          path: python-audit.json
+          if-no-files-found: warn
+
+  node:
+    name: Audit frontend dependency tree
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: src/frontend/package-lock.json
+      - name: Audit including development dependencies (high and critical)
+        run: npm audit --audit-level=high --json > npm-audit.json
+      - name: Publish audit evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dependency-audit
+          path: src/frontend/npm-audit.json
+          if-no-files-found: warn

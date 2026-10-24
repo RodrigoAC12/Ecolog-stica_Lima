@@ -1,0 +1,32 @@
+/* Shell and navigation */
+.app-shell { min-height: 100vh; }
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  min-height: 86px;
+  padding: 1rem max(1.25rem, calc((100vw - 1300px) / 2));
+  background: #131719ec;
+  border-bottom: 1px solid #ffffff24;
+  backdrop-filter: blur(16px);
+}
+.brand { display: flex; align-items: center; gap: .7rem; flex: none; font-weight: 850; letter-spacing: -.04em; font-size: 1.1rem; line-height: 1.1; }
+.brand-mark, .login-emblem {
+  display: inline-flex; align-items: center; justify-content: center; position: relative;
+  background: var(--green); color: #0c1510; font-weight: 900; letter-spacing: -.12em;
+  width: 42px; height: 42px; border: 1px solid #88f6b6;
+  box-shadow: 4px 4px 0 #0a0d0c, 5px 5px 0 var(--green);
+}
+.brand-mark span, .login-emblem span { position: absolute; font-size: .7rem; right: 3px; top: 2px; letter-spacing: 0; }
+.brand-location { display: block; color: var(--muted); font: 600 .64rem ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; margin-top: .28rem; }
+.topbar nav { display: flex; align-items: center; justify-content: center; flex: 1; gap: .3rem; }
+.topbar nav button, .logout {
+  color: #dce5e2; border: 1px solid transparent; background: transparent;
+  border-radius: 5px; padding: .7rem .95rem; font-size: .9rem; font-weight: 650;
+  transition: background .18s ease, border-color .18s ease, color .18s ease;
+}
+.topbar nav button:hover, .logout:hover { background: #263032; color: #fff; }
+.topbar nav .nav-active { border-color: #377c5b; background: #1b3a2b; color: #b6ffd6; }
+.logout { border-color: #74817d; padding-inline: 1.25rem; }
+.content { max-width: 1300px; margin: 0 auto; padding: clamp(1.25rem, 3vw, 2.5rem); }
+

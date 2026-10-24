@@ -70,3 +70,8 @@ Las funciones críticas deben seguir operables desde **360 px**, conforme a RNF-
 ## Mantenimiento
 
 Antes de dar por terminado un cambio visual, ejecutar `npm test` y `npm run build` desde `src/frontend`, revisar las cuatro pantallas a 360 px y en escritorio, comprobar foco de teclado y confirmar que no haya desplazamiento horizontal ni pérdida de las acciones de US-001 a US-010. Mantener esta guía sincronizada con `style.css` y `src/frontend/src/App.tsx`.
+
+
+## Organización de la interfaz — versión del proyecto 1.2.4
+
+El diseño anterior conserva su identidad visual. Para facilitar mantenimiento, `src/frontend/src/App.tsx` compone las pantallas, mientras `pages/` contiene login, inicio y los cuatro módulos; `forms/` separa los formularios, `components/common/` sus elementos reutilizables y `components/layout/` la navegación. Los estilos se organizan por propósito en `styles/` e ingresan por `style.css`. Las pruebas de componente y el build verifican que los flujos existentes sigan funcionando. Una revisión manual de accesibilidad y viewport de 360 px sigue siendo un control distinto.

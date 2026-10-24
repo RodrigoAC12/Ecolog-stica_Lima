@@ -1,10 +1,12 @@
 import importlib
 import os
+from pathlib import Path
 from uuid import UUID
 
 import pytest
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
+from sqlalchemy.engine import make_url
 from sqlalchemy.orm import sessionmaker
 
 from app.core.config import settings
@@ -15,9 +17,29 @@ from app.main import app
 from app.models import Client, Role, User
 
 
+def validate_test_database_url(url: str) -> None:
+    """Reject accidental schema destruction outside an explicitly named test database."""
+    parsed = make_url(url)
+    database = parsed.database
+    if parsed.get_backend_name() == "sqlite" and database in (None, "", ":memory:"):
+        return
+    if not database:
+        raise ValueError("TEST_DATABASE_URL must name a dedicated test database.")
+    name = Path(database).stem if parsed.get_backend_name() == "sqlite" else database
+    if not (name.lower().startswith("test_") or name.lower().endswith("_test")):
+        raise ValueError(
+            "TEST_DATABASE_URL must target a database named test_* or *_test; "
+            "pytest creates and drops its tables."
+        )
+
+
+
 @pytest.fixture
 def context(tmp_path, monkeypatch):
-    database_url = os.getenv("TEST_DATABASE_URL", f"sqlite:///{tmp_path / 'sprint1.db'}")
+    explicit_database_url = os.getenv("TEST_DATABASE_URL")
+    if explicit_database_url is not None:
+        validate_test_database_url(explicit_database_url)
+    database_url = explicit_database_url or f"sqlite:///{tmp_path / 'sprint1.db'}"
     engine = create_engine(database_url)
     Base.metadata.create_all(engine)
     factory = sessionmaker(bind=engine, expire_on_commit=False)
