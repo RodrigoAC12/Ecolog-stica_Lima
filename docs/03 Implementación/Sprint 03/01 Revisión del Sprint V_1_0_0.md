@@ -38,7 +38,7 @@ La [matriz BDD](<../../Calidad/01 Matriz de pruebas BDD.md>) detalla la trazabil
 
 ## Demostración del trabajo completado
 
-**Fecha del recorrido:** 25/10/2026, 01:57:38 (Lima).<br>
+**Fecha del recorrido:** 25/10/2026, 02:04:56 (Lima).<br>
 **Versión:** 1.3.0 · **Entorno:** aplicación web y API reales en localhost, con base exclusiva de evaluación.<br>
 **Registro:** [video del recorrido](evidencias/demostracion-1.3.0.webm) y [resultados verificables](evidencias/accesibilidad-demostracion-1-3-0.json).
 

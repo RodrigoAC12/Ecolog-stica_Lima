@@ -3,11 +3,11 @@
 # Evaluación de Calidad de Código — SonarQube
 
 **Nombre del Proyecto:** EcoLogística Lima<br>
-**Fecha de Análisis:** 2026-10-25, 01:51:17 (America/Lima).<br>
+**Fecha de Análisis:** 2026-10-25, 02:03:48 (America/Lima).<br>
 **Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0<br>
-**Versión del Análisis:** V_1_0_3, corte del 25/10/2026 a las 01:51:17 (Lima).<br>
+**Versión del Análisis:** V_1_0_3, corte del 25/10/2026 a las 02:03:48 (Lima).<br>
 **Herramientas:** SonarQube Community Build 26.10.0.133078, SonarScanner para NPM 5.0.2.<br>
-**Revisión Git analizada:** `3ea875bf82f7a8b4ecb0a134dc04cb2767833eed`, sin cambios sin commit al iniciar el scanner.<br>
+**Revisión Git analizada:** `2af41c1c1b1caa8fbc7c55078fe3b5a7d4a99ef9`, sin cambios sin commit al iniciar el scanner.<br>
 **Versión técnica analizada:** `1.3.0`.
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
 
@@ -21,7 +21,7 @@ El despliegue se evalúa exclusivamente en localhost conforme a la [adenda del 2
 - **Cobertura de líneas:** 93,2 %; **cobertura de condiciones:** 88,1 %.
 - **Código fuente no comentado:** 1.529 líneas.
 
-El análisis `a010e846-b105-4213-9984-5553d32a6e57` finalizó con procesamiento `SUCCESS`. Esta ejecución evaluó tres condiciones respecto de `1.2.4-sprint3-final`, sin ignorar ninguna:
+El análisis `9874884e-ff57-4dd0-9224-738fa4ab98bd` finalizó con procesamiento `SUCCESS`. Esta ejecución evaluó tres condiciones respecto de `1.2.4-sprint3-final`, sin ignorar ninguna:
 
 | Condición de código nuevo | Umbral aplicado por el servidor | Resultado | Estado |
 |---|---|---:|---|
@@ -76,7 +76,7 @@ La evaluación posterior incorporó dos mejoras adicionales: validación obligat
 | Revisión independiente y publicación | Revisar código, ejecutar CI y analizar la revisión definitiva | Revisor técnico por confirmar | Antes de integrar |
 | Accesibilidad y aceptación | Evaluación WCAG y escenarios BDD con evidencia real | Equipo e interesados por confirmar | Antes del cierre del sprint |
 
-No se cambiaron umbrales, perfiles ni exclusiones para resolver los hallazgos. El análisis utiliza los perfiles `Sonar way core` disponibles. Cero vulnerabilidades detectadas no es una certificación de seguridad: el informe OWASP documenta los controles complementarios. El scanner vigente identifica `3ea875b`, recupera la información SCM y analiza un árbol de trabajo limpio; debe repetirse si cambia el código fuente posteriormente. El token temporal se revocó al terminar.
+No se cambiaron umbrales, perfiles ni exclusiones para resolver los hallazgos. El análisis utiliza los perfiles `Sonar way core` disponibles. Cero vulnerabilidades detectadas no es una certificación de seguridad: el informe OWASP documenta los controles complementarios. El scanner vigente identifica `2af41c1`, recupera la información SCM y analiza un árbol de trabajo limpio; debe repetirse si cambia el código fuente posteriormente. El token temporal se revocó al terminar.
 
 ## Control documental
 

@@ -50,7 +50,7 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [x] 36 pruebas backend en SQLite y PostgreSQL; migraciones verificadas.
 - [x] 11 pruebas frontend y compilación; 92,19 % de líneas, cuatro formularios 100 % y App 90 %.
 - [x] Auditorías de dependencias sin avisos conocidos en el corte conservado.
-- [x] Sonar 1.3.0 del commit `3ea875b` aprobado: tres condiciones, 92,4 % global, 100 % nuevo y cero problemas abiertos.
+- [x] Sonar 1.3.0 del commit `2af41c1` aprobado: tres condiciones, 92,4 % global, 100 % nuevo y cero problemas abiertos.
 - [x] 13 estados de accesibilidad automática y 16 comprobaciones dirigidas aprobadas.
 - [x] Contraste funcional medido: 437 comprobaciones, mínimo 6,66:1; restantes incompletos decorativos identificados.
 - [ ] Acreditar uso humano de lector de pantalla y navegadores del alcance completo.

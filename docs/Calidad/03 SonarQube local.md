@@ -6,7 +6,7 @@
 
 ## Alcance
 
-Análisis local de ECO-53 para la versión 1.3.0. La [evidencia actual](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) identifica la revisión `3ea875b`, procesada el 25/10/2026 a las 01:51:17 de Lima con árbol de trabajo limpio. El Quality Gate aprueba las tres condiciones, cobertura global 92,4 %, nueva 100 %, duplicación 0 % y cero problemas abiertos. Las secciones posteriores conservan los cortes históricos. El despliegue localhost se comprueba por separado; Sonar no sustituye aceptación funcional.
+Análisis local de ECO-53 para la versión 1.3.0. La [evidencia actual](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) identifica la revisión `2af41c1`, procesada el 25/10/2026 a las 02:03:48 de Lima con árbol de trabajo limpio. El Quality Gate aprueba las tres condiciones, cobertura global 92,4 %, nueva 100 %, duplicación 0 % y cero problemas abiertos. Las secciones posteriores conservan los cortes históricos. El despliegue localhost se comprueba por separado; Sonar no sustituye aceptación funcional.
 
 ## Herramientas y configuración
 

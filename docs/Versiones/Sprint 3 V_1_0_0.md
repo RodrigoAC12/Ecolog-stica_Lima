@@ -23,7 +23,7 @@
 - Backend: 36 pruebas aprobadas en SQLite y 36 en PostgreSQL 16 aislado; cobertura 93,43 %.
 - Migraciones: revisión `0002_clients_email_unique` en head; sin nuevas operaciones en `alembic check`.
 - Frontend: 11 pruebas y compilación aprobadas; cobertura de líneas 92,19 %, cuatro formularios 100 % y App 90 %.
-- Sonar: [análisis de la versión 1.3.0](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) del commit `3ea875b`; Quality Gate aprobado con tres condiciones, cobertura global 92,4 %, nueva 100 %, duplicación 0 % y cero problemas abiertos.
+- Sonar: [análisis de la versión 1.3.0](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) del commit `2af41c1`; Quality Gate aprobado con tres condiciones, cobertura global 92,4 %, nueva 100 %, duplicación 0 % y cero problemas abiertos.
 - Auditorías Python/npm: sin vulnerabilidades conocidas detectadas en las ejecuciones conservadas.
 - Interfaz: 13 estados axe sin infracciones automáticas; 16 comprobaciones dirigidas, 437 comprobaciones de contraste y ningún resultado incompleto sobre contenido funcional. Sin desbordamientos en el alcance medido.
 - Infraestructura local: configuraciones Compose de desarrollo y staging validadas sin imprimir credenciales; los servicios de otros proyectos no se modificaron.

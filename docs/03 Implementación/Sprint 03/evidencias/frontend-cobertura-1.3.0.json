@@ -1,5 +1,5 @@
 {
-  "executed_at": "2026-10-25T06:58:08.059657+00:00",
+  "executed_at": "2026-10-25T07:06:40.853216+00:00",
   "project_version": "1.3.0",
   "source": "Vitest V8: src/frontend/coverage/lcov.info",
   "summary": {
@@ -117,7 +117,7 @@
     },
     {
       "file": "src/frontend/src/components/common/PageIntro.tsx",
-      "sha256": "f30a1e45f14fe8ae5331a85ea9659e979d3dacb009dc37a47802167df3377ef4",
+      "sha256": "a6959723f0a9345086a38753f8411c07aaf827c88dd5f4847fd07caa8ce24846",
       "lines": {
         "total": 1,
         "covered": 1,
@@ -326,7 +326,7 @@
     },
     {
       "file": "src/frontend/src/pages/LoginPage.tsx",
-      "sha256": "b63a597375de5ec1c25d0d67b4f01b03bad835f42d2df48db288d5c3442cf789",
+      "sha256": "e2531c8dee809060bde9702b2ab993316e6d8ee72444e9b1a4c4a2a6bad1e157",
       "lines": {
         "total": 15,
         "covered": 15,

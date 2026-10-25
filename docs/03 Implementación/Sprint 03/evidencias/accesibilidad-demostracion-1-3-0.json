@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-10-25T06:57:38.978Z",
+  "executedAt": "2026-10-25T07:04:56.873Z",
   "label": "demostracion-1-3-0",
   "scope": "Aplicación real en localhost con API y SQLite aislado, datos sintéticos y navegador sin sesión del usuario.",
   "engine": "edge",
@@ -7263,7 +7263,7 @@
           "US-013",
           "US-014"
         ],
-        "executedAt": "2026-10-25T06:58:03.629Z",
+        "executedAt": "2026-10-25T07:05:23.097Z",
         "result": "PASSED",
         "visibleMessage": "Cliente registrado.",
         "screenshot": "demostracion-01.png"
@@ -7274,7 +7274,7 @@
           "US-014",
           "US-015"
         ],
-        "executedAt": "2026-10-25T06:58:04.969Z",
+        "executedAt": "2026-10-25T07:05:24.441Z",
         "result": "PASSED",
         "visibleMessage": "Cliente actualizado.",
         "screenshot": "demostracion-02.png"
@@ -7285,7 +7285,7 @@
           "US-001",
           "US-002"
         ],
-        "executedAt": "2026-10-25T06:58:06.407Z",
+        "executedAt": "2026-10-25T07:05:25.928Z",
         "result": "PASSED",
         "visibleMessage": "Vehículo registrado.",
         "screenshot": "demostracion-03.png"
@@ -7295,7 +7295,7 @@
         "histories": [
           "US-003"
         ],
-        "executedAt": "2026-10-25T06:58:07.611Z",
+        "executedAt": "2026-10-25T07:05:27.114Z",
         "result": "PASSED",
         "visibleMessage": "Vehículo actualizado.",
         "screenshot": "demostracion-04.png"
@@ -7305,7 +7305,7 @@
         "histories": [
           "US-004"
         ],
-        "executedAt": "2026-10-25T06:58:08.733Z",
+        "executedAt": "2026-10-25T07:05:28.292Z",
         "result": "PASSED",
         "visibleMessage": "Vehículo desactivado.",
         "screenshot": "demostracion-05.png"
@@ -7316,7 +7316,7 @@
           "US-009",
           "US-010"
         ],
-        "executedAt": "2026-10-25T06:58:10.100Z",
+        "executedAt": "2026-10-25T07:05:29.739Z",
         "result": "PASSED",
         "visibleMessage": "Conductor registrado.",
         "screenshot": "demostracion-06.png"
@@ -7326,7 +7326,7 @@
         "histories": [
           "US-011"
         ],
-        "executedAt": "2026-10-25T06:58:11.251Z",
+        "executedAt": "2026-10-25T07:05:30.993Z",
         "result": "PASSED",
         "visibleMessage": "Conductor actualizado.",
         "screenshot": "demostracion-07.png"
@@ -7337,7 +7337,7 @@
           "US-010",
           "US-012"
         ],
-        "executedAt": "2026-10-25T06:58:12.534Z",
+        "executedAt": "2026-10-25T07:05:32.236Z",
         "result": "PASSED",
         "visibleMessage": "Conductor desactivado.",
         "screenshot": "demostracion-08.png"
@@ -7348,7 +7348,7 @@
           "US-005",
           "US-006"
         ],
-        "executedAt": "2026-10-25T06:58:14.171Z",
+        "executedAt": "2026-10-25T07:05:33.881Z",
         "result": "PASSED",
         "visibleMessage": "Pedido registrado.",
         "screenshot": "demostracion-09.png"
@@ -7358,7 +7358,7 @@
         "histories": [
           "US-007"
         ],
-        "executedAt": "2026-10-25T06:58:15.498Z",
+        "executedAt": "2026-10-25T07:05:36.856Z",
         "result": "PASSED",
         "visibleMessage": "Pedido actualizado.",
         "screenshot": "demostracion-10.png"
@@ -7369,7 +7369,7 @@
           "US-006",
           "US-008"
         ],
-        "executedAt": "2026-10-25T06:58:16.665Z",
+        "executedAt": "2026-10-25T07:05:38.038Z",
         "result": "PASSED",
         "visibleMessage": "Pedido cancelado.",
         "screenshot": "demostracion-11.png"
