@@ -2,7 +2,7 @@
 
 # Matriz de pruebas BDD — Sprints 1 y 2
 
-**Versión documental:** 1.0.3 · **Versión del proyecto vigente:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
+**Versión documental:** 1.0.4 · **Versión del proyecto vigente:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
 
 **Base histórica:** 1.2.4 · **Etapa de origen:** Pre-Sprint 3. Los escenarios completos Gherkin se conservan en [Transformando a ágil](<../02 Planificación/01 Transformando a ágil V_1_0_1.md>). La siguiente matriz relaciona cada historia con los tests implementados; no afirma aceptación formal.
 
@@ -35,11 +35,13 @@
 
 El incremento 1.3.0 se conserva en la rama Sprint-3. La regresión backend comprende 36 pruebas por entorno y el frontend 11 pruebas; cuatro casos verifican cancelación sin escritura. El recorrido grabado verifica operaciones de las 15 historias, sin atribuir aceptación funcional de todos los escenarios Gherkin.
 
+El [registro de revisión preparado](<../03 Implementación/Sprint 03/Registro de revisión del cliente o del usuario V_1_0_0.md>) conserva los 30 escenarios oficiales y campos de resultado, observaciones y decisión. No se declara una aceptación recibida.
+
 ## Aceptación adicional requerida
 
 - [ ] Ejecutar y aprobar cada escenario oficial Gherkin con el interesado responsable.
 - [ ] Documentar sesión o acta de revisión funcional, fecha real y defectos detectados.
-- [ ] Verificar accesibilidad WCAG, navegación completa, 360 px y navegadores reales.
+- [x] Evaluación técnica de accesibilidad y seis versiones de navegadores documentada; comprensión con lector de pantalla en revisión del cliente o usuario.
 - [ ] Confirmar revisión independiente y evidencias de Definition of Done antes de fusionar el cambio.
 
 El resultado de un test unitario o de integración no equivale a la aceptación del escenario completo por los interesados.
@@ -52,3 +54,4 @@ El resultado de un test unitario o de integración no equivale a la aceptación 
 | 1.0.1 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | 1.0.2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | 1.0.3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
+| 1.0.4 | 25/10/2026 | Registro de 30 escenarios preparado y estado técnico de accesibilidad actualizado. |

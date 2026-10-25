@@ -2,7 +2,7 @@
 
 # Revisión técnica y plan de cierre — Sprint 3
 
-**Versión documental:** V_1_0_1 · **Proyecto:** EcoLogística Lima 1.3.0 · **Fecha:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_2 · **Proyecto:** EcoLogística Lima 1.3.0 · **Fecha:** 25/10/2026 (Lima).<br>
 **Alcance:** aplicación, API y bases de evaluación en localhost; historias US-001 a US-015.
 
 ## Responsables y seguimiento
@@ -54,17 +54,23 @@ La acción de esta entrega es evaluar y priorizar las mejoras. Implementarlas co
 
 ## Conciliación de Jira
 
-La [evidencia de seguimiento](evidencias/jira-seguimiento-1.3.0.json) conserva responsables, estados y fechas. La versión Jira **1.3.0** está creada sin liberar y vinculada a ECO-51 a ECO-59. Los responsables y fechas de seguimiento se registran en las tareas existentes; no se duplican historias ni se cambia el alcance funcional. Sprint 3 (ID 38) se replanifica del **25/10/2026, 09:00**, al **08/11/2026, 18:00**, hora de Lima. Su estado administrativo permanece `future`; estas fechas son planificación y no acreditan que se haya celebrado una ceremonia.
+La [evidencia de seguimiento](evidencias/jira-seguimiento-1.3.0.json) conserva responsables, estados y fechas. La versión Jira **1.3.0** está creada sin liberar y vinculada a ECO-51 a ECO-59. Las tareas siguen asignadas a los cinco integrantes.
 
-Sprint 1 (ID 3) sigue `active` y Sprint 2 (ID 37), `future`, en el corte consultado. Se conserva ese antecedente y se asigna su regularización a Marco mediante ECO-49. No se cierran sprints históricos ni se trasladan sus historias para corregir visualmente el tablero. ECO-18 conserva QA hasta la revisión del cliente o del usuario.
+La consulta previa verificó que las diez tarjetas de Sprint 1 (ID 3) ya tenían categoría `done`. Se registró su **cierre administrativo el 25/10/2026 a las 16:06:57 (Lima)**, sin cambiar los estados de las historias, sus fechas planificadas ni atribuir una aceptación nueva. Los datos [anteriores](evidencias/jira-regularizacion-antes.json) y [posteriores](evidencias/jira-regularizacion-despues.json) se conservan.
+
+Sprint 3 (ID 38) está **activo desde el 25/10/2026 a las 16:07:13 (Lima)**, con fin planificado el 08/11/2026 a las 18:00. Se conserva la programación anterior como antecedente y se registra la apertura administrativa real; no se afirma que se haya celebrado una reunión.
+
+Sprint 2 (ID 37) mantiene cuatro historias finalizadas y **ECO-18 en QA**, pendiente de revisión del cliente o del usuario. Se conserva `future` y su programación histórica: no se inicia ni se cierra una iteración incompleta para aparentar aceptación. ECO-49 conserva ese seguimiento residual a cargo de Marco; no se mueven sus historias a Sprint 3.
 
 ## Preparación y revisión pendiente
 
 La preparación técnica incluye los cinco informes, la demostración grabada, resultados de calidad, seguridad y accesibilidad, pruebas, responsables y enlaces. El alcance de ejecución sigue siendo localhost.
 
+El [registro de revisión preparado](<Registro de revisión del cliente o del usuario V_1_0_0.md>) contiene los 30 escenarios oficiales de las 15 historias, campos de participantes, observaciones, decisiones y Done. Los campos de resultado permanecen pendientes.
+
 **Pendiente: revisión del cliente o del usuario.** Marco coordina la presentación y el registro de observaciones, comprensión con tecnología de asistencia, aceptación de escenarios y resultado aplicable del Done. No se registra una presentación o aprobación todavía no recibida.
 
-La consigna cita además «TP2-ISI Consigna del repositorio PFA». Ese texto no está disponible entre los archivos localizados; Piero queda a cargo de contrastarlo cuando se facilite. Sí se verifican las reglas explícitas del adjunto recibido: Markdown, ubicación, nombres de los cinco informes y enlaces bidireccionales.
+La consigna cita además «TP2-ISI Consigna del repositorio PFA». La búsqueda repetida en el repositorio y Descargas no localizó ese texto; la consulta conectada devolvió únicamente su referencia en ECO-57 y advirtió fuentes parcialmente disponibles. Piero queda a cargo de contrastarlo cuando se facilite. Sí se verifican las reglas explícitas del adjunto recibido: Markdown, ubicación, nombres de los cinco informes y enlaces bidireccionales.
 
 ## Control documental
 
@@ -72,5 +78,6 @@ La consigna cita además «TP2-ISI Consigna del repositorio PFA». Ese texto no 
 |---|---|---|
 | V_1_0_0 | 25/10/2026 | Revisión técnica, distribución nominal, mejoras priorizadas y seguimiento de cierre. |
 | V_1_0_1 | 25/10/2026 | Correcciones y comprobaciones de las herramientas locales de evaluación. |
+| V_1_0_2 | 25/10/2026 | Cierre administrativo de Sprint 1, activación real de Sprint 3 y preparación de los 30 escenarios de revisión. |
 
 [← Volver al README](../../../README.md)

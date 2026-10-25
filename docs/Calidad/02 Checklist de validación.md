@@ -2,7 +2,7 @@
 
 # Checklist de validación — Pre-Sprint 3
 
-**Versión documental:** 1.0.6 · **Versión del Sprint 3:** 1.3.0 · **Actualizado:** 25/10/2026. Se identifican los resultados históricos y las adendas posteriores.
+**Versión documental:** 1.0.7 · **Versión del Sprint 3:** 1.3.0 · **Actualizado:** 25/10/2026. Se identifican los resultados históricos y las adendas posteriores.
 
 **Corte histórico de base:** versión 1.2.4 · **Rama:** `Pre-Sprint-3` · **Fecha:** 24/10/2026.
 
@@ -26,7 +26,7 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [x] [CI de Pre-Sprint 3](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40141894546): 27 pruebas backend tanto en SQLite como en PostgreSQL 16, cobertura del 92,85 %, 6 pruebas frontend, build, migraciones Alembic, Docker y enlaces.
 - [x] [Auditoría de dependencias](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40141894558) aprobada.
 - [x] [CodeQL Python/TypeScript](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40141894532) aprobado con los análisis SARIF exportados.
-- [ ] Realizar triage técnico de las alertas visibles en el panel Code Scanning, si las hubiera; un workflow verde no certifica que no exista ningún riesgo.
+- [x] Triage técnico actualizado el 25/10: tres alertas corregidas y cero abiertas; evidencia en la adenda de Sprint 3.
 - [x] Validación automática de enlaces locales Markdown aprobada durante el CI de Pre-Sprint 3.
 
 ## Validaciones formales pendientes
@@ -61,7 +61,8 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [ ] Registrar revisión del cliente o del usuario, observaciones y aceptación aplicable.
 - [x] Validar el entorno local según la [adenda vigente](<../03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>).
 - [x] Asignar tareas a los cinco integrantes, fijar seguimiento, replanificar Sprint 3 y vincular versión Jira 1.3.0 sin liberar.
-- [ ] Conservar ECO-49 para la regularización de estados históricos de Sprints 1 y 2; no cerrar ceremonias por inferencia.
+- [x] Regularizar lo verificable: Sprint 1 cerrado administrativamente con 10/10 tarjetas finalizadas y Sprint 3 activo con fecha real; evidencia antes/después conservada.
+- [ ] Mantener ECO-18 en QA y Sprint 2 sin cierre hasta la revisión del cliente o usuario.
 
 - [x] Versión del Sprint 3 corregida a 1.3.0 y [matriz de los ocho criterios](<../03 Implementación/Sprint 03/Matriz de entrega y rúbrica V_1_0_0.md>) actualizada.
 - [x] Recorrido técnico grabado: once operaciones comprobadas sobre las quince historias, con capturas, observaciones y resultados.
@@ -81,3 +82,4 @@ Consultar el [registro de entrega del Sprint 3](<../Versiones/Sprint 3 V_1_0_0.m
 | 1.0.4 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | 1.0.5 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
 | 1.0.6 | 25/10/2026 | Revisión técnica, compatibilidad ampliada, responsables nominales y seguimiento actualizado. |
+| 1.0.7 | 25/10/2026 | Regularización administrativa verificada y protocolo de revisión del cliente preparado. |

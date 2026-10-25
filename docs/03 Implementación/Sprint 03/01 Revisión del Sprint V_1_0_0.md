@@ -5,7 +5,7 @@
 **Nombre del Proyecto:** EcoLogística Lima<br>
 **Líder del Proyecto:** Marco Jhair Martinez Llanos, según el acta de constitución.<br>
 **Sprint:** 3 — Calidad, seguridad, accesibilidad y mantenibilidad.<br>
-**Versión documental:** V_1_0_4 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_5 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Rama de entrega:** `Sprint-3`.
 
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
@@ -81,14 +81,14 @@ La [revisión técnica y el plan de cierre](<Revisión técnica y plan de cierre
 | Revisión técnica del incremento | Código, pruebas y evidencias revisados; observación de contraste móvil corregida y comprobaciones de regresión ejecutadas | Jhon Robert Paitan Montes (API/seguridad) y Luis Antony Gonzalo Guerrero (interfaz) |
 | Accesibilidad y navegadores | Matriz técnica ampliada con versiones identificadas, etiquetas, foco, reflow y operaciones funcionales; comprensión con tecnología de asistencia incluida en la revisión del usuario | Luis Antony Gonzalo Guerrero |
 | Mejoras de seguridad | Plan priorizado de limitación de intentos, alertas, retención y recuperación, con responsables y criterios verificables | Jhon Robert Paitan Montes y Rodrigo Vladimir Arce Curi |
-| Conciliación Jira | Tareas asignadas a los cinco integrantes y fechas de seguimiento actualizadas; Sprint 3 replanificado del 25/10 al 08/11. Se conserva el antecedente administrativo de Sprints 1 y 2 en ECO-49 | Marco Jhair Martinez Llanos |
+| Conciliación Jira | Tareas asignadas; Sprint 1 cerrado administrativamente con 10/10 tarjetas finalizadas y Sprint 3 activo desde el 25/10, con fin planificado el 08/11. Sprint 2 conserva ECO-18 en QA | Marco Jhair Martinez Llanos |
 | Preparación de la versión final | Cinco informes, evidencias, versión 1.3.0 y enlaces revisados; temporales excluidos | Piero Pool Chauris Leguia y Rodrigo Vladimir Arce Curi |
 
 ## Pendientes
 
 | Pendiente | Acción de cierre | Responsable |
 |---|---|---|
-| Revisión del cliente o del usuario | Presentar el incremento y registrar participantes, observaciones, comprensión con tecnología de asistencia, aceptación de los escenarios y resultado del Done | Marco Jhair Martinez Llanos, con apoyo de Luis Antony Gonzalo Guerrero |
+| Revisión del cliente o del usuario | Completar el [registro preparado de 30 escenarios](<Registro de revisión del cliente o del usuario V_1_0_0.md>): participantes, observaciones, comprensión con tecnología de asistencia, aceptación y resultado del Done | Marco Jhair Martinez Llanos, con apoyo de Luis Antony Gonzalo Guerrero |
 
 La preparación técnica no registra una aceptación todavía no recibida. El texto adicional «TP2-ISI Consigna del repositorio PFA» no se localizó; Piero verificará sus reglas complementarias cuando esté disponible. Las reglas explícitas del adjunto recibido sí se comprueban.
 
@@ -103,5 +103,6 @@ No se incluyen en esta entrega US-016 a US-023: optimización, reoptimización, 
 | V_1_0_2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
 | V_1_0_4 | 25/10/2026 | Revisión técnica, distribución nominal y revisión del cliente o del usuario pendiente. |
+| V_1_0_5 | 25/10/2026 | Regularización administrativa comprobada y registro de revisión del cliente preparado. |
 
 [← Volver al README](../../../README.md)

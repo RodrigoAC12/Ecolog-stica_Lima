@@ -2,7 +2,7 @@
 
 # Adenda de planificación — Sprint 3
 
-**Versión documental:** V_1_0_5 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_6 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Base:** [Transformando a ágil V_1_0_1](<../01 Transformando a ágil V_1_0_1.md>) y [seguimiento de Sprint 2](<Seguimiento Jira Sprint 2 V_1_0_3.md>).<br>
 **Rama de entrega:** `Sprint-3` del fork `RodrigoAC12/Ecolog-stica_Lima`.
 
@@ -28,7 +28,7 @@ El despliegue se comprueba exclusivamente en localhost conforme a la [adenda de 
 Las evidencias técnicas permiten revisar el trabajo; el cierre exige los puntos aplicables del DoD y su evidencia de aceptación.
 
 
-El 25/10/2026 se asignaron las tareas existentes a los cinco integrantes y se actualizaron sus fechas de seguimiento. Sprint 3 (ID 38) se replanificó del 25/10/2026 a las 09:00 al 08/11/2026 a las 18:00, hora de Lima; conserva el estado `future`. Las fechas son planificación, no constancia de ceremonias. Sprint 1 sigue activo y Sprint 2 futuro como antecedente administrativo, cuyo seguimiento corresponde a Marco en ECO-49. ECO-18 conserva QA para la revisión del cliente o del usuario. El [plan nominal](<../../03 Implementación/Sprint 03/Revisión técnica y plan de cierre V_1_0_0.md>) especifica responsabilidades y mejoras priorizadas.
+El 25/10/2026 se asignaron las tareas y fechas de seguimiento a los cinco integrantes. La regularización administrativa verificó las diez tarjetas finalizadas de Sprint 1 y registró su cierre el 25/10/2026 a las 16:06:57 (Lima). Sprint 3 (ID 38) se abrió efectivamente el 25/10/2026 a las 16:07:13 (Lima), estado `active`, con fin planificado 08/11/2026 a las 18:00. Los cortes anterior/posterior se conservan en el [plan nominal](<../../03 Implementación/Sprint 03/Revisión técnica y plan de cierre V_1_0_0.md>). Sprint 2 conserva su programación histórica y ECO-18 en QA, pendiente de revisión del cliente o usuario. No se trasladan historias ni se atribuyen reuniones o aprobaciones nuevas.
 
 ## Impacto documental
 
@@ -51,6 +51,7 @@ El 25/10/2026 se asignaron las tareas existentes a los cinco integrantes y se ac
 | V_1_0_2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | V_1_0_3 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | V_1_0_4 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
+| V_1_0_5 | 25/10/2026 | Revisión técnica, compatibilidad ampliada, responsables nominales y seguimiento actualizado. |
+| V_1_0_6 | 25/10/2026 | Cierre administrativo de Sprint 1 y fecha real de activación de Sprint 3; ECO-18 conservado en QA. |
 
 La [matriz de entrega](<../../03 Implementación/Sprint 03/Matriz de entrega y rúbrica V_1_0_0.md>) conserva los ocho criterios de la consigna sin convertir toda mejora del backlog en obligación de esta entrega. Las limitaciones de evaluación y la aceptación pendiente se declaran expresamente para revisión del equipo.
-| V_1_0_5 | 25/10/2026 | Revisión técnica, compatibilidad ampliada, responsables nominales y seguimiento actualizado. |

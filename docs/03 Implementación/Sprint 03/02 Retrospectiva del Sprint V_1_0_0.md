@@ -4,7 +4,7 @@
 
 **Nombre del Proyecto:** EcoLogística Lima<br>
 **Líder del Proyecto:** Marco Jhair Martinez Llanos, según el acta de constitución.<br>
-**Versión documental:** V_1_0_4 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
+**Versión documental:** V_1_0_5 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
 
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
 
@@ -52,7 +52,7 @@ Ejecutar CI, CodeQL y auditorías sobre `main` y la rama de entrega. Mantener un
 | Revisar autenticación, permisos, estados y evidencias | Jhon Robert Paitan Montes y Luis Antony Gonzalo Guerrero | 26/10/2026 | [Revisión técnica](<Revisión técnica y plan de cierre V_1_0_0.md>); observación de contraste móvil identificada y corregida |
 | Completar la matriz técnica de accesibilidad y navegadores | Luis Antony Gonzalo Guerrero | 27/10/2026 | [WCAG](<05 WCAG V_1_0_0.md>); comprensión con tecnología de asistencia en revisión del cliente o del usuario |
 | Priorizar limitación de intentos, alertas, retención y recuperación | Jhon Robert Paitan Montes y Rodrigo Vladimir Arce Curi | 27 a 30/10/2026 | Cuatro mejoras ordenadas con criterios de cierre en el plan; implementación posterior según riesgo |
-| Conciliar responsables y fechas de seguimiento en Jira | Marco Jhair Martinez Llanos | 26/10/2026 | Reparto nominal y Sprint 3 replanificado; el antecedente de Sprints 1 y 2 se conserva en ECO-49 |
+| Conciliar responsables y fechas de seguimiento en Jira | Marco Jhair Martinez Llanos | 26/10/2026 | Reparto nominal, Sprint 1 cerrado administrativamente y Sprint 3 activo; Sprint 2 conserva ECO-18 en QA para revisión del cliente o usuario |
 | Mantener regresiones y compilación del frontend | Rodrigo Vladimir Arce Curi | En cada cambio afectado | 11 pruebas y cobertura por módulo; comprobaciones de navegadores sobre la aplicación real |
 | Revisar versiones, cinco informes y enlaces | Piero Pool Chauris Leguia | 26/10/2026 | Comprobador de enlaces y versión 1.3.0; contraste de norma PFA al recibir su texto |
 
@@ -67,5 +67,6 @@ Este plan queda asignado por indicación del solicitante el 25/10/2026. Los plaz
 | V_1_0_2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
 | V_1_0_4 | 25/10/2026 | Responsables nominales, plazos de seguimiento y revisión técnica documentada. |
+| V_1_0_5 | 25/10/2026 | Seguimiento de calendario contrastado con las operaciones administrativas efectivas. |
 
 [← Volver al README](../../../README.md)

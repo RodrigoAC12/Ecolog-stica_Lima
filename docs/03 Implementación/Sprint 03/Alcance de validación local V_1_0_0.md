@@ -2,7 +2,7 @@
 
 # Alcance de validación local del Sprint 3
 
-**Versión documental:** V_1_0_1 · **Fecha:** 25/10/2026 (Lima).
+**Versión documental:** V_1_0_2 · **Fecha:** 25/10/2026 (Lima).
 
 El alcance acordado de despliegue y comprobación es exclusivamente localhost. No se requiere contratar un servidor, publicar la aplicación en Internet, configurar DNS público ni acreditar acceso remoto. Las referencias anteriores a infraestructura externa no constituyen bloqueos de esta entrega.
 
@@ -20,7 +20,7 @@ La [guía de staging local](<../../Despliegue/Guía de staging.md>) describe có
 
 DoD-07 se verifica mediante el entorno local reproducible. El cifrado se comprueba en la entrada HTTPS local; HTTP de loopback se declara expresamente y no se presenta como tráfico externo cifrado. No se amplía la evaluación a dispositivos remotos.
 
-La revisión técnica, el contraste y la matriz de navegadores se documentan en los informes vigentes. Las tareas tienen responsables nominales y seguimiento en Jira. La revisión del cliente o del usuario, incluida la comprensión con tecnología de asistencia y aceptación funcional, permanece pendiente; el antecedente administrativo de Sprints 1 y 2 se conserva en ECO-49.
+La revisión técnica, el contraste y la matriz de navegadores se documentan en los informes vigentes. Las tareas tienen responsables nominales y seguimiento en Jira. La revisión del cliente o del usuario, incluida la comprensión con tecnología de asistencia y aceptación funcional, permanece pendiente; la regularización administrativa cerró Sprint 1 e inició Sprint 3 con fecha real. Sprint 2 conserva ECO-18 en QA.
 
 Los cinco informes conservan los nombres de archivo requeridos y remiten a esta adenda versionada para el alcance vigente. Las evidencias del 24/10 conservan sus fechas y resultados.
 
@@ -30,5 +30,6 @@ Los cinco informes conservan los nombres de archivo requeridos y remiten a esta 
 |---|---|---|
 | V_1_0_0 | 25/10/2026 | Alcance de ejecución exclusivamente localhost. |
 | V_1_0_1 | 25/10/2026 | Revisión técnica, responsables y revisión del cliente o del usuario diferenciadas. |
+| V_1_0_2 | 25/10/2026 | Estado administrativo de Sprint 1 y Sprint 3 actualizado con evidencia. |
 
 [← Volver al README](../../../README.md)

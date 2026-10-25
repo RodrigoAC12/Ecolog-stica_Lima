@@ -2,7 +2,7 @@
 
 # Matriz de entrega y rúbrica — Sprint 3
 
-**Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0 · **Fecha:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_4 · **Versión del proyecto:** 1.3.0 · **Fecha:** 25/10/2026 (Lima).<br>
 **Fuente:** consigna oficial «Implementación, Calidad de Código y Evaluación», adjunta por el solicitante.<br>
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
 **Alcance de ejecución:** exclusivamente localhost. Esta matriz permite revisar primero con el solicitante; no asigna una nota ni sustituye revisión del cliente o del usuario.
@@ -11,7 +11,7 @@
 
 | Ítem y exigencia de la rúbrica | Evidencia entregada | Estado y límite |
 |---|---|---|
-| 1. Review: secciones completas, HU y Done, demostración a interesados y pendientes reales | [Informe 01](<01 Revisión del Sprint V_1_0_0.md>), tabla de US-001 a US-015, DoD, recorrido y capturas | **Recorrido técnico registrado:** video, pasos sobre las 15 historias, resultados y observaciones técnicas. La revisión del cliente o del usuario permanece pendiente. |
+| 1. Review: secciones completas, HU y Done, demostración a interesados y pendientes reales | [Informe 01](<01 Revisión del Sprint V_1_0_0.md>), tabla de US-001 a US-015, DoD, recorrido y capturas | **Preparado para revisión:** video, resultados técnicos y [registro de 30 escenarios](<Registro de revisión del cliente o del usuario V_1_0_0.md>). La revisión del cliente o del usuario permanece pendiente. |
 | 2. Retrospectiva: aprendizajes, aciertos y acciones concretas en Personas, Relaciones, Procesos y Herramientas | [Informe 02](<02 Retrospectiva del Sprint V_1_0_0.md>), acciones con responsables nominales, fechas de seguimiento y evidencia | **Documento actualizado:** cuatro dimensiones cubiertas y plan asignado a los cinco integrantes por indicación del solicitante; no se atribuyen reuniones ni aprobaciones personales. |
 | 3. Calidad: Quality Gate, bugs, smells, cobertura, duplicación y plan de deuda | [Informe 03](<03 Calidad de código V_1_0_0.md>), [Sonar 1.3.0](evidencias/sonar-1.3.0.json) y [cobertura por archivo](evidencias/frontend-cobertura-1.3.0.json) | **Evaluado:** gate aprobado; 92,4 % global, 100 % nuevo, duplicación 0 %, cero problemas abiertos. Plan y antecedentes incluidos. |
 | 4. OWASP 2025: diez categorías, hallazgos/hotspots y correcciones | [Informe 04](<04 OWASP V_1_0_0.md>), Sonar, auditorías, pruebas negativas y evidencia TLS local | **Evaluación documentada:** cero hotspots detectados y defecto JWT corregido. Se explicitan categorías bajo revisión y límites del perfil estático. No se afirma seguridad completa ni se inventan hotspots. |
@@ -19,6 +19,8 @@
 | 6. Frontend/backend modular y `.gitignore` sin temporales | [Frontend](../../../src/frontend/), [backend](../../../src/backend/) y [.gitignore](../../../.gitignore) | **Preparado:** componentes separados; se excluyen secretos, dependencias instaladas, coberturas de trabajo, cachés y copias temporales. Se conserva evidencia seleccionada. |
 | 7. Coherencia y actualización/versionamiento de documentos afectados | Cinco informes con versión documental identificada; [versión 1.3.0](../../Versiones/1.3.0.md), [adenda de planificación](<../../02 Planificación/Anexos/Planificación Sprint 3 V_1_0_0.md>), [base histórica](../../Versiones/1.2.4.md), notas y guías con historial | **Actualizado:** 1.3.0 identifica el proyecto y sus metadatos. Las evidencias anteriores mantienen su corte. Se conservan nombres canónicos de los cinco archivos exigidos y sus versiones documentales independientes. |
 | 8. Cinco Markdown en `docs/03 Implementación/Sprint 03` y enlaces de ida/vuelta con README | [README](../../../README.md), cinco informes enlazados y comprobador de enlaces | **Preparado:** ubicación y enlaces verificados; aceptación e incorporación final pendientes. |
+
+La regularización administrativa conserva cortes antes/después: Sprint 1 cerrado con las diez tarjetas que ya estaban finalizadas y Sprint 3 activo con fecha real. Sprint 2 conserva ECO-18 en QA; no se atribuyen reuniones ni aceptación.
 
 ## Cómo revisar la entrega
 
@@ -42,5 +44,6 @@ El adjunto remite además a «TP2-ISI Consigna del repositorio PFA», cuyo texto
 | V_1_0_1 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | V_1_0_2 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
 | V_1_0_3 | 25/10/2026 | Revisión técnica, compatibilidad ampliada, responsables nominales y seguimiento actualizado. |
+| V_1_0_4 | 25/10/2026 | Regularización administrativa y registro de 30 escenarios oficiales disponible. |
 
 [← Volver al README](../../../README.md)
