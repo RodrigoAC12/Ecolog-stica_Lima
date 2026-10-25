@@ -1,5 +1,5 @@
 {
-  "executed_at": "2026-10-25T07:06:40.853216+00:00",
+  "executed_at": "2026-10-25T14:54:51.357881+00:00",
   "project_version": "1.3.0",
   "source": "Vitest V8: src/frontend/coverage/lcov.info",
   "summary": {
@@ -41,7 +41,7 @@
     },
     {
       "file": "src/frontend/src/api.ts",
-      "sha256": "9f2bdacf252780c3a04409804c634956cb2b3d733a2d23a7981d6d692e1cce2f",
+      "sha256": "8fe0884b3f676b79309b437c85847516df4ba97a848337ca57fcb9a6072f2423",
       "lines": {
         "total": 8,
         "covered": 7,

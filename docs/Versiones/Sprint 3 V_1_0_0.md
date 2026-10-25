@@ -2,7 +2,7 @@
 
 # Entrega técnica del Sprint 3
 
-**Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_4 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Base:** versión 1.2.4, commit `da3eef2`.<br>
 **Rama:** `Sprint-3`.<br>
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
@@ -30,11 +30,13 @@
 
 ## Límites y revisión requerida
 
-El contraste del contenido funcional quedó medido y aprobado; los resultados incompletos restantes son elementos decorativos identificados en el JSON. El uso humano de lector de pantalla y la matriz completa de navegadores siguen por comprobar. También quedan demostración/aceptación con interesados, revisión independiente y decisiones de calendario. No se cierra la épica ni se alteran fechas de ceremonias a partir de las pruebas automáticas.
+La [matriz técnica consolidada](<../03 Implementación/Sprint 03/evidencias/compatibilidad-1.3.0.json>) acredita seis versiones de Chrome, Edge y Firefox: 78 estados y 504 comprobaciones aprobadas, con reintento identificado. Se corrigió la superposición decorativa de Inicio en móvil y se solicitó lectura fresca a la API como medida preventiva. La revisión del cliente o del usuario incluye lector de pantalla, comprensión, observaciones y aceptación, y permanece pendiente. La prueba con lector de pantalla se interrumpió al no verificarse la URL en la herramienta de control de Windows. No se atribuyen sesiones ni aprobaciones personales.
+
+El [plan nominal de cierre](<../03 Implementación/Sprint 03/Revisión técnica y plan de cierre V_1_0_0.md>) distribuye trabajo entre los cinco integrantes. Jira conserva los responsables y fechas de seguimiento; Sprint 3 se replanificó del 25/10 al 08/11/2026 y la versión 1.3.0 permanece sin liberar. El antecedente administrativo de Sprints 1 y 2 se mantiene en ECO-49.
 
 **Actualización del 25/10/2026:** el [alcance vigente](<../03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>) es localhost. El [entorno local](<../03 Implementación/Sprint 03/evidencias/staging-local.json>) verifica frontend HTTP/HTTPS, certificado TLS, salud, login y recursos protegidos; no se requiere infraestructura externa.
 
-La [revisión](<../03 Implementación/Sprint 03/01 Revisión del Sprint V_1_0_0.md>) y la [retrospectiva](<../03 Implementación/Sprint 03/02 Retrospectiva del Sprint V_1_0_0.md>) documentan el incremento y su plan de mejora con hechos observables. Los acuerdos personales y aprobaciones requieren registro por el equipo.
+La [revisión](<../03 Implementación/Sprint 03/01 Revisión del Sprint V_1_0_0.md>) y la [retrospectiva](<../03 Implementación/Sprint 03/02 Retrospectiva del Sprint V_1_0_0.md>) documentan el incremento y su plan de mejora con hechos observables. La asignación procede de la indicación del solicitante; no se atribuyen aprobaciones personales.
 
 El proyecto, la versión OpenAPI, el paquete frontend y la configuración del análisis Sonar se identifican como **1.3.0**. Los identificadores `1.2.4-sprint3-*` distinguen cortes de análisis anteriores y no se modifican retrospectivamente. Los V_1_0_x son versiones documentales. Los informes de Sprints 1 y 2 se conservan como antecedentes.
 
@@ -48,3 +50,4 @@ La [matriz de entrega frente a la consigna](<../03 Implementación/Sprint 03/Mat
 | V_1_0_1 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | V_1_0_2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
+| V_1_0_4 | 25/10/2026 | Revisión técnica, compatibilidad ampliada, responsables nominales y seguimiento actualizado. |

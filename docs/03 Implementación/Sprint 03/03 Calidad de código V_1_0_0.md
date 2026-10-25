@@ -4,7 +4,7 @@
 
 **Nombre del Proyecto:** EcoLogística Lima<br>
 **Fecha de Análisis:** 2026-10-25, 02:03:48 (America/Lima).<br>
-**Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0<br>
+**Versión documental:** V_1_0_4 · **Versión del proyecto:** 1.3.0<br>
 **Versión del Análisis:** V_1_0_3, corte del 25/10/2026 a las 02:03:48 (Lima).<br>
 **Herramientas:** SonarQube Community Build 26.10.0.133078, SonarScanner para NPM 5.0.2.<br>
 **Revisión Git analizada:** `2af41c1c1b1caa8fbc7c55078fe3b5a7d4a99ef9`, sin cambios sin commit al iniciar el scanner.<br>
@@ -71,10 +71,10 @@ La evaluación posterior incorporó dos mejoras adicionales: validación obligat
 
 | Seguimiento de deuda y entrega | Acción siguiente | Responsable | Momento de verificación |
 |---|---|---|---|
-| Cobertura por componente y funciones frontend | Verificación actual: formularios 100 % de líneas y App 90 %; mantener regresiones y priorizar el resto según riesgo | Equipo de desarrollo | En cada cambio afectado |
-| Dependencias y alcance de seguridad | Mantener auditorías Python/npm y evaluación OWASP; el scanner omitió SCA | Por asignar en Jira | Informe de seguridad y revisión final |
-| Revisión independiente y publicación | Revisar código, ejecutar CI y analizar la revisión definitiva | Revisor técnico por confirmar | Antes de integrar |
-| Accesibilidad y aceptación | Evaluación WCAG y escenarios BDD con evidencia real | Equipo e interesados por confirmar | Antes del cierre del sprint |
+| Cobertura por componente y funciones frontend | Verificación actual: formularios 100 % de líneas y App 90 %; mantener regresiones y priorizar el resto según riesgo | Rodrigo Vladimir Arce Curi | En cada cambio afectado |
+| Dependencias y alcance de seguridad | Mantener auditorías Python/npm y evaluación OWASP; el scanner omitió SCA | Jhon Robert Paitan Montes | Informe de seguridad y revisión final |
+| Revisión técnica y seguimiento | Revisar código y evidencias; conservar la revisión del cliente o del usuario pendiente | Jhon Robert Paitan Montes y Luis Antony Gonzalo Guerrero | Seguimiento 26/10/2026 |
+| Accesibilidad y aceptación | Evaluación WCAG y escenarios BDD con evidencia real | Luis Antony Gonzalo Guerrero y Marco Jhair Martinez Llanos | Revisión del cliente o del usuario pendiente |
 
 No se cambiaron umbrales, perfiles ni exclusiones para resolver los hallazgos. El análisis utiliza los perfiles `Sonar way core` disponibles. Cero vulnerabilidades detectadas no es una certificación de seguridad: el informe OWASP documenta los controles complementarios. El scanner vigente identifica `2af41c1`, recupera la información SCM y analiza un árbol de trabajo limpio; debe repetirse si cambia el código fuente posteriormente. El token temporal se revocó al terminar.
 
@@ -86,5 +86,6 @@ No se cambiaron umbrales, perfiles ni exclusiones para resolver los hallazgos. E
 | V_1_0_1 | 25/10/2026 | Análisis del commit de entrega, severidad MEDIUM respaldada por API y cobertura de los cuatro formularios. |
 | V_1_0_2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
+| V_1_0_4 | 25/10/2026 | Revisión técnica, compatibilidad ampliada, responsables nominales y seguimiento actualizado. |
 
 [← Volver al README](../../../README.md)

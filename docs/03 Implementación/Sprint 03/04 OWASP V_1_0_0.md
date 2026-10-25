@@ -4,7 +4,7 @@
 
 **Nombre del Proyecto:** EcoLogística Lima<br>
 **Herramienta de Escaneo:** SonarQube Community Build 26.10.0.133078; complementos Pytest, pip-audit y npm audit.<br>
-**Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_4 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Alcance:** API FastAPI, persistencia y frontend de las funcionalidades US-001 a US-015, en la rama `Sprint-3`.
 
 ## 1. Matriz de Cumplimiento OWASP Top 10 2025
@@ -41,7 +41,7 @@ SonarQube no generó security hotspots ni vulnerabilidades en el [análisis 1.3.
 - **Impacto y límite:** la API no imponía caducidad a un token emitido sin esa propiedad. El caso requiere un token firmado válido; no demuestra obtención de la clave ni evasión de la firma.
 - **Corrección aplicada:** `jwt.decode` requiere las propiedades `exp` y `sub`, conservando el algoritmo permitido HS256.
 - **Verificación:** las nueve pruebas nuevas y la suite backend completa pasan: 36 pruebas en SQLite temporal y 36 en PostgreSQL 16 aislado, cobertura 93,43 %. Se incluye rechazo de token vencido y de algoritmo `none`; las migraciones llegan a head y `alembic check` no detecta deriva.
-- **Estado:** corregido y probado localmente; revisión independiente pendiente.
+- **Estado:** corregido y probado localmente; revisión técnica registrada; revisión del cliente o del usuario pendiente.
 
 ## 3. Evidencias, límites y seguimiento
 
@@ -53,10 +53,14 @@ La matriz distingue el resultado estático común (cero vulnerabilidades y hotsp
 | Dependencias Python | [python-audit.json](evidencias/python-audit.json) | Sin vulnerabilidades conocidas detectadas en esta ejecución |
 | Dependencias frontend | [npm-audit.json](evidencias/npm-audit.json) | 0 avisos en todas las severidades |
 | Pruebas negativas y control de acceso | [test_security_assessment.py](../../../src/backend/tests/test_security_assessment.py), [JUnit PostgreSQL](evidencias/backend-postgres.xml) | 9 casos nuevos; suite completa 36/36 en cada base |
-| Integridad y auditoría | Tests existentes de rollback, duplicados y restricciones | Verificación automatizada; no aceptación humana |
+| Integridad y auditoría | Tests existentes de rollback, duplicados y restricciones | Verificación automatizada; no revisión del cliente o del usuario |
 | Comunicación y configuración local | [staging-local.json](evidencias/staging-local.json) y [guía de despliegue](<../../Despliegue/Guía de staging.md>) | TLS 1.3, certificado verificado, cabeceras y puertos limitados a loopback |
 
 El informe registra resultados técnicos sobre datos de pruebas. Antes del cierre se requiere revisar los pendientes con responsable, conservar la validación de la revisión final y acreditar la aceptación aplicable del DoD dentro del alcance localhost. Las auditorías reflejan avisos conocidos al ejecutarse; no garantizan ausencia de vulnerabilidades futuras.
+
+## 4. Responsables y mejoras priorizadas
+
+La [revisión técnica y el plan de cierre](<Revisión técnica y plan de cierre V_1_0_0.md>) asignan seguridad a Jhon Robert Paitan Montes, con apoyo de Rodrigo Vladimir Arce Curi. Se priorizan limitación de intentos, alertas de autenticación, retención/restauración y ampliación de autorización, con fechas de seguimiento del 27 al 30/10/2026 y criterios verificables. La evaluación y priorización están documentadas; no se presenta su implementación como realizada.
 
 ## Control documental
 
@@ -66,5 +70,6 @@ El informe registra resultados técnicos sobre datos de pruebas. Antes del cierr
 | V_1_0_1 | 25/10/2026 | Evidencia del commit de entrega, cero hotspots y despliegue localhost ya acreditado; límites y backlog explícitos. |
 | V_1_0_2 | 25/10/2026 | Versión del proyecto 1.3.0; evidencias anteriores conservadas en su corte original. |
 | V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
+| V_1_0_4 | 25/10/2026 | Revisión técnica, compatibilidad ampliada, responsables nominales y seguimiento actualizado. |
 
 [← Volver al README](../../../README.md)

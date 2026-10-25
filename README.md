@@ -288,6 +288,9 @@ Los principales criterios de evaluación serán:
 
 ---
 
+
+[Revisión técnica, responsables y plan de cierre del Sprint 3](<docs/03 Implementación/Sprint 03/Revisión técnica y plan de cierre V_1_0_0.md>) · [Compatibilidad de navegadores](<docs/Calidad/04 Compatibilidad de navegadores.md>).
+
 ## Equipo
 
 - Luis Antony Gonzalo Guerrero
@@ -302,7 +305,7 @@ La lista actual de cinco integrantes fue confirmada por el usuario mediante una 
 
 ## Seguridad y comprobaciones pre-Sprint 3
 
-El [registro de preparación técnica de seguridad](<docs/03 Implementación/Pre-Sprint 3/02 Informe de seguridad V_1_0_0.md>) contiene los informes de CodeQL y auditoría de dependencias del 24/10/2026, los cambios de versión y las limitaciones de cada evidencia. La [validación de integridad y auditoría DoD-09](<docs/03 Implementación/Pre-Sprint 3/03 Informe de integridad y auditoría V_1_0_0.md>) documenta las pruebas automatizadas del backend ejecutadas sobre SQLite y PostgreSQL 16 aislado, con cobertura del 92,85 %. Estos resultados técnicos no sustituyen revisión humana, aceptación BDD ni staging/TLS del Definition of Done.
+El [registro de preparación técnica de seguridad](<docs/03 Implementación/Pre-Sprint 3/02 Informe de seguridad V_1_0_0.md>) contiene los informes de CodeQL y auditoría de dependencias del 24/10/2026, los cambios de versión y las limitaciones de cada evidencia. La [validación de integridad y auditoría DoD-09](<docs/03 Implementación/Pre-Sprint 3/03 Informe de integridad y auditoría V_1_0_0.md>) documenta las pruebas automatizadas del backend ejecutadas sobre SQLite y PostgreSQL 16 aislado, con cobertura del 92,85 %. Estos resultados históricos se complementan con la revisión técnica y el entorno localhost de Sprint 3; la revisión del cliente o del usuario y la aceptación BDD permanecen pendientes.
 
 ## Preparación técnica del cambio unificado
 

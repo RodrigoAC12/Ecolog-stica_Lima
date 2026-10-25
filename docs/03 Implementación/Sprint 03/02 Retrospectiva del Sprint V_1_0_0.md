@@ -4,7 +4,7 @@
 
 **Nombre del Proyecto:** EcoLogística Lima<br>
 **Líder del Proyecto:** Marco Jhair Martinez Llanos, según el acta de constitución.<br>
-**Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
+**Versión documental:** V_1_0_4 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
 
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
 
@@ -47,16 +47,16 @@ Ejecutar CI, CodeQL y auditorías sobre `main` y la rama de entrega. Mantener un
 
 ### Acciones a realizar
 
-| Acción verificable | Responsable propuesto | Plazo de referencia | Evidencia de cumplimiento |
+| Acción verificable | Responsable asignado | Seguimiento | Resultado y evidencia |
 |---|---|---|---|
-| Revisar el incremento y las correcciones sin cambiar umbrales para ocultar hallazgos | Par técnico distinto del autor | Antes de integrar | Revisión registrada y CI aprobado |
-| Conservar la evidencia del contraste resuelto y completar lector de pantalla/navegadores del DoD | Calidad/UX | Antes de declarar conformidad AA completa | [Evaluación vigente](evidencias/accesibilidad-entrega-edge.json); validación humana aún pendiente |
-| Priorizar limitación de intentos y auditoría/alertas de login; mantener seguridad local | Backend/infraestructura | Backlog de mejora, según riesgo | Nuevas tareas y pruebas cuando se implemente; no es un requisito adicional de la consigna |
-| Conciliar responsables, fechas y estados de Jira | Líder del proyecto y equipo | Antes del cierre administrativo | Tablero y acuerdos con fechas reales |
-| Mantener las regresiones de cancelación y priorizar escenarios restantes según riesgo | Desarrollo frontend | En cada cambio afectado | 11 pruebas aprobadas y [cobertura por módulo](evidencias/frontend-cobertura-1.3.0.json); formularios 100 % de líneas |
-| Conservar los cinco informes y validar enlaces tras cada cambio | Responsable documental | En cada entrega | Comprobador de enlaces aprobado |
+| Revisar autenticación, permisos, estados y evidencias | Jhon Robert Paitan Montes y Luis Antony Gonzalo Guerrero | 26/10/2026 | [Revisión técnica](<Revisión técnica y plan de cierre V_1_0_0.md>); observación de contraste móvil identificada y corregida |
+| Completar la matriz técnica de accesibilidad y navegadores | Luis Antony Gonzalo Guerrero | 27/10/2026 | [WCAG](<05 WCAG V_1_0_0.md>); comprensión con tecnología de asistencia en revisión del cliente o del usuario |
+| Priorizar limitación de intentos, alertas, retención y recuperación | Jhon Robert Paitan Montes y Rodrigo Vladimir Arce Curi | 27 a 30/10/2026 | Cuatro mejoras ordenadas con criterios de cierre en el plan; implementación posterior según riesgo |
+| Conciliar responsables y fechas de seguimiento en Jira | Marco Jhair Martinez Llanos | 26/10/2026 | Reparto nominal y Sprint 3 replanificado; el antecedente de Sprints 1 y 2 se conserva en ECO-49 |
+| Mantener regresiones y compilación del frontend | Rodrigo Vladimir Arce Curi | En cada cambio afectado | 11 pruebas y cobertura por módulo; comprobaciones de navegadores sobre la aplicación real |
+| Revisar versiones, cinco informes y enlaces | Piero Pool Chauris Leguia | 26/10/2026 | Comprobador de enlaces y versión 1.3.0; contraste de norma PFA al recibir su texto |
 
-Las acciones representan el plan de mejora derivado del trabajo observado. Los responsables concretos y fechas de calendario requieren confirmación del equipo; no se registran como compromisos personales ya aceptados.
+Este plan queda asignado por indicación del solicitante el 25/10/2026. Los plazos son fechas de seguimiento y no se presentan como compromisos personales ya aceptados ni como constancia de una reunión. Los aprendizajes y acciones derivan de las comprobaciones efectivamente registradas.
 
 ## Control documental
 
@@ -66,5 +66,6 @@ Las acciones representan el plan de mejora derivado del trabajo observado. Los r
 | V_1_0_1 | 25/10/2026 | Resultados del contraste y cobertura, acciones realizadas y mejoras futuras diferenciadas. |
 | V_1_0_2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
+| V_1_0_4 | 25/10/2026 | Responsables nominales, plazos de seguimiento y revisión técnica documentada. |
 
 [← Volver al README](../../../README.md)

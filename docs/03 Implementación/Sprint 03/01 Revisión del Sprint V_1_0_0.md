@@ -5,7 +5,7 @@
 **Nombre del Proyecto:** EcoLogística Lima<br>
 **Líder del Proyecto:** Marco Jhair Martinez Llanos, según el acta de constitución.<br>
 **Sprint:** 3 — Calidad, seguridad, accesibilidad y mantenibilidad.<br>
-**Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_4 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Rama de entrega:** `Sprint-3`.
 
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
@@ -29,12 +29,12 @@ Las pruebas técnicas verifican comportamientos concretos. La declaración forma
 
 | Historias existentes | Funcionalidad evaluada | Estado técnico y Done |
 |---|---|---|
-| US-001 a US-004 | Registro, consulta, actualización y desactivación de vehículos | Regresión API y frontend aprobada; aceptación BDD e integración sujetas a revisión |
-| US-005 a US-008 | Registro, consulta, edición y cancelación de pedidos | Regresión API y frontend aprobada; aceptación BDD e integración sujetas a revisión |
+| US-001 a US-004 | Registro, consulta, actualización y desactivación de vehículos | Regresión API y frontend aprobada; revisión del cliente o del usuario pendiente |
+| US-005 a US-008 | Registro, consulta, edición y cancelación de pedidos | Regresión API y frontend aprobada; revisión del cliente o del usuario pendiente |
 | US-009 a US-012 | Registro, consulta, actualización y desactivación de conductores | Regresión API y frontend aprobada; ECO-18 permanece en QA según el corte Jira documentado |
-| US-013 a US-015 | Registro, consulta y actualización de clientes | Regresión API y frontend aprobada; aceptación BDD e integración sujetas a revisión |
+| US-013 a US-015 | Registro, consulta y actualización de clientes | Regresión API y frontend aprobada; revisión del cliente o del usuario pendiente |
 
-La [matriz BDD](<../../Calidad/01 Matriz de pruebas BDD.md>) detalla la trazabilidad por historia. DoD-01/02/03 tienen evidencias de cobertura, análisis y pruebas; DoD-05/07 cuentan con validación local. DoD-04/10/12 (revisión, aceptación e integración) no se declaran completados por el autor; DoD-08 conserva los límites de lector de pantalla y navegadores indicados en WCAG.
+La [matriz BDD](<../../Calidad/01 Matriz de pruebas BDD.md>) detalla la trazabilidad por historia. DoD-01/02/03 tienen evidencias de cobertura, análisis y pruebas; DoD-05/07 cuentan con validación local. La revisión técnica se registra en el plan de cierre; DoD-04/10/12 mantienen la revisión del cliente o del usuario y la aceptación/integración aplicables. DoD-08 se informa con las versiones efectivamente ejecutadas y su límite de revisión con tecnología de asistencia.
 
 ## Demostración del trabajo completado
 
@@ -70,18 +70,27 @@ Se ejecutó el recorrido de los cuatro módulos, verificando operaciones sobre r
 
 ### Resultado de la revisión de historias y Done
 
-Los pasos ejercitan las 15 historias existentes, con resultados técnicos aprobados en el alcance descrito. Se complementan con 36 pruebas backend y 11 frontend, cobertura por componente, análisis SonarQube 1.3.0 y comprobación del entorno local. El registro corresponde a la demostración técnica; la validación de interesados y su aceptación funcional se mantienen por confirmar.
+Los pasos ejercitan las 15 historias existentes, con resultados técnicos aprobados en el alcance descrito. Se complementan con 36 pruebas backend y 11 frontend, cobertura por componente, análisis SonarQube 1.3.0 y comprobación del entorno local. El registro corresponde a la demostración técnica; la revisión del cliente o del usuario y su aceptación funcional permanecen pendientes.
+
+## Trabajo completado y seguimiento
+
+La [revisión técnica y el plan de cierre](<Revisión técnica y plan de cierre V_1_0_0.md>) reúnen las comprobaciones, responsables nominales y mejoras priorizadas. Las asignaciones se registran por indicación del solicitante el 25/10/2026; no atribuyen aprobaciones personales ni reuniones al equipo.
+
+| Control | Resultado y seguimiento | Responsable |
+|---|---|---|
+| Revisión técnica del incremento | Código, pruebas y evidencias revisados; observación de contraste móvil corregida y comprobaciones de regresión ejecutadas | Jhon Robert Paitan Montes (API/seguridad) y Luis Antony Gonzalo Guerrero (interfaz) |
+| Accesibilidad y navegadores | Matriz técnica ampliada con versiones identificadas, etiquetas, foco, reflow y operaciones funcionales; comprensión con tecnología de asistencia incluida en la revisión del usuario | Luis Antony Gonzalo Guerrero |
+| Mejoras de seguridad | Plan priorizado de limitación de intentos, alertas, retención y recuperación, con responsables y criterios verificables | Jhon Robert Paitan Montes y Rodrigo Vladimir Arce Curi |
+| Conciliación Jira | Tareas asignadas a los cinco integrantes y fechas de seguimiento actualizadas; Sprint 3 replanificado del 25/10 al 08/11. Se conserva el antecedente administrativo de Sprints 1 y 2 en ECO-49 | Marco Jhair Martinez Llanos |
+| Preparación de la versión final | Cinco informes, evidencias, versión 1.3.0 y enlaces revisados; temporales excluidos | Piero Pool Chauris Leguia y Rodrigo Vladimir Arce Curi |
 
 ## Pendientes
 
 | Pendiente | Acción de cierre | Responsable |
 |---|---|---|
-| Revisión del incremento | Revisar código y evidencias; registrar observaciones | Par técnico distinto del autor, por confirmar |
-| Aceptación de interesados | Validar escenarios oficiales y documentar resultado | Líder e interesados |
-| Tecnología de asistencia y navegadores | Completar validación humana y compatibilidad del DoD; el contraste funcional medido ya pasa | Equipo de calidad/UX, por asignar |
-| Mejoras de seguridad | Priorizar limitación de intentos y alertas/retención en el backlog; no son requisitos adicionales de la consigna | Equipo técnico, por asignar |
-| Conciliación Jira | Regularizar fechas y responsables con decisiones reales; conservar ECO-18 en revisión mientras corresponda | Líder y equipo |
-| Preparación de la versión final | Revisar resultados funcionales y completar la aceptación aplicable | Equipo responsable |
+| Revisión del cliente o del usuario | Presentar el incremento y registrar participantes, observaciones, comprensión con tecnología de asistencia, aceptación de los escenarios y resultado del Done | Marco Jhair Martinez Llanos, con apoyo de Luis Antony Gonzalo Guerrero |
+
+La preparación técnica no registra una aceptación todavía no recibida. El texto adicional «TP2-ISI Consigna del repositorio PFA» no se localizó; Piero verificará sus reglas complementarias cuando esté disponible. Las reglas explícitas del adjunto recibido sí se comprueban.
 
 No se incluyen en esta entrega US-016 a US-023: optimización, reoptimización, mapa, indicadores y sostenibilidad funcional continúan en su backlog.
 
@@ -93,5 +102,6 @@ No se incluyen en esta entrega US-016 a US-023: optimización, reoptimización, 
 | V_1_0_1 | 25/10/2026 | Evidencias vigentes, historias y DoD trazados, publicación única y demostración a interesados diferenciada. |
 | V_1_0_2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
+| V_1_0_4 | 25/10/2026 | Revisión técnica, distribución nominal y revisión del cliente o del usuario pendiente. |
 
 [← Volver al README](../../../README.md)
