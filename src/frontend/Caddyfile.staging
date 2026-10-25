@@ -1,4 +1,9 @@
-{$STAGING_DOMAIN} {
+(local_application) {
+    header {
+        X-Content-Type-Options nosniff
+        X-Frame-Options DENY
+        Referrer-Policy no-referrer
+    }
     @api path /api/* /health /docs /openapi.json
     handle @api {
         reverse_proxy backend:8000
@@ -8,4 +13,13 @@
         try_files {path} /index.html
         file_server
     }
+}
+
+{$STAGING_DOMAIN} {
+    tls internal
+    import local_application
+}
+
+http://{$STAGING_DOMAIN} {
+    import local_application
 }

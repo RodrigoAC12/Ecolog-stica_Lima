@@ -3,7 +3,7 @@
 ## Contexto y alcance
 
 - **Rama de desarrollo vigente:** `Sprint-3`, autorizada por el usuario en el fork `RodrigoAC12/Ecolog-stica_Lima`. La base 1.2.4 ya está integrada en `jmartinez278/Ecolog-stica_Lima:main` mediante PR #3, commit `da3eef2`; la entrega del Sprint 3 requiere su propia revisión e integración.
-- **Versión del proyecto:** 1.2.4. Los documentos académicos numerados `V_1_0_0` conservan su versión individual.
+- **Versión del proyecto:** 1.2.4. Los documentos numerados `V_1_0_0` conservan su versión individual.
 - Sprint 1 abarca US-001 a US-010; Sprint 2, US-011 a US-015. El trabajo de Pre-Sprint 3 solo prepara y verifica esa funcionalidad; no implementa US-016 en adelante.
 - Los entregables históricos están en `docs/03 Implementación/Sprint 1/` y `docs/03 Implementación/Sprint 2/`; mover un archivo no significa que su sesión o aceptación histórica haya ocurrido.
 - Los cinco informes oficiales del Sprint 3 están en `docs/03 Implementación/Sprint 03/`; conservar sus enlaces bidireccionales y evidencias, sin presentar resultados automáticos como aprobación humana.
@@ -17,7 +17,7 @@
 - Frontend React + TypeScript + Vite en `src/frontend/src`, con `App.tsx` como composición de páginas, `pages/`, `forms/`, `components/` y `styles/`. El token permanece en memoria.
 - Backend FastAPI + SQLAlchemy + PostgreSQL en `src/backend`: router HTTP → servicio → repositorio → persistencia y auditoría.
 - Alembic mantiene las revisiones `0001_sprint1` y `0002_clients_email_unique`. Al migrar una base ya utilizada, hacer copia de seguridad y resolver duplicados de correo antes de aplicar la revisión incremental; no borrar registros automáticamente.
-- `docker-compose.yml` es para desarrollo local y limita los puertos al anfitrión; `docker-compose.staging.yml` es una configuración distinta. No afirmar despliegue externo sin evidencia de DNS y TLS reales.
+- El despliegue y las comprobaciones se limitan a localhost. `docker-compose.yml` es para desarrollo y `docker-compose.staging.yml` para validación local separada. No exigir servidor ni dominio público; conservar evidencia del entorno realmente ejecutado.
 
 ## Verificación técnica
 
@@ -45,7 +45,7 @@ docker compose --env-file .env.example config --quiet
 docker compose --env-file .env.staging.example -f docker-compose.staging.yml config --quiet
 ```
 
-Los workflows CodeQL y auditoría de dependencias deben pasar en la **rama final**. La revisión humana del PR, WCAG AA/360 px en navegadores reales, BDD con interesados y staging TLS real se comprueban por separado: una prueba automatizada no cierra el Definition of Done por sí misma.
+Los workflows CodeQL y auditoría de dependencias deben pasar en la **rama final**. La revisión humana del PR, WCAG AA/360 px en navegadores reales, BDD con interesados y staging TLS en localhost se comprueban por separado: una prueba automatizada no cierra el Definition of Done por sí misma.
 
 ## Documentos de referencia
 

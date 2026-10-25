@@ -2,7 +2,7 @@
 
 # Checklist de validación — Pre-Sprint 3
 
-**Versión documental:** 1.0.1. El cuerpo original conserva el corte preparatorio; la adenda final incorpora la entrega posterior del Sprint 3.
+**Versión documental:** 1.0.2. Se identifican los resultados históricos y las adendas posteriores de entrega y alcance local.
 
 **Versión del proyecto:** 1.2.4 · **Rama:** `Pre-Sprint-3` · **Fecha:** 24/10/2026.
 
@@ -31,8 +31,8 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 
 ## Validaciones formales pendientes
 
-- [ ] Aprobación presupuestal y del contenido académico por el equipo/docente.
-- [ ] Prueba de staging real con DNS válido, certificado HTTPS/TLS y secretos gestionados fuera del repositorio.
+- [ ] Aprobación presupuestal y del contenido documental por el equipo.
+- [x] Staging en localhost verificado el 25/10/2026, con HTTPS local y secretos fuera del repositorio.
 - [ ] Pruebas manuales de accesibilidad WCAG, 360 px, teclado y navegadores soportados.
 - [ ] Demostración y aceptación de los escenarios oficiales Gherkin por interesados.
 - [ ] Revisión independiente del código y aprobación del Pull Request por el propietario.
@@ -53,7 +53,8 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [x] Sonar final aprobado con tres condiciones evaluadas y cero problemas abiertos.
 - [x] 13 estados de accesibilidad automática y 11 comprobaciones dirigidas aprobadas tras corregir.
 - [ ] Acreditar contraste pendiente, lector de pantalla y navegadores del alcance completo.
-- [ ] Acreditar aceptación de interesados, revisión independiente y staging externo.
+- [ ] Acreditar aceptación de interesados y revisión independiente.
+- [x] Validar el entorno local según la [adenda vigente](<../03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>).
 - [ ] Confirmar acuerdos personales, calendario y cierre administrativo en Jira.
 
 Consultar el [registro de entrega del Sprint 3](<../Versiones/Sprint 3 V_1_0_0.md>) para resultados, límites y trazabilidad. La preparación de documentos no convierte en realizadas las validaciones pendientes.

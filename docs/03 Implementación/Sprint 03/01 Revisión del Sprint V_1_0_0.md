@@ -10,6 +10,8 @@
 
 ## Historias de Usuario completadas en este Sprint
 
+**Alcance vigente, 25/10/2026:** ejecución exclusiva en localhost, según la [adenda de validación local](<Alcance de validación local V_1_0_0.md>). La [evidencia local](evidencias/staging-local.json) verifica frontend, API, login, recursos protegidos y TLS; no se requiere infraestructura remota.
+
 El incremento se concentra en trabajo transversal sobre US-001 a US-015. Estas funcionalidades proceden de los Sprints 1 y 2; no se presentan como historias nuevas completadas en Sprint 3. Las tareas técnicas verificadas son:
 
 | Trabajo del incremento | Resultado comprobado | Trazabilidad |
@@ -50,7 +52,7 @@ La revisión con interesados debe registrar sus observaciones y aceptación sobr
 | Revisión del incremento | Revisar PR y evidencias; registrar observaciones | Par técnico distinto del autor, por confirmar |
 | Aceptación de interesados | Validar escenarios oficiales y documentar resultado | Líder e interesados |
 | Contraste y tecnología de asistencia | Completar las verificaciones WCAG no resueltas automáticamente | Equipo de calidad/UX, por asignar |
-| Seguridad operativa | TLS real, limitación de intentos y alertas/retención de auditoría | Equipo técnico, por asignar |
+| Seguridad operativa | Mantener la configuración local verificada y completar limitación de intentos y alertas/retención de auditoría | Equipo técnico, por asignar |
 | Conciliación Jira | Regularizar fechas y responsables con decisiones reales; conservar ECO-18 en revisión mientras corresponda | Líder y equipo |
 | Integración | Publicar y revisar la rama; comprobar CI y obtener aprobación del propietario | Equipo y propietario del repositorio |
 

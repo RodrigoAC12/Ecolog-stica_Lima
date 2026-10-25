@@ -1,6 +1,6 @@
 # EcoLogística Lima
 
-**Versión de este README:** 1.2.5 · **Actualizado:** 24/10/2026
+**Versión de este README:** 1.2.6 · **Actualizado:** 25/10/2026
 
 **EcoLogística Lima** es un proyecto de software orientado a la optimización sostenible de rutas de distribución de última milla para el escenario empresarial de **DistriRápido S.A.C.**
 
@@ -165,7 +165,7 @@ Los cuatro entregables obligatorios de la consigna de planificación se encuentr
 | 3. Matriz de riesgos y respuestas | [03 Registro de riesgos V_1_0_0](<docs/02 Planificación/03 Registro de riesgos V_1_0_0.md>) |
 | 4. Presupuesto financiero del MVP | [04 Presupuesto del proyecto V_1_0_0](<docs/02 Planificación/04 Presupuesto del proyecto V_1_0_0.md>) |
 
-**Estado y alcance temporal:** son artefactos documentales de planificación. El presupuesto es una **proyección académica** pendiente de validación del equipo, no evidencia de gastos. El documento adicional [Seguimiento Jira Sprint 2](<docs/02 Planificación/Anexos/Seguimiento Jira Sprint 2 V_1_0_3.md>) es un anexo de seguimiento posterior y no sustituye al cuarto entregable obligatorio.
+**Estado y alcance temporal:** son artefactos documentales de planificación. El presupuesto es una **estimación de planificación** pendiente de validación del equipo, no evidencia de gastos. El documento adicional [Seguimiento Jira Sprint 2](<docs/02 Planificación/Anexos/Seguimiento Jira Sprint 2 V_1_0_3.md>) es un anexo de seguimiento posterior y no sustituye al cuarto entregable obligatorio.
 
 ## Documentación del Proyecto
 
@@ -326,7 +326,7 @@ La [guía de SonarQube local](<docs/Calidad/03 SonarQube local.md>) describe el 
 | Seguridad OWASP 2025 | [04 OWASP V_1_0_0](<docs/03 Implementación/Sprint 03/04 OWASP V_1_0_0.md>) |
 | Accesibilidad WCAG | [05 WCAG V_1_0_0](<docs/03 Implementación/Sprint 03/05 WCAG V_1_0_0.md>) |
 
-La [adenda de planificación del Sprint 3](<docs/02 Planificación/Anexos/Planificación Sprint 3 V_1_0_0.md>) incorpora EP-06 y relaciona los ocho criterios con RF/RNF y DoD. La evaluación comprende pruebas reales y sus límites; revisión independiente, aceptación de interesados, contraste pendiente y staging externo se verifican por separado.
+La [adenda de planificación del Sprint 3](<docs/02 Planificación/Anexos/Planificación Sprint 3 V_1_0_0.md>) incorpora EP-06 y relaciona los ocho criterios con RF/RNF y DoD. El [alcance vigente](<docs/03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>) se limita a localhost. La [guía de staging local](<docs/Despliegue/Guía de staging.md>) describe HTTP local en 8080 y verificación TLS en 8443. No se requiere servidor ni dominio público. Revisión independiente, aceptación y comprobaciones WCAG pendientes se verifican por separado.
 
 **Checklist acumulado:** [seguimiento de correcciones en Jira y GitHub](docs/Calidad/02 Checklist de validación.md), con evidencias técnicas y pendientes que requieren decisión humana.
 
@@ -352,9 +352,10 @@ Los documentos de definición inicial se encuentran en `docs/01 Inicio/`, la pla
 | 1.2.3 | 06/10/2026 | Resultados locales con Docker, PostgreSQL y frontend, y estado de revisión de las cinco historias en Jira. |
 | 1.2.4 | 24/10/2026 | Preparación Pre-Sprint 3: planificación completa, evidencias y arquitectura técnica, pruebas de integridad, CI, accesibilidad y modularización de interfaz. |
 | 1.2.5 | 24/10/2026 | Cinco informes del Sprint 3, evidencias de calidad/seguridad/accesibilidad, adenda EP-06 y aclaración del estado posterior al merge. |
+| 1.2.6 | 25/10/2026 | Alcance localhost, staging local y verificación TLS sin infraestructura remota. |
 
 ---
 
 ## Licencia
 
-Proyecto académico desarrollado como parte del Proyecto Final de Asignatura.
+Proyecto EcoLogística Lima.

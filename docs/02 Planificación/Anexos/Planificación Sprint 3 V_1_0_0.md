@@ -2,7 +2,7 @@
 
 # Adenda de planificación — Sprint 3
 
-**Versión documental:** V_1_0_0 · **Fecha:** 24/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_1 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Base:** [Transformando a ágil V_1_0_1](<../01 Transformando a ágil V_1_0_1.md>) y [seguimiento de Sprint 2](<Seguimiento Jira Sprint 2 V_1_0_3.md>).<br>
 **Rama de entrega:** `Sprint-3` del fork `RodrigoAC12/Ecolog-stica_Lima`.
 
@@ -23,6 +23,8 @@ La línea base conserva 23 historias funcionales y 10 enablers. Esta adenda inco
 
 ## Criterios de cierre
 
+El despliegue se comprueba exclusivamente en localhost conforme a la [adenda de alcance del 25/10/2026](<../../03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>). La [evidencia local](<../../03 Implementación/Sprint 03/evidencias/staging-local.json>) acredita HTTP/HTTPS, login y recursos protegidos; no se requiere infraestructura remota.
+
 Las evidencias técnicas permiten revisar el trabajo; el cierre exige los puntos aplicables del DoD. Mantener en revisión los controles humanos o de entorno no acreditados. La rama de entrega y el PR no equivalen a aprobación ni a fusión en `main`.
 
 En Jira, Sprint 1 figuraba activo y Sprint 2/Sprint 3 futuros con fechas vencidas. No se crean fechas efectivas por inferencia: su regularización corresponde al equipo con fechas reales. ECO-18 permanece en QA y los pendientes ECO-47 a ECO-50 conservan su seguimiento independiente.
@@ -31,7 +33,7 @@ En Jira, Sprint 1 figuraba activo y Sprint 2/Sprint 3 futuros con fechas vencida
 
 | Documento o grupo | Tratamiento |
 |---|---|
-| README | Nueva versión documental 1.2.5, enlaces oficiales de Sprint 03 y estado posterior al merge |
+| README | Versión documental 1.2.6, enlaces oficiales de Sprint 03 y alcance localhost |
 | Notas 1.2.4 y guía Sonar | Aclaración de integración y evidencia del incremento posterior |
 | Planificación inicial de cinco épicas | Se conserva como línea base histórica; EP-06 se añade mediante esta adenda versionada |
 | Informes de Sprints 1 y 2 | Se conservan cortes del 29/09 y 06/10; el estado posterior se registra por separado |
@@ -44,3 +46,4 @@ En Jira, Sprint 1 figuraba activo y Sprint 2/Sprint 3 futuros con fechas vencida
 | Versión | Fecha | Cambio |
 |---|---|---|
 | V_1_0_0 | 24/10/2026 | Adenda EP-06, trazabilidad de los ocho criterios y tratamiento de documentos afectados. |
+| V_1_0_1 | 25/10/2026 | Alcance localhost y evidencia de validación del entorno local. |

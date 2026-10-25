@@ -1,30 +1,58 @@
 [← Volver al README](../../README.md)
 
-# Guía de staging — EcoLogística Lima
+# Guía de staging local — EcoLogística Lima
 
-**Versión del proyecto:** 1.2.4 · **Etapa:** Pre-Sprint 3.
+**Versión documental:** 1.0.1 · **Actualizado:** 25/10/2026 (Lima).
 
-La configuración de staging se define en `docker-compose.staging.yml`, `src/frontend/Dockerfile.staging` y `src/frontend/Caddyfile.staging`. Se mantiene separada del Compose local: PostgreSQL y el backend no publican puertos del anfitrión. Caddy sirve React compilado y actúa como proxy HTTPS para la API.
+El entorno se ejecuta exclusivamente en localhost. Docker Compose levanta PostgreSQL, API y frontend compilado detrás de Caddy. Solo el gateway publica puertos, enlazados a 127.0.0.1; la API y la base permanecen en la red interna. No se necesita dominio público ni servidor adicional.
 
-## Prerrequisitos de despliegue real
+## Preparación
 
-1. Servidor **no productivo** autorizado, DNS propio para staging y puertos 80/443 disponibles.
-2. Archivo `.env.staging` fuera del control de Git con secretos distintos a producción, basándose en `.env.staging.example` y reemplazando todos los valores ficticios.
-3. Volumen de base de datos aislado, firewall y control de acceso; no importar datos personales reales sin autorización.
-4. Prueba de resolución DNS, renovación automática de certificados TLS y respuesta de `https://<dominio>/health`.
+Desde la raíz del repositorio, con Docker Desktop activo:
 
-## Comprobación y ejecución
-
-Desde la raíz del repositorio:
-
-```bash
-docker compose --env-file .env.staging.example -f docker-compose.staging.yml config --quiet
-# Únicamente con secretos y servidor de staging autorizados:
-docker compose --env-file .env.staging -f docker-compose.staging.yml up -d --build
+```powershell
+& .venv/Scripts/python.exe scripts/prepare_local_staging.py
+$localEnvironment = Join-Path $env:LOCALAPPDATA 'EcoLogistica/staging.env'
+docker compose --project-name ecologistica-staging-local --env-file $localEnvironment -f docker-compose.staging.yml config --quiet
+docker compose --project-name ecologistica-staging-local --env-file $localEnvironment -f docker-compose.staging.yml up -d --build --wait
 ```
 
-La ejecución de `docker compose config` y la compilación de la imagen en CI solo validan **configuración y construcción**. No demuestran que un certificado real haya sido emitido ni que el servicio esté accesible externamente.
+El preparador genera una configuración privada fuera del repositorio y no sobrescribe una existente. Allí se encuentran la cuenta local y sus credenciales. No publicar ese archivo ni imprimir la configuración Compose expandida. La plantilla versionada contiene únicamente valores de ejemplo.
 
-**Antes de migrar** una base ya usada, realizar respaldo y revisar correos de cliente duplicados, porque la migración `0002_clients_email_unique` se detendrá al detectarlos. Evitar `docker compose down -v` porque elimina volúmenes persistentes. Registrar responsable, fecha, SHA desplegado, certificado, controles de roles, formularios y pruebas BDD.
+## Acceso
 
-**Evidencia de despliegue real:** pendiente de infraestructura y de aprobación del equipo.
+- Aplicación local: [http://localhost:8080](http://localhost:8080).
+- Aplicación con TLS local: [https://localhost:8443](https://localhost:8443).
+- Salud de API por TLS: [https://localhost:8443/health](https://localhost:8443/health).
+
+Caddy utiliza una CA interna para localhost. La confianza del navegador se administra por separado; no se modifica automáticamente el almacén de certificados de Windows. El acceso HTTP está limitado a la interfaz local. La comprobación TLS valida la cadena y el nombre del certificado mediante la CA seleccionada, sin desactivar la verificación.
+
+## Verificación
+
+Copiar únicamente el certificado público y ejecutar el comprobador:
+
+```powershell
+$localEnvironment = Join-Path $env:LOCALAPPDATA 'EcoLogistica/staging.env'
+$localAuthority = Join-Path $env:LOCALAPPDATA 'EcoLogistica/localhost-root.crt'
+docker compose --project-name ecologistica-staging-local --env-file $localEnvironment -f docker-compose.staging.yml cp gateway:/data/caddy/pki/authorities/local/root.crt $localAuthority
+& .venv/Scripts/python.exe scripts/verify_local_staging.py
+```
+
+Se verifica frontend HTTP/HTTPS, salud, cabeceras, rechazo sin autenticación, login y lectura de cuatro recursos protegidos. Los resultados sin tokens ni contraseñas se conservan en [staging-local.json](<../03 Implementación/Sprint 03/evidencias/staging-local.json>). Las migraciones deben indicar la revisión 0002_clients_email_unique al consultar Alembic dentro del backend.
+
+## Operación
+
+Los volúmenes persistentes pertenecen al proyecto Compose ecologistica-staging-local. Para detenerlo conservando datos:
+
+```powershell
+docker compose --project-name ecologistica-staging-local --env-file $localEnvironment -f docker-compose.staging.yml down
+```
+
+No utilizar down -v para una parada normal. Antes de migrar datos existentes, respaldarlos y revisar duplicados de correo. La validación local no acredita operación remota ni aprobación funcional de interesados.
+
+## Control documental
+
+| Versión | Fecha | Cambio |
+|---|---|---|
+| 1.0.0 | 24/10/2026 | Configuración inicial de staging. |
+| 1.0.1 | 25/10/2026 | Alcance localhost, acceso loopback y verificación TLS con CA local. |

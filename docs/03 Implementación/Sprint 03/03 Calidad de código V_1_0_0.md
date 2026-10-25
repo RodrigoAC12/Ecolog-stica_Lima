@@ -12,6 +12,8 @@
 
 ## 1. Resumen Ejecutivo de Quality Gate
 
+El despliegue se evalúa exclusivamente en localhost conforme a la [adenda del 25/10/2026](<Alcance de validación local V_1_0_0.md>). La [verificación local](evidencias/staging-local.json) se distingue del corte de métricas Sonar identificado a continuación.
+
 - **Estado del Quality Gate:** PASSED.
 - **Porcentaje de Cobertura de Pruebas (Coverage):** 89,9 % global en SonarQube; combina líneas y condiciones.
 - **Duplicación de Código:** 0,0 %.

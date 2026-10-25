@@ -8,6 +8,8 @@
 
 ## ¿Qué aprendimos?
 
+El alcance vigente se limita a localhost; la [adenda del 25/10/2026](<Alcance de validación local V_1_0_0.md>) y la [evidencia local](evidencias/staging-local.json) sustituyen la dependencia de infraestructura remota por una validación reproducible en esta PC.
+
 Aprendimos a distinguir la primera línea base de SonarQube de una evaluación efectiva del código nuevo: el primer Quality Gate devolvía condiciones vacías y el reanálisis posterior sí evaluó sus umbrales. La ausencia de alertas estáticas tampoco cubría toda la seguridad: una prueba negativa detectó la aceptación de tokens sin expiración y permitió corregirla.
 
 La evaluación de interfaz mostró otra diferencia útil: axe no notificó infracciones automáticas, pero las comprobaciones dirigidas detectaron seis fallas de foco relacionadas con una causa común. La revisión de la interacción y de las capturas complementó las métricas.
@@ -45,7 +47,7 @@ Ejecutar CI, CodeQL y auditorías sobre `main` y la rama de entrega. Mantener un
 |---|---|---|---|
 | Revisar el PR y las correcciones sin cambiar umbrales para ocultar hallazgos | Par técnico distinto del autor | Antes de integrar | Revisión registrada y CI aprobado |
 | Completar contraste, lector de pantalla y navegadores del alcance | Calidad/UX | Antes de declarar conformidad AA | Matriz de criterios y resultados por entorno |
-| Definir limitación de intentos, auditoría de login y seguridad del despliegue | Backend/infraestructura | Antes de exposición externa | Pruebas y configuración verificadas |
+| Definir limitación de intentos, auditoría de login y mantener la seguridad del despliegue local | Backend/infraestructura | Antes del cierre de la validación local | Pruebas y configuración verificadas |
 | Conciliar responsables, fechas y estados de Jira | Líder del proyecto y equipo | Antes del cierre administrativo | Tablero y acuerdos con fechas reales |
 | Priorizar escenarios no cubiertos de los formularios | Desarrollo frontend | Próxima iteración técnica | Cobertura por módulo y nuevas pruebas pertinentes |
 | Conservar los cinco informes y validar enlaces tras cada cambio | Responsable documental | En cada entrega | Comprobador de enlaces aprobado |

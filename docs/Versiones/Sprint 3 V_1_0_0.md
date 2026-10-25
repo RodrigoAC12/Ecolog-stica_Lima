@@ -30,7 +30,9 @@
 
 ## Límites y revisión requerida
 
-El resultado de contraste que axe deja incompleto, el uso humano de lector de pantalla y la compatibilidad completa de navegadores siguen por comprobar. También quedan aceptación BDD de interesados, revisión independiente, decisiones de calendario y staging externo HTTPS. No se cierra la épica ni se alteran fechas de ceremonias a partir de las pruebas automáticas.
+El resultado de contraste que axe deja incompleto, el uso humano de lector de pantalla y la compatibilidad completa de navegadores siguen por comprobar. También quedan aceptación BDD, revisión independiente y decisiones de calendario. No se cierra la épica ni se alteran fechas de ceremonias a partir de las pruebas automáticas.
+
+**Actualización del 25/10/2026:** el [alcance vigente](<../03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>) es localhost. El [entorno local](<../03 Implementación/Sprint 03/evidencias/staging-local.json>) verifica frontend HTTP/HTTPS, certificado TLS, salud, login y recursos protegidos; no se requiere infraestructura externa.
 
 La [revisión](<../03 Implementación/Sprint 03/01 Revisión del Sprint V_1_0_0.md>) y la [retrospectiva](<../03 Implementación/Sprint 03/02 Retrospectiva del Sprint V_1_0_0.md>) documentan el incremento y su plan de mejora con hechos observables. Los acuerdos personales y aprobaciones requieren registro por el equipo.
 

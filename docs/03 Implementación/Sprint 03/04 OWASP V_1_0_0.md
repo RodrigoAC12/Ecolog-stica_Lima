@@ -9,14 +9,16 @@
 
 ## 1. Matriz de Cumplimiento OWASP Top 10 2025
 
+**Actualización de alcance, 25/10/2026:** únicamente localhost, según la [adenda versionada](<Alcance de validación local V_1_0_0.md>). El [entorno verificado](evidencias/staging-local.json) utiliza HTTP de loopback y HTTPS con CA interna; no se exige servidor ni DNS público.
+
 Se utiliza la [lista oficial OWASP 2025](https://top10.owasp.org/2025/). La tabla de la consigna conserva nombres y orden de 2021 bajo el rótulo 2025; se mantiene la estructura solicitada y se corrige la clasificación. SSRF se revisa dentro del control de acceso y de los servicios aplicables, no como una categoría A10 independiente de 2025.
 
 | Categoría OWASP 2025 | Estado en proyecto | Hallazgos de SonarQube y comprobaciones complementarias |
 |---|---|---|
 | A01 — Broken Access Control | Bajo revisión; controles probados | Sin vulnerabilidades notificadas en el corte Sonar disponible. Las pruebas verifican 401 sin autenticación y 403 ante escrituras de AUDITOR en vehículos, pedidos, conductores y clientes. Falta completar la matriz de todos los roles y alcance por objeto. |
-| A02 — Security Misconfiguration | Bajo revisión | Configuración local y staging separadas, pero no se acredita un servidor externo HTTPS. SonarQube local aún necesita gestión de su contraseña inicial y acceso. Revisar cabeceras y configuración definitiva antes de exposición pública. |
+| A02 — Security Misconfiguration | Bajo revisión; entorno local verificado | Gateway limitado a 127.0.0.1, API y PostgreSQL sin puertos publicados. Se verifican cabeceras nosniff, DENY y no-referrer y rechazo sin autenticación. SonarQube mantiene controles de acceso independientes. |
 | A03 — Software Supply Chain Failures | Limpio en las auditorías ejecutadas; alcance limitado | [pip-audit](evidencias/python-audit.json) y [npm audit](evidencias/npm-audit.json) no detectaron avisos conocidos en esta ejecución. npm incluye dependencias de desarrollo. El scanner Sonar omitió SCA y la auditoría no certifica la cadena completa de suministro. |
-| A04 — Cryptographic Failures | Bajo revisión; controles probados | Contraseñas protegidas con scrypt, sal aleatoria y comparación constante. Las pruebas verifican hashes distintos y rechazo de credenciales incorrectas. La generación JWT exige clave configurada; queda acreditar TLS y gestión de secretos en staging. |
+| A04 — Cryptographic Failures | Bajo revisión; controles probados | Contraseñas con scrypt, sal aleatoria y comparación constante; JWT con clave configurada. TLS 1.3 local verifica cadena y hostname con la CA seleccionada. Secretos generados fuera del repositorio. HTTP se limita a loopback y no se presenta como tráfico cifrado. |
 | A05 — Injection | Bajo revisión; caso negativo probado | SQLAlchemy construye las consultas mediante parámetros. El intento de entrada SQL en el login devuelve 401 sin token. React presenta los valores como texto; no se considera probada toda variante de inyección mediante un único caso. |
 | A06 — Insecure Design | Bajo revisión | Las pruebas existentes verifican restricciones de estados y transacciones. Faltan análisis de abuso, límites de recursos y reglas de futuras rutas. No se atribuye implementación de US-016 a US-023. |
 | A07 — Authentication Failures | Bajo revisión; defecto corregido | Se reprodujo la aceptación de un JWT firmado sin `exp` y se corrigió exigiendo `exp` y `sub`. Se verifican token vencido, sin firma y sin expiración. Quedan limitación de intentos, política de sesión y demás controles de autenticación por definir. |
@@ -51,7 +53,7 @@ SonarQube no generó security hotspots ni vulnerabilidades en el [corte final re
 | Pruebas negativas y control de acceso | [test_security_assessment.py](../../../src/backend/tests/test_security_assessment.py), [JUnit PostgreSQL](evidencias/backend-postgres.xml) | 9 casos nuevos; suite completa 36/36 en cada base |
 | Integridad y auditoría | Tests existentes de rollback, duplicados y restricciones | Verificación automatizada; no aceptación humana |
 
-El informe registra resultados técnicos sobre datos de pruebas. Antes del cierre se requiere revisar los pendientes con responsable, actualizar el análisis de la revisión final y acreditar el entorno externo y la aceptación del DoD. Las auditorías de dependencias reflejan avisos conocidos al ejecutarse; no garantizan ausencia de vulnerabilidades futuras.
+El informe registra resultados técnicos sobre datos de pruebas. Antes del cierre se requiere revisar los pendientes con responsable, conservar la validación de la revisión final y acreditar la aceptación aplicable del DoD dentro del alcance localhost. Las auditorías reflejan avisos conocidos al ejecutarse; no garantizan ausencia de vulnerabilidades futuras.
 
 ## Control documental
 
