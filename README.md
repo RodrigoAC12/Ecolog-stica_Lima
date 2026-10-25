@@ -336,6 +336,8 @@ La [matriz de entrega y rúbrica](<docs/03 Implementación/Sprint 03/Matriz de e
 
 El [alcance vigente](<docs/03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>) se limita a localhost. La [guía de staging local](<docs/Despliegue/Guía de staging.md>) describe HTTP en 8080 y TLS en 8443. La evaluación de interfaz acredita 437 comprobaciones de contraste y 16 de interacción sobre 13 estados; quedan demostración/aceptación con interesados, revisión independiente y límites de tecnología de asistencia/navegadores. No se requiere infraestructura remota.
 
+La [prueba parcial con lector de pantalla](<docs/Calidad/06 Prueba con lector de pantalla.md>) acredita seis comprobaciones del acceso e Inicio con salida real de NVDA 2026.2. El recorrido completo de los módulos y la comprensión en la revisión del cliente o del usuario permanecen pendientes.
+
 **Checklist acumulado:** [seguimiento de correcciones en Jira y GitHub](docs/Calidad/02 Checklist de validación.md), con evidencias técnicas y pendientes que requieren decisión humana.
 
 **Estado de la base, 24/10/2026:** la versión 1.2.4 corresponde al commit `da3eef2`. El Sprint 3 continúa esa base como versión 1.3.0. La [conciliación de Sprints 1 y 2](<docs/03 Implementación/Pre-Sprint 3/04 Estado de Sprints 1 y 2 V_1_0_0.md>) conserva el corte anterior: cuatro historias de Sprint 2 finalizadas y ECO-18 en QA. Los resultados técnicos se distinguen de la aceptación funcional y las decisiones de calendario.

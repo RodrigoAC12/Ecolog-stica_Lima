@@ -2,7 +2,7 @@
 
 # Checklist de validación — Pre-Sprint 3
 
-**Versión documental:** 1.0.7 · **Versión del Sprint 3:** 1.3.0 · **Actualizado:** 25/10/2026. Se identifican los resultados históricos y las adendas posteriores.
+**Versión documental:** 1.0.8 · **Versión del Sprint 3:** 1.3.0 · **Actualizado:** 25/10/2026. Se identifican los resultados históricos y las adendas posteriores.
 
 **Corte histórico de base:** versión 1.2.4 · **Rama:** `Pre-Sprint-3` · **Fecha:** 24/10/2026.
 
@@ -56,11 +56,14 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [x] 13 estados de accesibilidad automática y 16 comprobaciones dirigidas aprobadas.
 - [x] Contraste funcional medido: 437 comprobaciones, mínimo 6,66:1; restantes incompletos decorativos identificados.
 - [x] Completar matriz técnica de dos versiones de Chrome, Edge y Firefox: seis versiones, 78 estados y 504 comprobaciones, con reintento identificado.
-- [ ] Completar revisión del cliente o del usuario con lector de pantalla; ejecución interrumpida por la comprobación de URL del control de Windows.
+- [x] [Prueba parcial real con NVDA](<06 Prueba con lector de pantalla.md>): seis comprobaciones de acceso e Inicio con transcripción.
+- [ ] Completar el recorrido NVDA de los cuatro módulos y sus mensajes; inspección de Windows interrumpida por verificación de URL.
+- [ ] Registrar comprensión y aceptación en la revisión del cliente o del usuario.
 - [x] Documentar revisión técnica de código, pruebas y evidencias, con responsables nominales.
 - [ ] Registrar revisión del cliente o del usuario, observaciones y aceptación aplicable.
 - [x] Validar el entorno local según la [adenda vigente](<../03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>).
 - [x] Asignar tareas a los cinco integrantes, fijar seguimiento, replanificar Sprint 3 y vincular versión Jira 1.3.0 sin liberar.
+- [x] Jira actualizado: ECO-52 a ECO-58 Finalizada por sus entregables verificables; recorrido integral NVDA en ECO-48 y aceptación aplicable pendientes.
 - [x] Regularizar lo verificable: Sprint 1 cerrado administrativamente con 10/10 tarjetas finalizadas y Sprint 3 activo con fecha real; evidencia antes/después conservada.
 - [ ] Mantener ECO-18 en QA y Sprint 2 sin cierre hasta la revisión del cliente o usuario.
 
@@ -83,3 +86,4 @@ Consultar el [registro de entrega del Sprint 3](<../Versiones/Sprint 3 V_1_0_0.m
 | 1.0.5 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
 | 1.0.6 | 25/10/2026 | Revisión técnica, compatibilidad ampliada, responsables nominales y seguimiento actualizado. |
 | 1.0.7 | 25/10/2026 | Regularización administrativa verificada y protocolo de revisión del cliente preparado. |
+| 1.0.8 | 25/10/2026 | Seis comprobaciones NVDA acreditadas; recorrido integral y aceptación diferenciados. |

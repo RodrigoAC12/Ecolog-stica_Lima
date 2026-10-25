@@ -2,7 +2,7 @@
 
 # Revisión técnica y plan de cierre — Sprint 3
 
-**Versión documental:** V_1_0_2 · **Proyecto:** EcoLogística Lima 1.3.0 · **Fecha:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_3 · **Proyecto:** EcoLogística Lima 1.3.0 · **Fecha:** 25/10/2026 (Lima).<br>
 **Alcance:** aplicación, API y bases de evaluación en localhost; historias US-001 a US-015.
 
 ## Responsables y seguimiento
@@ -35,7 +35,7 @@ Se revisaron autenticación y caducidad JWT, permisos de los endpoints de los cu
 
 Luis y Jhon asumen el seguimiento de la revisión técnica según su ámbito. El documento no registra su firma ni una aprobación personal que no haya sido recibida.
 
-La [matriz consolidada de navegadores](evidencias/compatibilidad-1.3.0.json) registra seis versiones aprobadas, 78 estados y 504 comprobaciones. Un reintento de Chrome 155 se identifica expresamente. La comprobación con lector de pantalla se interrumpió por la verificación de URL del control de Windows; no se registra como aprobada.
+La [matriz consolidada de navegadores](evidencias/compatibilidad-1.3.0.json) registra seis versiones aprobadas, 78 estados y 504 comprobaciones. Un reintento de Chrome 155 se identifica expresamente. La [prueba parcial con NVDA](<../../Calidad/06 Prueba con lector de pantalla.md>) acredita seis comprobaciones del acceso y de Inicio mediante su salida real. El recorrido integral sigue pendiente: la captura dejó de producir anuncios y la inspección de Windows se interrumpió por la verificación de URL; no se registra una aprobación completa.
 
 La API del frontend solicita respuestas sin almacenamiento en caché como medida preventiva de consistencia y privacidad; no se presenta una causa de fallo de caché como confirmada.
 
@@ -72,6 +72,14 @@ El [registro de revisión preparado](<Registro de revisión del cliente o del us
 
 La consigna cita además «TP2-ISI Consigna del repositorio PFA». La búsqueda repetida en el repositorio y Descargas no localizó ese texto; la consulta conectada devolvió únicamente su referencia en ECO-57 y advirtió fuentes parcialmente disponibles. Piero queda a cargo de contrastarlo cuando se facilite. Sí se verifican las reglas explícitas del adjunto recibido: Markdown, ubicación, nombres de los cinco informes y enlaces bidireccionales.
 
+
+
+### Cierre de entregables en Jira — 25/10/2026
+
+La [consulta posterior](evidencias/jira-seguimiento-1.3.0.json) verifica **ECO-52 a ECO-58 en Finalizada**: informe retrospectivo, calidad, seguridad, evaluación WCAG, organización, versionado y publicación documental. Cada tarjeta registra el motivo y el alcance del cierre. El [corte anterior](evidencias/jira-seguimiento-antes-cierre-entregables.json) se conserva.
+
+El cierre de ECO-55 corresponde al informe de evaluación, que incluye límites y comprobaciones pendientes; no declara recorrido integral NVDA aprobado ni conformidad AA universal. **ECO-51 y ECO-18 siguen en QA; ECO-47 a ECO-49 y ECO-59 siguen en curso; ECO-50 sigue en QA.** El recorrido NVDA restante se conserva en ECO-48. No se libera la versión ni se cierra la épica por completar los documentos.
+
 ## Control documental
 
 | Versión | Fecha | Cambio |
@@ -79,5 +87,6 @@ La consigna cita además «TP2-ISI Consigna del repositorio PFA». La búsqueda 
 | V_1_0_0 | 25/10/2026 | Revisión técnica, distribución nominal, mejoras priorizadas y seguimiento de cierre. |
 | V_1_0_1 | 25/10/2026 | Correcciones y comprobaciones de las herramientas locales de evaluación. |
 | V_1_0_2 | 25/10/2026 | Cierre administrativo de Sprint 1, activación real de Sprint 3 y preparación de los 30 escenarios de revisión. |
+| V_1_0_3 | 25/10/2026 | Prueba parcial con NVDA y límites del recorrido completo. |
 
 [← Volver al README](../../../README.md)

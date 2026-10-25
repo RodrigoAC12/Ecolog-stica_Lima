@@ -2,7 +2,7 @@
 
 # Entrega técnica del Sprint 3
 
-**Versión documental:** V_1_0_5 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_6 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Base:** versión 1.2.4, commit `da3eef2`.<br>
 **Rama:** `Sprint-3`.<br>
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
@@ -30,7 +30,7 @@
 
 ## Límites y revisión requerida
 
-La [matriz técnica consolidada](<../03 Implementación/Sprint 03/evidencias/compatibilidad-1.3.0.json>) acredita seis versiones de Chrome, Edge y Firefox: 78 estados y 504 comprobaciones aprobadas, con reintento identificado. Se corrigió la superposición decorativa de Inicio en móvil y se solicitó lectura fresca a la API como medida preventiva. La revisión del cliente o del usuario incluye lector de pantalla, comprensión, observaciones y aceptación, y permanece pendiente. La prueba con lector de pantalla se interrumpió al no verificarse la URL en la herramienta de control de Windows. No se atribuyen sesiones ni aprobaciones personales.
+La [matriz técnica consolidada](<../03 Implementación/Sprint 03/evidencias/compatibilidad-1.3.0.json>) acredita seis versiones de Chrome, Edge y Firefox: 78 estados y 504 comprobaciones aprobadas, con reintento identificado. Se corrigió la superposición decorativa de Inicio en móvil y se solicitó lectura fresca a la API como medida preventiva. La revisión del cliente o del usuario incluye lector de pantalla, comprensión, observaciones y aceptación, y permanece pendiente. La [prueba parcial de NVDA](<../Calidad/06 Prueba con lector de pantalla.md>) acredita seis comprobaciones del acceso e Inicio. El recorrido ampliado dejó de producir anuncios y la inspección se interrumpió al no verificarse la URL en la herramienta de control de Windows; no se registra aprobación integral. No se atribuyen sesiones ni aprobaciones personales.
 
 El [plan nominal de cierre](<../03 Implementación/Sprint 03/Revisión técnica y plan de cierre V_1_0_0.md>) distribuye trabajo entre los cinco integrantes. Jira conserva responsables y seguimiento: Sprint 1 cerrado administrativamente con 10/10 tarjetas ya finalizadas y Sprint 3 activo desde el 25/10/2026 a las 16:07:13 (Lima), con fin planificado el 08/11. La versión 1.3.0 permanece sin liberar. Sprint 2 conserva ECO-18 en QA; ese punto sigue condicionado a la revisión del cliente o usuario.
 
@@ -52,3 +52,4 @@ La [matriz de entrega frente a la consigna](<../03 Implementación/Sprint 03/Mat
 | V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
 | V_1_0_4 | 25/10/2026 | Revisión técnica, compatibilidad ampliada, responsables nominales y seguimiento actualizado. |
 | V_1_0_5 | 25/10/2026 | Cierre administrativo y activación verificados en Jira; protocolo de revisión preparado. |
+| V_1_0_6 | 25/10/2026 | Resultados parciales reales de NVDA y alcance restante documentado. |
