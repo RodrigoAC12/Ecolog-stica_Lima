@@ -3,12 +3,13 @@
 ## Contexto y alcance
 
 - **Rama de desarrollo vigente:** `Sprint-3`, autorizada por el usuario en el fork `RodrigoAC12/Ecolog-stica_Lima`. La base 1.2.4 ya está integrada en `jmartinez278/Ecolog-stica_Lima:main` mediante PR #3, commit `da3eef2`; la entrega del Sprint 3 requiere su propia revisión e integración.
-- **Versión del proyecto:** 1.2.4. Los documentos numerados `V_1_0_0` conservan su versión individual.
+- **Versión del proyecto:** 1.3.0 para Sprint 3; 1.2.4 es la base histórica integrada. Los documentos numerados `V_1_0_0` conservan su versión documental individual.
+- **Envío al propietario retirado:** PR #4 cerrado y solicitud de revisión cancelada. No reabrir, crear otro PR, solicitar revisores ni enviar la entrega al propietario hasta recibir una nueva orden expresa del usuario. La rama `Sprint-3` permanece para revisión previa.
 - Sprint 1 abarca US-001 a US-010; Sprint 2, US-011 a US-015. El trabajo de Pre-Sprint 3 solo prepara y verifica esa funcionalidad; no implementa US-016 en adelante.
 - Los entregables históricos están en `docs/03 Implementación/Sprint 1/` y `docs/03 Implementación/Sprint 2/`; mover un archivo no significa que su sesión o aceptación histórica haya ocurrido.
 - Los cinco informes oficiales del Sprint 3 están en `docs/03 Implementación/Sprint 03/`; conservar sus enlaces bidireccionales y evidencias, sin presentar resultados automáticos como aprobación humana.
 - Los cuatro entregables obligatorios de planificación están en `docs/02 Planificación/`; el seguimiento adicional está en `Anexos/`.
-- Registrar las mejoras frente al último `main` en [docs/Versiones/1.2.4.md](docs/Versiones/1.2.4.md). Consultar pruebas y validaciones en `docs/Calidad/`.
+- Registrar el Sprint 3 en [docs/Versiones/1.3.0.md](docs/Versiones/1.3.0.md); conservar [1.2.4](docs/Versiones/1.2.4.md) como antecedente. Consultar pruebas y validaciones en `docs/Calidad/`.
 - El estado de Jira y las ceremonias se basan en datos reales. No inventar revisores, fechas, sesiones, aprobaciones ni despliegues de staging.
 - No agregar secretos. Archivos `.env` operativos no deben almacenarse en Git.
 
@@ -53,4 +54,4 @@ Los workflows CodeQL y auditoría de dependencias deben pasar en la **rama final
 - Reglas de negocio: `docs/01 Inicio/09. Reglas de negocio V_1_0_0.md`.
 - Planificación: `docs/02 Planificación/01 Transformando a ágil V_1_0_1.md`.
 - Diseño visual: `DESIGN.md`.
-- Entrega: `docs/Versiones/1.2.4.md`.
+- Entrega en revisión previa: `docs/Versiones/1.3.0.md`.

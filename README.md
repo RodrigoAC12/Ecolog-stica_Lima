@@ -1,6 +1,6 @@
 # EcoLogística Lima
 
-**Versión de este README:** 1.2.6 · **Actualizado:** 25/10/2026
+**Versión del proyecto y de este README:** 1.3.0 · **Actualizado:** 25/10/2026
 
 **EcoLogística Lima** es un proyecto de software orientado a la optimización sostenible de rutas de distribución de última milla para el escenario empresarial de **DistriRápido S.A.C.**
 
@@ -306,15 +306,15 @@ El [registro de preparación técnica de seguridad](<docs/03 Implementación/Pre
 
 ## Preparación técnica del cambio unificado
 
-**Versión del proyecto:** [1.2.4 — alcance y condiciones de entrega](docs/Versiones/1.2.4.md).
+**Versión del proyecto:** [1.3.0 — Sprint 3 en revisión previa](docs/Versiones/1.3.0.md). La [versión 1.2.4](docs/Versiones/1.2.4.md) se conserva como base histórica.
 
 La [matriz de trazabilidad BDD](docs/Calidad/01 Matriz de pruebas BDD.md) relaciona las historias US-001 a US-015 con pruebas y pendientes de aceptación. La [guía de staging](docs/Despliegue/Guía de staging.md) documenta el despliegue mediante HTTPS que debe verificar el equipo con infraestructura real; la configuración en el fork no prueba que el sitio esté desplegado. La actualización del esquema utiliza migraciones Alembic explícitas y un índice que impide correos duplicados de clientes. El [seguimiento de correcciones](docs/Calidad/02 Checklist de validación.md) distingue entregables técnicos de aprobación humana.
 
 ## Estado
 
-### Preparación local de calidad del Sprint 3
+### Entrega consolidada del Sprint 3
 
-La [guía de SonarQube local](<docs/Calidad/03 SonarQube local.md>) describe el scanner y la cobertura backend/frontend. La [entrega técnica del Sprint 3](<docs/Versiones/Sprint 3 V_1_0_0.md>) se presenta en la rama `Sprint-3` para revisión mediante PR; no acredita por sí sola el cierre de ECO-53 o del Sprint 3.
+La [versión 1.3.0 del Sprint 3](docs/Versiones/1.3.0.md) permanece en la rama `Sprint-3` del fork para revisión previa del solicitante. El [PR #4](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/4) está **cerrado**, sin fusionar y sin solicitud de revisión activa. No se reenviará al propietario hasta una nueva orden expresa. La [guía Sonar](<docs/Calidad/03 SonarQube local.md>) conserva la evidencia del commit `3c1b45d`: gate aprobado, 92,4 % global, 100 % nuevo y cero problemas abiertos. Ese análisis precede a la corrección de los metadatos de versión a 1.3.0.
 
 ### Entregables del Sprint 3
 
@@ -326,7 +326,9 @@ La [guía de SonarQube local](<docs/Calidad/03 SonarQube local.md>) describe el 
 | Seguridad OWASP 2025 | [04 OWASP V_1_0_0](<docs/03 Implementación/Sprint 03/04 OWASP V_1_0_0.md>) |
 | Accesibilidad WCAG | [05 WCAG V_1_0_0](<docs/03 Implementación/Sprint 03/05 WCAG V_1_0_0.md>) |
 
-La [adenda de planificación del Sprint 3](<docs/02 Planificación/Anexos/Planificación Sprint 3 V_1_0_0.md>) incorpora EP-06 y relaciona los ocho criterios con RF/RNF y DoD. El [alcance vigente](<docs/03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>) se limita a localhost. La [guía de staging local](<docs/Despliegue/Guía de staging.md>) describe HTTP local en 8080 y verificación TLS en 8443. No se requiere servidor ni dominio público. Revisión independiente, aceptación y comprobaciones WCAG pendientes se verifican por separado.
+La [matriz de entrega y rúbrica](<docs/03 Implementación/Sprint 03/Matriz de entrega y rúbrica V_1_0_0.md>) permite revisar los ocho criterios, sus evidencias y límites. La [adenda de planificación](<docs/02 Planificación/Anexos/Planificación Sprint 3 V_1_0_0.md>) relaciona EP-06 con RF/RNF y DoD. Los cinco informes conservan los nombres de archivo solicitados; sus versiones internas e historiales identifican las actualizaciones.
+
+El [alcance vigente](<docs/03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>) se limita a localhost. La [guía de staging local](<docs/Despliegue/Guía de staging.md>) describe HTTP en 8080 y TLS en 8443. La evaluación de interfaz acredita 437 comprobaciones de contraste y 16 de interacción sobre 13 estados; quedan demostración/aceptación con interesados, revisión independiente y límites de tecnología de asistencia/navegadores. No se requiere infraestructura remota.
 
 **Checklist acumulado:** [seguimiento de correcciones en Jira y GitHub](docs/Calidad/02 Checklist de validación.md), con evidencias técnicas y pendientes que requieren decisión humana.
 
@@ -351,8 +353,7 @@ Los documentos de definición inicial se encuentran en `docs/01 Inicio/`, la pla
 | 1.2.2 | 06/10/2026 | Calendario exacto de Jira, DoD como criterio único de cierre, seguimiento revisado y alcance de las verificaciones del informe técnico. |
 | 1.2.3 | 06/10/2026 | Resultados locales con Docker, PostgreSQL y frontend, y estado de revisión de las cinco historias en Jira. |
 | 1.2.4 | 24/10/2026 | Preparación Pre-Sprint 3: planificación completa, evidencias y arquitectura técnica, pruebas de integridad, CI, accesibilidad y modularización de interfaz. |
-| 1.2.5 | 24/10/2026 | Cinco informes del Sprint 3, evidencias de calidad/seguridad/accesibilidad, adenda EP-06 y aclaración del estado posterior al merge. |
-| 1.2.6 | 25/10/2026 | Alcance localhost, staging local y verificación TLS sin infraestructura remota. |
+| 1.3.0 | 25/10/2026 | Sprint 3: cinco informes, evidencia de calidad/seguridad/accesibilidad, alcance localhost, versiones unificadas y revisión previa. PR #4 cerrado y revisión del propietario retirada. |
 
 ---
 
