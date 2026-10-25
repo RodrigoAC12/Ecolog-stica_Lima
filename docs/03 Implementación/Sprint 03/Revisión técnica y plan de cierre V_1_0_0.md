@@ -39,7 +39,7 @@ La [matriz consolidada de navegadores](evidencias/compatibilidad-1.3.0.json) reg
 
 La API del frontend solicita respuestas sin almacenamiento en caché como medida preventiva de consistencia y privacidad; no se presenta una causa de fallo de caché como confirmada.
 
-La [remediación de herramientas locales](<../../Calidad/05 Seguridad de herramientas locales.md>) incorpora configuración cifrada con DPAPI, migración sin cambio de credenciales, mínimo TLS explícito y nombre de video controlado localmente. Las cuatro pruebas de configuración y la repetición de 13 estados de interfaz aprobaron; el nuevo CodeQL verifica el cierre de las alertas registradas.
+La [remediación de herramientas locales](<../../Calidad/05 Seguridad de herramientas locales.md>) incorpora configuración cifrada con DPAPI, migración sin cambio de credenciales, mínimo TLS explícito y nombre de video controlado localmente. Las cuatro pruebas de configuración y la repetición de 13 estados de interfaz aprobaron; el nuevo CodeQL y su evidencia final confirman las tres alertas corregidas, con cero abiertas.
 
 ## Plan priorizado de mejoras de seguridad
 

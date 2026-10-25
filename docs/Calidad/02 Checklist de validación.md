@@ -43,6 +43,8 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 
 ## Adenda de Sprint 3 — estado vigente al 25/10/2026
 
+- [x] Triage de CodeQL: tres alertas de herramientas corregidas y verificadas en el reanálisis, cero abiertas. Configuración operativa cifrada y cuatro pruebas DPAPI aprobadas.
+
 - [x] Cinco informes oficiales preparados en `docs/03 Implementación/Sprint 03/` con retorno al README.
 - [x] Cuatro hallazgos S9011 corregidos y reanalizados.
 - [x] JWT sin expiración rechazado y probado.

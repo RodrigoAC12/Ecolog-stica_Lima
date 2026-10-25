@@ -45,7 +45,7 @@ SonarQube no generó security hotspots ni vulnerabilidades en el [análisis 1.3.
 
 ## 3. Alertas de herramientas locales
 
-La consulta del panel CodeQL identificó tres alertas adicionales en scripts, fuera del alcance de Sonar sobre la aplicación. La [revisión y remediación de herramientas](<../../Calidad/05 Seguridad de herramientas locales.md>) documenta severidad, alcance y comprobaciones: configuración local cifrada con DPAPI en lugar de un archivo de contraseñas en texto; TLS mínimo 1.2 explícito; y nombre del video tomado de la versión local validada. Cuatro pruebas de cifrado y migración aprobaron, la configuración operativa se conservó y la auditoría de interfaz se repitió con 13 estados aprobados. El cierre en CodeQL se contrasta en su nueva ejecución, sin descartar alertas manualmente.
+La consulta del panel CodeQL identificó tres alertas adicionales en scripts, fuera del alcance de Sonar sobre la aplicación. La [revisión y remediación de herramientas](<../../Calidad/05 Seguridad de herramientas locales.md>) documenta severidad, alcance y comprobaciones: configuración local cifrada con DPAPI en lugar de un archivo de contraseñas en texto; TLS mínimo 1.2 explícito; y nombre del video tomado de la versión local validada. Cuatro pruebas de cifrado y migración aprobaron, la configuración operativa se conservó y la auditoría de interfaz se repitió con 13 estados aprobados. El reanálisis CodeQL de `f7b7a15` aprobó; la [evidencia final](evidencias/codeql-herramientas-final.json) confirma las tres alertas corregidas y cero abiertas, sin descartes manuales.
 
 ## 4. Evidencias, límites y seguimiento
 

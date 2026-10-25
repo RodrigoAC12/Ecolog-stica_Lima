@@ -2,7 +2,7 @@
 
 # Seguridad de las herramientas locales — Sprint 3
 
-**Versión documental:** 1.0.0 · **Proyecto:** 1.3.0 · **Fecha:** 25/10/2026 (Lima).<br>
+**Versión documental:** 1.0.1 · **Proyecto:** 1.3.0 · **Fecha:** 25/10/2026 (Lima).<br>
 **Responsable:** Jhon Robert Paitan Montes; apoyo de Rodrigo Vladimir Arce Curi.
 
 ## Hallazgos y correcciones
@@ -37,12 +37,13 @@ La [API de protección de datos de Microsoft](https://learn.microsoft.com/en-us/
 node scripts/audit_accessibility.mjs cierre-herramientas edge
 ```
 
-El cierre de las alertas debe verificarse en el nuevo análisis de CodeQL de `Sprint-3`; no se descartan alertas manualmente ni se modifica su severidad para obtener un resultado favorable. Las auditorías evalúan su alcance concreto y la revisión del cliente o del usuario permanece pendiente.
+El [reanálisis de CodeQL del commit f7b7a15](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40233142086) aprobó y la [evidencia final](<../03 Implementación/Sprint 03/evidencias/codeql-herramientas-final.json>) confirma las tres alertas en estado `fixed`, cero abiertas y ninguna descartada manualmente. No se modificó su severidad para obtener un resultado favorable. Las auditorías evalúan su alcance concreto y la revisión del cliente o del usuario permanece pendiente.
 
 ## Control documental
 
 | Versión | Fecha | Cambio |
 |---|---|---|
 | 1.0.0 | 25/10/2026 | Tres hallazgos de herramientas, correcciones y validaciones de cifrado, TLS y auditoría de interfaz. |
+| 1.0.1 | 25/10/2026 | Reanálisis aprobado y cierre automático confirmado de las tres alertas. |
 
 [← Volver al README](../../README.md)
