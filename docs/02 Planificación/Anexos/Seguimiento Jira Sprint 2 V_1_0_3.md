@@ -1,4 +1,4 @@
-[← Volver al README principal](../../README.md)
+[← Volver al README principal](<../../../README.md>)
 
 # Seguimiento Jira — ECO Sprint 2
 
@@ -10,7 +10,7 @@
 |---:|---:|---:|---:|
 | **5** | **0** | **5 en revisión** | **5** |
 
-**Alcance del corte:** Jira devuelve el Sprint 2 en estado `future`, aunque su intervalo configurado ya había comenzado. El objetivo se registró a las 17:10 del 06/10/2026. Tras las pruebas locales, ECO-17 a ECO-21 pasaron de `To Do` a `In Review / QA`; siguen con prioridad `Highest` y sin responsable. El código de US-011 a US-015 ya fue integrado; una historia se declara `Done` únicamente cuando cumple todos los puntos aplicables del [Definition of Done](01%20Transformando%20a%20ágil%20V_1_0_1.md). `Requieren atención` cuenta las cinco tarjetas por prioridad alta, falta de asignación y DoD abierto; no indica un bloqueo técnico confirmado.
+**Alcance del corte:** Jira devuelve el Sprint 2 en estado `future`, aunque su intervalo configurado ya había comenzado. El objetivo se registró a las 17:10 del 06/10/2026. Tras las pruebas locales, ECO-17 a ECO-21 pasaron de `To Do` a `In Review / QA`; siguen con prioridad `Highest` y sin responsable. El código de US-011 a US-015 ya fue integrado; una historia se declara `Done` únicamente cuando cumple todos los puntos aplicables del [Definition of Done](<../01 Transformando a ágil V_1_0_1.md>). `Requieren atención` cuenta las cinco tarjetas por prioridad alta, falta de asignación y DoD abierto; no indica un bloqueo técnico confirmado.
 
 ## Fechas planificadas en Jira y hechos comprobados
 
@@ -28,7 +28,7 @@ El plazo del 07/10/2026 que aparecía en acciones internas de versiones anterior
 
 ## 1. Configuración y continuidad con Sprint 1
 
-Se reutiliza el mismo proyecto `ECO`, la épica [EP-01 / ECO-1](https://jhonpaitanrcm.atlassian.net/browse/ECO-1) y el tablero Scrum del [artefacto histórico del Sprint 1](02%20Artefactos%20Jira%20V_1_0_2.md). No se creó un tablero duplicado. La configuración consultada muestra columnas `To Do → In Progress → In Review / QA → Done`, estimación con Story Points y ranking. El Sprint 1 (ID 3) permanece `active` en Jira y el Sprint 2 (ID 37) está `future`; esas etiquetas no deben confundirse con el estado de Git.
+Se reutiliza el mismo proyecto `ECO`, la épica [EP-01 / ECO-1](https://jhonpaitanrcm.atlassian.net/browse/ECO-1) y el tablero Scrum del [artefacto histórico del Sprint 1](<../02 Artefactos Jira V_1_0_2.md>). No se creó un tablero duplicado. La configuración consultada muestra columnas `To Do → In Progress → In Review / QA → Done`, estimación con Story Points y ranking. El Sprint 1 (ID 3) permanece `active` en Jira y el Sprint 2 (ID 37) está `future`; esas etiquetas no deben confundirse con el estado de Git.
 
 ## 2. Backlog comprometido en Sprint 2
 
@@ -41,7 +41,7 @@ Se reutiliza el mismo proyecto `ECO`, la épica [EP-01 / ECO-1](https://jhonpait
 | US-015 Actualizar condiciones de entrega del cliente | [ECO-21](https://jhonpaitanrcm.atlassian.net/browse/ECO-21) | ECO-1 | 3 | In Review / QA | Sin asignar |
 | **Total** | **5 historias** |  | **15** | **0 Done** | **5 sin asignar** |
 
-Los criterios BDD están en [Transformando a ágil](01%20Transformando%20a%20ágil%20V_1_0_1.md). La integración técnica se describe en el [informe de estado del Sprint 2](../03%20Implementación/01%20Informe%20de%20estado%20del%20proyecto%20V_1_0_0.md).
+Los criterios BDD están en [Transformando a ágil](<../01 Transformando a ágil V_1_0_1.md>). La integración técnica se describe en el [informe de estado del Sprint 2](<../../03 Implementación/Sprint 2/01 Informe de estado del proyecto V_1_0_0.md>).
 
 ## 3. Sprint Planning y Sprint Goal
 
@@ -64,7 +64,7 @@ Registrar el objetivo no acredita una reunión de planificación. Las fechas del
 
 ## 5. Roadmap y release
 
-US-011 a US-015 continúan la épica EP-01 del Sprint 1; las épicas EP-02 a EP-05 permanecen fuera de este incremento. La [captura histórica del roadmap y de la release `v1.0.0-MVP`](02%20Artefactos%20Jira%20V_1_0_2.md) corresponde a la planificación inicial, no a un nuevo corte visual del Sprint 2. En esta revisión se consultaron datos de Jira, sin producir capturas nuevas ni declarar publicada una release.
+US-011 a US-015 continúan la épica EP-01 del Sprint 1; las épicas EP-02 a EP-05 permanecen fuera de este incremento. La [captura histórica del roadmap y de la release `v1.0.0-MVP`](<../02 Artefactos Jira V_1_0_2.md>) corresponde a la planificación inicial, no a un nuevo corte visual del Sprint 2. En esta revisión se consultaron datos de Jira, sin producir capturas nuevas ni declarar publicada una release.
 
 ## 6. Fuentes y límites de la evidencia
 
@@ -75,7 +75,7 @@ US-011 a US-015 continúan la épica EP-01 del Sprint 1; las épicas EP-02 a EP-
 - Atlassian Jira, `getJiraBoardConfig(boardId=2)`: columnas, filtro, campo de Story Points y ranking.
 - JQL ejecutado: `project = ECO ORDER BY created DESC`, vista `evidence`; proporcionó épica, prioridad y puntos de ECO-17 a ECO-21. El total de 15 puntos se suma de esos cinco valores.
 - GitHub, [PR #1](https://github.com/jmartinez278/EcoLog-stica-Lima/pull/1): creado el 06/10/2026 a las 19:08:38 UTC y fusionado a las 21:23:33 UTC. La consulta de reviews devolvió `[]`; la de ejecuciones de workflow asociadas al commit `53642da` también devolvió `[]`.
-- El 06/10/2026 Jira confirmó las transiciones de ECO-17 a ECO-21 a `In Review / QA`. Las comprobaciones locales están detalladas en el [informe de estado](../03%20Implementación/01%20Informe%20de%20estado%20del%20proyecto%20V_1_0_0.md). El estado de revisión no equivale a aceptación.
+- El 06/10/2026 Jira confirmó las transiciones de ECO-17 a ECO-21 a `In Review / QA`. Las comprobaciones locales están detalladas en el [informe de estado](<../../03 Implementación/Sprint 2/01 Informe de estado del proyecto V_1_0_0.md>). El estado de revisión no equivale a aceptación.
 - La consulta es una fotografía del momento. No demuestra reuniones, aceptación de stakeholders, revisión por pares ni estado posterior de las tarjetas.
 
 ## Historial de control de cambios

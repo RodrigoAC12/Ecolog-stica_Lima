@@ -1,3 +1,7 @@
+[← Volver al README principal](../../README.md)
+
+**Etapa:** Pre-Sprint 3 · **Versión del proyecto:** 1.2.4. El diagrama incluye elementos previstos en la arquitectura objetivo que todavía no han sido implementados en US-001 a US-015 (por ejemplo, optimización de rutas, mapas y métricas avanzadas).
+
 # Diagrama de APIs — EcoLogística Lima
 
 ## Arquitectura de APIs

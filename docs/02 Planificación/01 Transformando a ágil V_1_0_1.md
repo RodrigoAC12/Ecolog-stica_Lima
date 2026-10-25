@@ -1,4 +1,4 @@
-[← Volver al README Principal](../../README.md)
+[← Volver al README Principal](<../../README.md>)
 
 # Transformando a ágil
 
@@ -1399,7 +1399,7 @@ Al trasladar este backlog a Jira Software se mantendrán los mismos identificado
 
 # 12. Validación de cumplimiento del Artefacto 1
 
-Esta matriz verifica que el **artefacto de planificación define** los elementos solicitados. Un `✅` en esta tabla no acredita la ejecución de pruebas, análisis de seguridad, revisión por pares, staging ni aceptación de historias en el Sprint 1. El avance real se describe en el [informe de estado](../03%20Implementación/01%20Informe%20de%20estado%20del%20proyecto%20V_1_0_0.md).
+Esta matriz verifica que el **artefacto de planificación define** los elementos solicitados. Un `✅` en esta tabla no acredita la ejecución de pruebas, análisis de seguridad, revisión por pares, staging ni aceptación de historias en el Sprint 1. El avance real se describe en el [informe de estado](<../03 Implementación/Sprint 2/01 Informe de estado del proyecto V_1_0_0.md>).
 
 | Criterio de la consigna | Evidencia en este documento | Estado |
 |---|---|---|
@@ -1435,4 +1435,4 @@ Las Historias de Usuario y Enablers incluyen criterios de aceptación BDD/Gherki
 
 Este artefacto constituye la base formal para configurar el Product Backlog, Roadmap, Release y Sprint 1 en Atlassian Jira Software.
 
-[← Volver al README Principal](../../README.md)
+[← Volver al README Principal](<../../README.md>)

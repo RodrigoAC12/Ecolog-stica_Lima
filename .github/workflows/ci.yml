@@ -1,0 +1,107 @@
+name: ECO - CI de calidad
+
+on:
+  push:
+    branches: [Pre-Sprint-3]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Comprobar enlaces Markdown del repositorio
+        run: python3 scripts/check_markdown_links.py
+      - name: Validar configuracion Docker Compose (sin iniciar servicios)
+        run: docker compose --env-file .env.example config --quiet
+      - name: Validar configuracion staging sin desplegar
+        run: docker compose --env-file .env.staging.example -f docker-compose.staging.yml config --quiet
+      - name: Verificar build de frontend estatico para staging
+        run: docker build --file src/frontend/Dockerfile.staging --tag ecologistica-staging-check:ci src/frontend
+
+  backend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: src/backend/requirements.txt
+      - name: Instalar dependencias
+        run: python -m pip install -r requirements.txt
+      - name: Pruebas y cobertura minima 80 %
+        run: python -m pytest -q --cov=app --cov-report=term-missing --cov-report=xml:coverage.xml --cov-fail-under=80
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cobertura-backend
+          path: src/backend/coverage.xml
+          if-no-files-found: warn
+
+  postgres-integration:
+    name: PostgreSQL integration and audit rollback
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: ecologistica_test
+          POSTGRES_PASSWORD: ci-test-only
+          POSTGRES_DB: ecologistica_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U ecologistica_test -d ecologistica_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      TEST_DATABASE_URL: postgresql+psycopg://ecologistica_test:ci-test-only@127.0.0.1:5432/ecologistica_test
+      DATABASE_URL: postgresql+psycopg://ecologistica_test:ci-test-only@127.0.0.1:5432/ecologistica_test
+    defaults:
+      run:
+        working-directory: src/backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: src/backend/requirements.txt
+      - name: Install backend test dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run full test suite against isolated PostgreSQL
+        run: python -m pytest -q --cov=app --cov-report=term-missing --cov-fail-under=80
+      - name: Verify schema upgrades and migration head on empty test database
+        run: |
+          python -m alembic upgrade head
+          python -m alembic current
+          python -m alembic check
+
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: src/frontend/package-lock.json
+      - name: Instalar dependencias
+        run: npm ci
+      - name: Pruebas de frontend
+        run: npm test
+      - name: TypeScript y compilacion
+        run: npm run build

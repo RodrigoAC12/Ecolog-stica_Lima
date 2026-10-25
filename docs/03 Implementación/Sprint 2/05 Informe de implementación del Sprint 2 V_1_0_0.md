@@ -1,4 +1,4 @@
-[← Volver al README principal](../../README.md)
+[← Volver al README principal](<../../../README.md>)
 
 # Informe de implementación — ECO Sprint 2
 
@@ -107,7 +107,7 @@ El modelo de datos del Sprint 1 ya contenía todos los campos requeridos en `con
 | Contrato API | OpenAPI disponible con versión `0.2.0` |
 | Recorrido integrado | Registro y actualización de cliente, y registro y desactivación de conductor verificados sobre PostgreSQL local |
 
-La tabla conserva los resultados **registrados al elaborar la versión 1.0.0**. El 06/10/2026 esta revisión repitió dentro de Docker las 14 pruebas backend sobre SQLite y PostgreSQL aislado, las 5 pruebas frontend, el build y el arranque de Compose. `/health`, `/openapi.json`, login, listas autenticadas y proxy de Vite respondieron correctamente en `localhost`; una lectura sin token devolvió 401. La base PostgreSQL temporal se eliminó al terminar. El desglose de cobertura mostró `api/clients.py`, `api/drivers.py`, ambos repositorios, `services/drivers.py` y `schemas/operations.py` al 100 %, y `services/clients.py` al 96 %. Véase el [informe de estado](01%20Informe%20de%20estado%20del%20proyecto%20V_1_0_0.md). El recorrido de mutaciones sobre PostgreSQL de la versión 1.0.0 no se repitió vía HTTP; las mutaciones quedaron cubiertas en la suite aislada.
+La tabla conserva los resultados **registrados al elaborar la versión 1.0.0**. El 06/10/2026 esta revisión repitió dentro de Docker las 14 pruebas backend sobre SQLite y PostgreSQL aislado, las 5 pruebas frontend, el build y el arranque de Compose. `/health`, `/openapi.json`, login, listas autenticadas y proxy de Vite respondieron correctamente en `localhost`; una lectura sin token devolvió 401. La base PostgreSQL temporal se eliminó al terminar. El desglose de cobertura mostró `api/clients.py`, `api/drivers.py`, ambos repositorios, `services/drivers.py` y `schemas/operations.py` al 100 %, y `services/clients.py` al 96 %. Véase el [informe de estado](<01 Informe de estado del proyecto V_1_0_0.md>). El recorrido de mutaciones sobre PostgreSQL de la versión 1.0.0 no se repitió vía HTTP; las mutaciones quedaron cubiertas en la suite aislada.
 
 Comandos principales utilizados:
 
@@ -132,7 +132,7 @@ Las pruebas backend están en `src/backend/tests/test_drivers.py` y `src/backend
 
 ## Estado frente al Definition of Done
 
-La implementación, las pruebas automatizadas y el arranque local cuentan con evidencia de esta revisión; conservar sus salidas facilita una revisión externa. Este informe no declara las historias formalmente `Done`: el [Definition of Done](../02%20Planificación/01%20Transformando%20a%20ágil%20V_1_0_1.md) es el único criterio de cierre y exige cumplir todos los puntos aplicables. Los escenarios BDD se verifican dentro de DoD-10. Aún deben registrarse, según corresponda:
+La implementación, las pruebas automatizadas y el arranque local cuentan con evidencia de esta revisión; conservar sus salidas facilita una revisión externa. Este informe no declara las historias formalmente `Done`: el [Definition of Done](<../../02 Planificación/01 Transformando a ágil V_1_0_1.md>) es el único criterio de cierre y exige cumplir todos los puntos aplicables. Los escenarios BDD se verifican dentro de DoD-10. Aún deben registrarse, según corresponda:
 
 1. Revisión y aprobación por otro integrante del equipo mediante Pull Request.
 2. Análisis estático o de seguridad acordado por el equipo.

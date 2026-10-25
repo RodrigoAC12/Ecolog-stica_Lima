@@ -1,4 +1,4 @@
-[← Volver al README principal](../../README.md)
+[← Volver al README principal](<../../../README.md>)
 
 # Retrospectiva del Sprint 2 — análisis para validación del equipo
 
@@ -10,7 +10,7 @@
 
 El nombre `V_1_0_0` se mantiene por la consigna; el historial registra esta revisión.
 
-**Estado de la reunión:** no hay evidencia de una retrospectiva del equipo realizada al corte. Este análisis se basa en la comparación de `sprint-1` y `sprint-2`, las pruebas backend ejecutadas, el [registro de impedimentos](02%20Registro%20de%20Impedimentos%20V_1_0_0.md) y la consulta de [Jira](../02%20Planificación/04%20Seguimiento%20Jira%20Sprint%202%20V_1_0_3.md). Las acciones son propuestas verificables; no se atribuyen opiniones ni acuerdos a integrantes sin confirmación.
+**Estado de la reunión:** no hay evidencia de una retrospectiva del equipo realizada al corte. Este análisis se basa en la comparación de `sprint-1` y `sprint-2`, las pruebas backend ejecutadas, el [registro de impedimentos](<02 Registro de Impedimentos V_1_0_0.md>) y la consulta de [Jira](<../../02 Planificación/Anexos/Seguimiento Jira Sprint 2 V_1_0_3.md>). Las acciones son propuestas verificables; no se atribuyen opiniones ni acuerdos a integrantes sin confirmación.
 
 ## ¿Qué aprendimos?
 
