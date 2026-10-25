@@ -2,7 +2,7 @@ name: ECO - CI de calidad
 
 on:
   push:
-    branches: [Pre-Sprint-3]
+    branches: [main, Pre-Sprint-3]
   pull_request:
     branches: [main]
 

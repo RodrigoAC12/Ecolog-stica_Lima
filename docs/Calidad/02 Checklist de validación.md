@@ -21,9 +21,9 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 
 ## Verificaciones automáticas
 
-- [x] [CI de Pre-Sprint 3](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40141894546): 27 pruebas backend tanto en SQLite como en PostgreSQL 16, cobertura del 92,85 %, 6 pruebas frontend, build, migraciones Alembic, Docker y enlaces.
-- [x] [Auditoría de dependencias](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40141894558) aprobada.
-- [x] [CodeQL Python/TypeScript](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40141894532) aprobado con los análisis SARIF exportados.
+- [x] [CI del commit definitivo de Pre-Sprint 3](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40142101485): 27 pruebas backend tanto en SQLite como en PostgreSQL 16, cobertura del 92,85 %, 6 pruebas frontend, build, migraciones Alembic, Docker y enlaces.
+- [x] [Auditoría de dependencias del commit definitivo](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40142101462) aprobada.
+- [x] [CodeQL Python/TypeScript del commit definitivo](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40142101483) aprobado con los análisis SARIF exportados.
 - [ ] Realizar triage humano de las alertas visibles en el panel Code Scanning, si las hubiera; un workflow verde no certifica que no exista ningún riesgo.
 - [x] Validación automática de enlaces locales Markdown aprobada durante el CI de Pre-Sprint 3.
 
@@ -33,7 +33,8 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [ ] Prueba de staging real con DNS válido, certificado HTTPS/TLS y secretos gestionados fuera del repositorio.
 - [ ] Pruebas manuales de accesibilidad WCAG, 360 px, teclado y navegadores soportados.
 - [ ] Demostración y aceptación de los escenarios oficiales Gherkin por interesados.
-- [ ] Revisión independiente del código y aprobación del Pull Request por el propietario.
+- [x] [Integración del PR #3 por el propietario](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/3) el 24/10/2026, a las 19:46 (Lima).
+- [ ] Acreditar **revisión independiente del código** conforme a DoD-04: el PR #3 no registra reviews formales, aunque sí fue fusionado.
 - [ ] Confirmación de responsables, estado de sprints y ceremonias reales en Jira; no inventar reuniones ni fechas.
 
 **Referencias:** [Informe de seguridad](<../03 Implementación/Pre-Sprint 3/02 Informe de seguridad V_1_0_0.md>), [Integridad y auditoría](<../03 Implementación/Pre-Sprint 3/03 Informe de integridad y auditoría V_1_0_0.md>) y [Versión 1.2.4](../Versiones/1.2.4.md).

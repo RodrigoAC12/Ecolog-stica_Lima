@@ -314,7 +314,7 @@ La [matriz de trazabilidad BDD](docs/Calidad/01 Matriz de pruebas BDD.md) relaci
 
 **Checklist acumulado:** [seguimiento de correcciones en Jira y GitHub](docs/Calidad/02 Checklist de validación.md), con evidencias técnicas y pendientes que requieren decisión humana.
 
-**Control al 24/10/2026:** la preparación técnica anterior al Sprint 3 se desarrolla en la [rama `Pre-Sprint-3` del fork](https://github.com/RodrigoAC12/Ecolog-stica_Lima/tree/Pre-Sprint-3), no en `main` original. [Conciliación actual de los Sprints 1 y 2](<docs/03 Implementación/Pre-Sprint 3/04 Estado de Sprints 1 y 2 V_1_0_0.md>): cuatro historias de Sprint 2 están `Finalizada` y ECO-18 está en `In Review / QA`; la documentación histórica refleja el 06/10. Persisten validaciones de DoD, responsables y calendario por confirmar. No se declara empezado Sprint 3 ni aprobada la integración.
+**Integración al 24/10/2026:** la versión **1.2.4** ya está incorporada al [repositorio original, rama `main`](https://github.com/jmartinez278/Ecolog-stica_Lima/tree/main), mediante el [Pull Request #3](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/3), fusionado por `jmartinez278` el **24/10/2026 a las 19:46, hora de Lima** (merge `da3eef2`). La entrega se preparó en la [rama `Pre-Sprint-3`](https://github.com/RodrigoAC12/Ecolog-stica_Lima/tree/Pre-Sprint-3). [Estado documentado de los Sprints 1 y 2](<docs/03 Implementación/Pre-Sprint 3/04 Estado de Sprints 1 y 2 V_1_0_0.md>): el corte anterior registra cuatro historias del Sprint 2 como `Finalizada` y ECO-18 en `In Review / QA`. La fusión técnica **no demuestra** una revisión independiente formal ni cierra las validaciones humanas del DoD, la accesibilidad, el presupuesto, las ceremonias o staging TLS real. No se declara iniciado el Sprint 3.
 
 **Fase del incremento técnico al 06/10/2026:** incremento técnico del Sprint 2 publicado en `sprint-2` e integrado en `main`. Incorpora US-011 a US-015 sobre la base técnica del Sprint 1; la aceptación formal y el estado de Jira siguen pendientes de conciliación.
 
@@ -334,7 +334,7 @@ Los documentos de definición inicial se encuentran en `docs/01 Inicio/`, la pla
 | 1.2.1 | 06/10/2026 | Incorporación del informe técnico de implementación del Sprint 2. |
 | 1.2.2 | 06/10/2026 | Calendario exacto de Jira, DoD como criterio único de cierre, seguimiento revisado y alcance de las verificaciones del informe técnico. |
 | 1.2.3 | 06/10/2026 | Resultados locales con Docker, PostgreSQL y frontend, y estado de revisión de las cinco historias en Jira. |
-| 1.2.4 | 24/10/2026 | Preparación Pre-Sprint 3: planificación completa, evidencias y arquitectura técnica, pruebas de integridad, CI, accesibilidad y modularización de interfaz. |
+| 1.2.4 | 24/10/2026 | Preparación Pre-Sprint 3: planificación completa, integridad, CI, seguridad y frontend modular; integrada a `main` del propietario mediante PR #3, con validaciones formales del DoD todavía diferenciadas. |
 
 ---
 

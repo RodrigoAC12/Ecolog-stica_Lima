@@ -2,12 +2,12 @@
 
 ## Contexto y alcance
 
-- **Rama de desarrollo vigente:** `Pre-Sprint-3`, en el fork `RodrigoAC12/Ecolog-stica_Lima`; `main` del propietario permanece intacto hasta revisar y aprobar el PR.
+- **Base integrada vigente:** `jmartinez278/Ecolog-stica_Lima:main`, versión 1.2.4, por Pull Request [#3](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/3) fusionado el 24/10/2026 (merge `da3eef2`). El `main` del fork `RodrigoAC12/Ecolog-stica_Lima` está sincronizado con ese commit. `Pre-Sprint-3` conserva la entrega previa al merge; cualquier ajuste posterior debe hacerse en una rama de mantenimiento o de desarrollo nueva, mediante PR.
 - **Versión del proyecto:** 1.2.4. Los documentos académicos numerados `V_1_0_0` conservan su versión individual.
 - Sprint 1 abarca US-001 a US-010; Sprint 2, US-011 a US-015. El trabajo de Pre-Sprint 3 solo prepara y verifica esa funcionalidad; no implementa US-016 en adelante.
 - Los entregables históricos están en `docs/03 Implementación/Sprint 1/` y `docs/03 Implementación/Sprint 2/`; mover un archivo no significa que su sesión o aceptación histórica haya ocurrido.
 - Los cuatro entregables obligatorios de planificación están en `docs/02 Planificación/`; el seguimiento adicional está en `Anexos/`.
-- Registrar las mejoras frente al último `main` en [docs/Versiones/1.2.4.md](docs/Versiones/1.2.4.md). Consultar pruebas y validaciones en `docs/Calidad/`.
+- Las mejoras de 1.2.4 frente a la base 1.2.3 están registradas en [docs/Versiones/1.2.4.md](docs/Versiones/1.2.4.md). Los cambios posteriores llevan PR propio y registro de evidencias; consultar pruebas y validaciones en `docs/Calidad/`.
 - El estado de Jira y las ceremonias se basan en datos reales. No inventar revisores, fechas, sesiones, aprobaciones ni despliegues de staging.
 - No agregar secretos. Archivos `.env` operativos no deben almacenarse en Git.
 
@@ -44,7 +44,7 @@ docker compose --env-file .env.example config --quiet
 docker compose --env-file .env.staging.example -f docker-compose.staging.yml config --quiet
 ```
 
-Los workflows CodeQL y auditoría de dependencias deben pasar en la **rama final**. La revisión humana del PR, WCAG AA/360 px en navegadores reales, BDD con interesados y staging TLS real se comprueban por separado: una prueba automatizada no cierra el Definition of Done por sí misma.
+Los workflows CI, CodeQL y auditoría de dependencias se ejecutan en Pull Requests hacia `main` y deben ejecutarse al actualizar `main`. La revisión humana del PR, WCAG AA/360 px en navegadores reales, BDD con interesados y staging TLS real se comprueban por separado: una prueba automatizada no cierra el Definition of Done por sí misma.
 
 ## Documentos de referencia
 
