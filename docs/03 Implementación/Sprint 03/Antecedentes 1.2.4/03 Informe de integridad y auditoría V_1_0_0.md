@@ -1,8 +1,10 @@
-[← Volver al README](../../../README.md)
+[← Volver al README](../../../../README.md)
 
 # Informe de integridad transaccional y auditoría
 
-**Versión documental:** 1.0.0 · **Versión del proyecto:** 1.2.4 · **Etapa:** Pre-Sprint 3.
+> Antecedente histórico de la base 1.2.4, integrado documentalmente al Sprint 3 el 25/10/2026. Se conservan las fechas, resultados y límites del corte original. La entrega vigente es [Sprint 3 — versión 1.3.0](<../../../Versiones/1.3.0.md>), con [evaluaciones y alcance actuales](<../Matriz de entrega y rúbrica V_1_0_0.md>).
+
+**Versión documental:** 1.0.1 · **Versión del proyecto:** 1.2.4 · **Corte histórico:** 24/10/2026.
 
 ## Criterio técnico
 
@@ -32,4 +34,10 @@ La suite se ejecuta en SQLite efímero y PostgreSQL 16 aislado dentro de [GitHub
 
 Los tests documentan casos concretos, no una prueba exhaustiva de todas las concurrencias. La aprobación formal del DoD requiere revisión independiente y verificación de los escenarios oficiales; también quedan pendientes las pruebas de staging y UI por personas responsables.
 
-**Relacionados:** [Informe de seguridad](<02 Informe de seguridad V_1_0_0.md>) · [Matriz BDD](<../../Calidad/01 Matriz de pruebas BDD.md>) · [Versión 1.2.4](<../../Versiones/1.2.4.md>).
+**Relacionados:** [Informe de seguridad](<02 Informe de seguridad V_1_0_0.md>) · [Matriz BDD](<../../../Calidad/01 Matriz de pruebas BDD.md>) · [Versión 1.2.4](<../../../Versiones/1.2.4.md>).
+
+## Control documental
+
+| Versión | Fecha | Cambio |
+|---|---|---|
+| 1.0.1 | 25/10/2026 | Integración de antecedentes en Sprint 03, retiro de la etapa separada y enlaces actualizados. |

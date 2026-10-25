@@ -1,8 +1,8 @@
 [← Volver al README](../../README.md)
 
-# Checklist de validación — Pre-Sprint 3
+# Checklist de validación — Sprint 3
 
-**Versión documental:** 1.0.9 · **Versión del Sprint 3:** 1.3.0 · **Actualizado:** 25/10/2026. Se identifican los resultados históricos y las adendas posteriores.
+**Versión documental:** 1.0.10 · **Versión del Sprint 3:** 1.3.0 · **Actualizado:** 25/10/2026. Se identifican los resultados históricos y las adendas posteriores.
 
 **Corte histórico de base:** versión 1.2.4 · **Rama:** `Pre-Sprint-3` · **Fecha:** 24/10/2026.
 
@@ -12,7 +12,7 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 
 - [x] Conservar los 13 documentos de Inicio sin modificar los hechos históricos.
 - [x] Incorporar el presupuesto como cuarto entregable de Planificación; seguimiento Jira en Anexos.
-- [x] Agrupar informes en carpetas Sprint 1, Sprint 2 y Pre-Sprint 3; documentar las modificaciones globales en [Versión 1.2.4](../Versiones/1.2.4.md).
+- [x] Agrupar informes en carpetas Sprint 1, Sprint 2 y antecedentes de la base 1.2.4 integrados en Sprint 03; documentar las modificaciones globales en [Versión 1.2.4](../Versiones/1.2.4.md).
 - [x] Centralizar diagramas de API y C4 en `docs/Arquitectura/`.
 - [x] Incorporar migraciones explícitas Alembic e índice de unicidad de correo del cliente.
 - [x] Añadir pruebas de rollback, auditoría y salvaguarda de bases de prueba.
@@ -23,11 +23,11 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 
 ## Verificaciones automáticas
 
-- [x] [CI de Pre-Sprint 3](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40141894546): 27 pruebas backend tanto en SQLite como en PostgreSQL 16, cobertura del 92,85 %, 6 pruebas frontend, build, migraciones Alembic, Docker y enlaces.
+- [x] [CI de la base histórica 1.2.4](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40141894546): 27 pruebas backend tanto en SQLite como en PostgreSQL 16, cobertura del 92,85 %, 6 pruebas frontend, build, migraciones Alembic, Docker y enlaces.
 - [x] [Auditoría de dependencias](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40141894558) aprobada.
 - [x] [CodeQL Python/TypeScript](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40141894532) aprobado con los análisis SARIF exportados.
 - [x] Triage técnico actualizado el 25/10: tres alertas corregidas y cero abiertas; evidencia en la adenda de Sprint 3.
-- [x] Validación automática de enlaces locales Markdown aprobada durante el CI de Pre-Sprint 3.
+- [x] Validación automática de enlaces locales Markdown aprobada durante el CI de la base histórica 1.2.4.
 
 ## Validaciones formales pendientes
 
@@ -39,7 +39,7 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [x] Integración técnica de la base 1.2.4 con 24/10/2026; no sustituye la revisión independiente requerida.
 - [ ] Confirmación de responsables, estado de sprints y ceremonias reales en Jira; no inventar reuniones ni fechas.
 
-**Referencias:** [Informe de seguridad](<../03 Implementación/Pre-Sprint 3/02 Informe de seguridad V_1_0_0.md>), [Integridad y auditoría](<../03 Implementación/Pre-Sprint 3/03 Informe de integridad y auditoría V_1_0_0.md>) y [Versión 1.2.4](../Versiones/1.2.4.md).
+**Referencias:** [Informe de seguridad](<../03 Implementación/Sprint 03/Antecedentes 1.2.4/02 Informe de seguridad V_1_0_0.md>), [Integridad y auditoría](<../03 Implementación/Sprint 03/Antecedentes 1.2.4/03 Informe de integridad y auditoría V_1_0_0.md>) y [Versión 1.2.4](../Versiones/1.2.4.md).
 
 ## Adenda de Sprint 3 — estado vigente al 25/10/2026
 
@@ -77,7 +77,7 @@ Consultar el [registro de entrega del Sprint 3](<../Versiones/Sprint 3 V_1_0_0.m
 
 | Versión | Fecha | Cambio |
 |---|---|---|
-| 1.0.0 | 24/10/2026 | Checklist de la base Pre-Sprint 3. |
+| 1.0.0 | 24/10/2026 | Checklist de la base histórica 1.2.4. |
 | 1.0.1 | 24/10/2026 | Adenda del incremento de Sprint 3. |
 | 1.0.2 | 25/10/2026 | Alcance y comprobación localhost. |
 | 1.0.3 | 25/10/2026 | Evidencias de contraste, cobertura, Sonar y matriz de entrega única. |
@@ -87,3 +87,4 @@ Consultar el [registro de entrega del Sprint 3](<../Versiones/Sprint 3 V_1_0_0.m
 | 1.0.7 | 25/10/2026 | Regularización administrativa verificada y protocolo de revisión del cliente preparado. |
 | 1.0.8 | 25/10/2026 | Seis comprobaciones NVDA acreditadas; recorrido integral y aceptación diferenciados. |
 | 1.0.9 | 25/10/2026 | Recorrido NVDA aprobado, correcciones verificadas y aceptación del cliente o usuario pendiente. |
+| 1.0.10 | 25/10/2026 | Integración de antecedentes en Sprint 03, retiro de la etapa separada y enlaces actualizados. |

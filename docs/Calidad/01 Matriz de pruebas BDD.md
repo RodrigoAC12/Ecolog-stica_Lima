@@ -2,9 +2,9 @@
 
 # Matriz de pruebas BDD — Sprints 1 y 2
 
-**Versión documental:** 1.0.4 · **Versión del proyecto vigente:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
+**Versión documental:** 1.0.5 · **Versión del proyecto vigente:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
 
-**Base histórica:** 1.2.4 · **Etapa de origen:** Pre-Sprint 3. Los escenarios completos Gherkin se conservan en [Transformando a ágil](<../02 Planificación/01 Transformando a ágil V_1_0_1.md>). La siguiente matriz relaciona cada historia con los tests implementados; no afirma aceptación formal.
+**Base histórica:** 1.2.4 · **Corte de origen:** 24/10/2026. Los escenarios completos Gherkin se conservan en [Transformando a ágil](<../02 Planificación/01 Transformando a ágil V_1_0_1.md>). La siguiente matriz relaciona cada historia con los tests implementados; no afirma aceptación formal.
 
 | Historia | Alcance | Prueba automatizada relacionada |
 |---|---|---|
@@ -29,7 +29,7 @@
 - **Integridad y auditoría:** `test_transaction_audit.py`, `test_database_safety.py`, `test_client_email_uniqueness.py`.
 - **Autenticación y permisos:** `test_auth.py` y las respuestas HTTP probadas por cada módulo.
 - **Frontend:** `src/frontend/src/App.test.tsx` con React Testing Library y mocks de red; incluye enlace de salto por teclado.
-- **Entorno:** tests backend con SQLite y PostgreSQL 16 aislado; migraciones, documentación y compilación en [Actions](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions?query=branch%3APre-Sprint-3).
+- **Entorno:** tests backend con SQLite y PostgreSQL 16 aislado; migraciones, documentación y compilación en [Actions](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions?query=branch%3ASprint-3).
 
 ## Adenda del Sprint 3
 
@@ -55,3 +55,4 @@ El resultado de un test unitario o de integración no equivale a la aceptación 
 | 1.0.2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | 1.0.3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
 | 1.0.4 | 25/10/2026 | Registro de 30 escenarios preparado y estado técnico de accesibilidad actualizado. |
+| 1.0.5 | 25/10/2026 | Integración de antecedentes en Sprint 03, retiro de la etapa separada y enlaces actualizados. |

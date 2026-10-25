@@ -2,7 +2,7 @@
 
 # Entrega técnica del Sprint 3
 
-**Versión documental:** V_1_0_7 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_8 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Base:** versión 1.2.4, commit `da3eef2`.<br>
 **Rama:** `Sprint-3`.<br>
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
@@ -15,7 +15,7 @@
 | Seguridad | JWT exige expiración y sujeto; nueve pruebas negativas adicionales | [Informe 04](<../03 Implementación/Sprint 03/04 OWASP V_1_0_0.md>) |
 | Accesibilidad | Gestión de foco y estilos de controles; auditoría reproducible de 13 estados | [Informe 05](<../03 Implementación/Sprint 03/05 WCAG V_1_0_0.md>) |
 | Documentación | Cinco Markdown oficiales, enlaces bidireccionales y adenda EP-06 | [README](../../README.md) y [planificación](<../02 Planificación/Anexos/Planificación Sprint 3 V_1_0_0.md>) |
-| CI | Controles al actualizar `main`, `Pre-Sprint-3` y `Sprint-3`; cobertura frontend conservada | `.github/workflows/` |
+| CI | Controles al actualizar `main` y `Sprint-3`; cobertura frontend conservada | `.github/workflows/` |
 | Organización | Resultados generados ignorados, evidencia seleccionada conservada | `.gitignore` y `docs/03 Implementación/Sprint 03/evidencias/` |
 
 ## Verificaciones locales
@@ -54,3 +54,4 @@ La [matriz de entrega frente a la consigna](<../03 Implementación/Sprint 03/Mat
 | V_1_0_5 | 25/10/2026 | Cierre administrativo y activación verificados en Jira; protocolo de revisión preparado. |
 | V_1_0_6 | 25/10/2026 | Resultados parciales reales de NVDA y alcance restante documentado. |
 | V_1_0_7 | 25/10/2026 | Recorrido NVDA aprobado, correcciones verificadas y aceptación del cliente o usuario pendiente. |
+| V_1_0_8 | 25/10/2026 | Integración de antecedentes en Sprint 03, retiro de la etapa separada y enlaces actualizados. |
