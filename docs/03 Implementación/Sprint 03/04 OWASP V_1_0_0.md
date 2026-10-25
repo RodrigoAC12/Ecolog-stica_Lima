@@ -30,7 +30,7 @@ Se utiliza la [lista oficial OWASP 2025](https://top10.owasp.org/2025/). La tabl
 
 ## 2. Detalles de Security Hotspots y Vulnerabilidades Críticas
 
-SonarQube no generó security hotspots ni vulnerabilidades en el [análisis 1.3.0](evidencias/sonar-1.3.0.json), revisión `2af41c1`, con Quality Gate aprobado. **Hotspot #1 y Hotspot #2: no aplican; se detectaron cero.** El análisis usa los perfiles activos `Sonar way core`; no sustituye una prueba de penetración ni todos los controles de OWASP. Los cuatro problemas corregidos S9011 son de fiabilidad, no se presentan como vulnerabilidades.
+SonarQube no generó security hotspots ni vulnerabilidades en el [análisis 1.3.0](evidencias/sonar-1.3.0.json), revisión `7f455d4`, con Quality Gate aprobado. **Hotspot #1 y Hotspot #2: no aplican; se detectaron cero.** El análisis usa los perfiles activos `Sonar way core`; no sustituye una prueba de penetración ni todos los controles de OWASP. Los cuatro problemas corregidos S9011 son de fiabilidad, no se presentan como vulnerabilidades.
 
 ### SEC-01 — Token firmado sin fecha de expiración
 

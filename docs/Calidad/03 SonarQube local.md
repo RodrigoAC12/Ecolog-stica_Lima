@@ -2,11 +2,11 @@
 
 # Preparación del análisis local con SonarQube
 
-**Versión documental:** 1.0.5 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
+**Versión documental:** 1.0.6 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
 
 ## Alcance
 
-Análisis local de ECO-53 para la versión 1.3.0. La [evidencia actual](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) identifica la revisión `2af41c1`, procesada el 25/10/2026 a las 02:03:48 de Lima con árbol de trabajo limpio. El Quality Gate aprueba las tres condiciones, cobertura global 92,4 %, nueva 100 %, duplicación 0 % y cero problemas abiertos. Las secciones posteriores conservan los cortes históricos. El despliegue localhost se comprueba por separado; Sonar no sustituye aceptación funcional.
+Análisis local de ECO-53 para la versión 1.3.0. La [evidencia actual](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) identifica la revisión `7f455d4`, procesada el 25/10/2026 a las 15:44:18 de Lima con árbol de trabajo limpio. El Quality Gate aprueba las tres condiciones, cobertura global 92,4 %, nueva 100 %, duplicación 0 % y cero problemas abiertos. Las secciones posteriores conservan los cortes históricos. El despliegue localhost se comprueba por separado; Sonar no sustituye aceptación funcional.
 
 ## Herramientas y configuración
 
@@ -45,16 +45,21 @@ Crear un token de análisis del proyecto desde la cuenta SonarQube autorizada. I
 ```powershell
 $sonarSecureToken = Read-Host 'Token de análisis del proyecto' -AsSecureString
 $env:SONAR_TOKEN = [System.Net.NetworkCredential]::new('', $sonarSecureToken).Password
-$env:SONAR_HOST_URL = 'http://localhost:9000'
+$env:SONAR_HOST_URL = 'http://127.0.0.1:9000'
+$env:JAVA_HOME = 'C:\Program Files\Java\jdk-21.0.12.1'
+$sonarJava = Join-Path $env:JAVA_HOME 'bin/java.exe'
+$env:SONAR_SCANNER_JAVA_OPTS = '-Xmx512m'
 try {
-    npx.cmd --yes @sonar/scan@5.0.2 '-Dsonar.qualitygate.wait=true'
+    npx.cmd --yes @sonar/scan@5.0.2 '-Dsonar.scanner.skipJreProvisioning=true' "-Dsonar.scanner.javaExePath=$sonarJava" '-Dsonar.javascript.node.maxspace=512' '-Dsonar.qualitygate.wait=true'
 } finally {
-    Remove-Item Env:SONAR_TOKEN -ErrorAction SilentlyContinue
+    Remove-Item Env:SONAR_TOKEN,Env:SONAR_SCANNER_JAVA_OPTS -ErrorAction SilentlyContinue
     Remove-Variable sonarSecureToken -ErrorAction SilentlyContinue
 }
 ```
 
 El scanner puede obtener su runtime Java automáticamente. Si se utiliza el JDK instalado, configurar `JAVA_HOME` y su carpeta `bin` en el `PATH` de esa terminal, y pasar `-Dsonar.scanner.skipJreProvisioning=true`. En equipos con memoria ajustada pueden limitarse el heap del scanner mediante `SONAR_SCANNER_JAVA_OPTS` y el de JavaScript mediante `sonar.javascript.node.maxspace`.
+
+En esta PC se fija explícitamente `sonar.scanner.javaExePath`: hay dos Java en el PATH y el descubrimiento automático de esta versión del scanner devolvió ambas rutas como si fueran un ejecutable. Se usa la dirección IPv4 de loopback para las llamadas de análisis. El token temporal de la comprobación se revocó al finalizar.
 
 Un código de salida por Quality Gate fallido debe investigarse en el panel: distinguir un análisis procesado con hallazgos de un fallo de ejecución. No cambiar umbrales ni excluir código para ocultar resultados.
 
@@ -144,3 +149,4 @@ La ejecución previa del commit publicado `cde28d7`, análisis `dfc82560-3601-49
 | 1.0.3 | 25/10/2026 | Análisis sobre commit limpio, resultados actuales y antecedentes de la revisión publicada. |
 | 1.0.4 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
 | 1.0.5 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
+| 1.0.6 | 25/10/2026 | Nuevo análisis del código actualizado, Java explícito y conexión de loopback comprobados. |

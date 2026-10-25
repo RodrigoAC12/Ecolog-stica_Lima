@@ -3,11 +3,11 @@
 # Evaluación de Calidad de Código — SonarQube
 
 **Nombre del Proyecto:** EcoLogística Lima<br>
-**Fecha de Análisis:** 2026-10-25, 02:03:48 (America/Lima).<br>
+**Fecha de Análisis:** 2026-10-25, 15:44:18 (America/Lima).<br>
 **Versión documental:** V_1_0_4 · **Versión del proyecto:** 1.3.0<br>
-**Versión del Análisis:** V_1_0_3, corte del 25/10/2026 a las 02:03:48 (Lima).<br>
+**Versión del Análisis:** V_1_0_4, corte del 25/10/2026 a las 15:44:18 (Lima).<br>
 **Herramientas:** SonarQube Community Build 26.10.0.133078, SonarScanner para NPM 5.0.2.<br>
-**Revisión Git analizada:** `2af41c1c1b1caa8fbc7c55078fe3b5a7d4a99ef9`, sin cambios sin commit al iniciar el scanner.<br>
+**Revisión Git analizada:** `7f455d43d925c90ba9f45be5d682c28cdec17556`, sin cambios sin commit al iniciar el scanner.<br>
 **Versión técnica analizada:** `1.3.0`.
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
 
@@ -19,9 +19,9 @@ El despliegue se evalúa exclusivamente en localhost conforme a la [adenda del 2
 - **Porcentaje de Cobertura de Pruebas (Coverage):** 92,4 % global en SonarQube; combina líneas y condiciones.
 - **Duplicación de Código:** 0,0 %.
 - **Cobertura de líneas:** 93,2 %; **cobertura de condiciones:** 88,1 %.
-- **Código fuente no comentado:** 1.529 líneas.
+- **Código fuente no comentado:** 1.530 líneas.
 
-El análisis `9874884e-ff57-4dd0-9224-738fa4ab98bd` finalizó con procesamiento `SUCCESS`. Esta ejecución evaluó tres condiciones respecto de `1.2.4-sprint3-final`, sin ignorar ninguna:
+El análisis `3db42d5c-16d2-4bb8-ba78-9d4040d3eb18` finalizó con procesamiento `SUCCESS`. Esta ejecución evaluó tres condiciones respecto de `1.2.4-sprint3-final`, sin ignorar ninguna:
 
 | Condición de código nuevo | Umbral aplicado por el servidor | Resultado | Estado |
 |---|---|---:|---|
@@ -76,7 +76,9 @@ La evaluación posterior incorporó dos mejoras adicionales: validación obligat
 | Revisión técnica y seguimiento | Revisar código y evidencias; conservar la revisión del cliente o del usuario pendiente | Jhon Robert Paitan Montes y Luis Antony Gonzalo Guerrero | Seguimiento 26/10/2026 |
 | Accesibilidad y aceptación | Evaluación WCAG y escenarios BDD con evidencia real | Luis Antony Gonzalo Guerrero y Marco Jhair Martinez Llanos | Revisión del cliente o del usuario pendiente |
 
-No se cambiaron umbrales, perfiles ni exclusiones para resolver los hallazgos. El análisis utiliza los perfiles `Sonar way core` disponibles. Cero vulnerabilidades detectadas no es una certificación de seguridad: el informe OWASP documenta los controles complementarios. El scanner vigente identifica `2af41c1`, recupera la información SCM y analiza un árbol de trabajo limpio; debe repetirse si cambia el código fuente posteriormente. El token temporal se revocó al terminar.
+No se cambiaron umbrales, perfiles ni exclusiones para resolver los hallazgos. El análisis utiliza los perfiles `Sonar way core` disponibles. Cero vulnerabilidades detectadas no es una certificación de seguridad: el informe OWASP documenta los controles complementarios. El scanner vigente identifica `7f455d4`, recupera la información SCM y analiza un árbol de trabajo limpio; debe repetirse si cambia el código fuente posteriormente. El token temporal se revocó al terminar.
+
+El [corte previo de 1.3.0](evidencias/sonar-1.3.0-2af41c1.json) se conserva con su revisión original; el JSON vigente corresponde al código actualizado y al commit identificado arriba.
 
 ## Control documental
 
