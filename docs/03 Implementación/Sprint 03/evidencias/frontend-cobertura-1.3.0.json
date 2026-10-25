@@ -1,42 +1,43 @@
 {
-  "executed_at": "2026-10-25T14:54:51.357881+00:00",
+  "executed_at": "2026-10-25T22:01:05.537721+00:00",
   "project_version": "1.3.0",
   "source": "Vitest V8: src/frontend/coverage/lcov.info",
+  "application_commit": "647f0a2193f5c0ddf7a5f5923d2c309b4c524925",
   "summary": {
     "lines": {
-      "total": 205,
-      "covered": 189,
-      "percent": 92.19
+      "total": 207,
+      "covered": 192,
+      "percent": 92.75
     },
     "branches": {
-      "total": 177,
-      "covered": 156,
-      "percent": 88.13
+      "total": 183,
+      "covered": 162,
+      "percent": 88.52
     },
     "functions": {
       "total": 116,
-      "covered": 110,
-      "percent": 94.82
+      "covered": 111,
+      "percent": 95.69
     }
   },
   "files": [
     {
       "file": "src/frontend/src/App.tsx",
-      "sha256": "9407c834a1ee9d94f2815855b377ea745af2e692d538497547e30762ab48fc26",
+      "sha256": "38f251981a0f83cef3e482b7c39323555a805cee3fc55ff2320a706e747b06d8",
       "lines": {
-        "total": 10,
-        "covered": 9,
-        "percent": 90.0
+        "total": 12,
+        "covered": 12,
+        "percent": 100.0
       },
       "branches": {
-        "total": 16,
-        "covered": 16,
+        "total": 18,
+        "covered": 18,
         "percent": 100.0
       },
       "functions": {
         "total": 5,
-        "covered": 4,
-        "percent": 80.0
+        "covered": 5,
+        "percent": 100.0
       }
     },
     {
@@ -69,12 +70,12 @@
       "branches": {
         "total": 0,
         "covered": 0,
-        "percent": 100
+        "percent": 100.0
       },
       "functions": {
         "total": 0,
         "covered": 0,
-        "percent": 100
+        "percent": 100.0
       }
     },
     {
@@ -83,17 +84,17 @@
       "lines": {
         "total": 0,
         "covered": 0,
-        "percent": 100
+        "percent": 100.0
       },
       "branches": {
         "total": 0,
         "covered": 0,
-        "percent": 100
+        "percent": 100.0
       },
       "functions": {
         "total": 0,
         "covered": 0,
-        "percent": 100
+        "percent": 100.0
       }
     },
     {
@@ -107,7 +108,7 @@
       "branches": {
         "total": 0,
         "covered": 0,
-        "percent": 100
+        "percent": 100.0
       },
       "functions": {
         "total": 1,
@@ -126,7 +127,7 @@
       "branches": {
         "total": 0,
         "covered": 0,
-        "percent": 100
+        "percent": 100.0
       },
       "functions": {
         "total": 1,
@@ -136,15 +137,15 @@
     },
     {
       "file": "src/frontend/src/components/common/StatusMessage.tsx",
-      "sha256": "43640a2791ded9fd191a333d3132ddd72ed1d241f4c9aa7b70128865927f9c2e",
+      "sha256": "151daae3fb7a8191da37582631acac50a2a69c893036fbb0fa51ea5bff700444",
       "lines": {
         "total": 1,
         "covered": 1,
         "percent": 100.0
       },
       "branches": {
-        "total": 6,
-        "covered": 6,
+        "total": 10,
+        "covered": 10,
         "percent": 100.0
       },
       "functions": {
@@ -164,7 +165,7 @@
       "branches": {
         "total": 0,
         "covered": 0,
-        "percent": 100
+        "percent": 100.0
       },
       "functions": {
         "total": 1,
@@ -292,7 +293,7 @@
       "lines": {
         "total": 29,
         "covered": 26,
-        "percent": 89.65
+        "percent": 89.66
       },
       "branches": {
         "total": 24,
@@ -316,17 +317,17 @@
       "branches": {
         "total": 0,
         "covered": 0,
-        "percent": 100
+        "percent": 100.0
       },
       "functions": {
         "total": 3,
         "covered": 2,
-        "percent": 66.66
+        "percent": 66.67
       }
     },
     {
       "file": "src/frontend/src/pages/LoginPage.tsx",
-      "sha256": "e2531c8dee809060bde9702b2ab993316e6d8ee72444e9b1a4c4a2a6bad1e157",
+      "sha256": "1d7340452697745e08f9b7c249563d63e8046e3275ce8acdc50594ebc6846334",
       "lines": {
         "total": 15,
         "covered": 15,
@@ -349,12 +350,12 @@
       "lines": {
         "total": 37,
         "covered": 33,
-        "percent": 89.18
+        "percent": 89.19
       },
       "branches": {
         "total": 18,
         "covered": 16,
-        "percent": 88.88
+        "percent": 88.89
       },
       "functions": {
         "total": 16,
@@ -368,12 +369,12 @@
       "lines": {
         "total": 27,
         "covered": 24,
-        "percent": 88.88
+        "percent": 88.89
       },
       "branches": {
         "total": 14,
         "covered": 13,
-        "percent": 92.85
+        "percent": 92.86
       },
       "functions": {
         "total": 11,

@@ -2,7 +2,7 @@
 
 # Entrega técnica del Sprint 3
 
-**Versión documental:** V_1_0_6 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_7 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Base:** versión 1.2.4, commit `da3eef2`.<br>
 **Rama:** `Sprint-3`.<br>
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
@@ -22,15 +22,15 @@
 
 - Backend: 36 pruebas aprobadas en SQLite y 36 en PostgreSQL 16 aislado; cobertura 93,43 %.
 - Migraciones: revisión `0002_clients_email_unique` en head; sin nuevas operaciones en `alembic check`.
-- Frontend: 11 pruebas y compilación aprobadas; cobertura de líneas 92,19 %, cuatro formularios 100 % y App 90 %.
-- Sonar: [análisis de la versión 1.3.0](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) del commit `7f455d4`; Quality Gate aprobado con tres condiciones, cobertura global 92,4 %, nueva 100 %, duplicación 0 % y cero problemas abiertos.
+- Frontend: 11 pruebas y compilación aprobadas; cobertura de líneas 92,75 %, cuatro formularios 100 % y App 100 %.
+- Sonar: [análisis de la versión 1.3.0](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) del commit `647f0a2`; Quality Gate aprobado con tres condiciones, cobertura global 92,6 %, nueva 100 %, duplicación 0 % y cero problemas abiertos.
 - Auditorías Python/npm: sin vulnerabilidades conocidas detectadas en las ejecuciones conservadas.
 - Interfaz: 13 estados axe sin infracciones automáticas; 16 comprobaciones dirigidas, 437 comprobaciones de contraste y ningún resultado incompleto sobre contenido funcional. Sin desbordamientos en el alcance medido.
 - Infraestructura local: configuraciones Compose de desarrollo y staging validadas sin imprimir credenciales; los servicios de otros proyectos no se modificaron.
 
 ## Límites y revisión requerida
 
-La [matriz técnica consolidada](<../03 Implementación/Sprint 03/evidencias/compatibilidad-1.3.0.json>) acredita seis versiones de Chrome, Edge y Firefox: 78 estados y 504 comprobaciones aprobadas, con reintento identificado. Se corrigió la superposición decorativa de Inicio en móvil y se solicitó lectura fresca a la API como medida preventiva. La revisión del cliente o del usuario incluye lector de pantalla, comprensión, observaciones y aceptación, y permanece pendiente. La [prueba parcial de NVDA](<../Calidad/06 Prueba con lector de pantalla.md>) acredita seis comprobaciones del acceso e Inicio. El recorrido ampliado dejó de producir anuncios y la inspección se interrumpió al no verificarse la URL en la herramienta de control de Windows; no se registra aprobación integral. No se atribuyen sesiones ni aprobaciones personales.
+La [matriz técnica consolidada](<../03 Implementación/Sprint 03/evidencias/compatibilidad-1.3.0.json>) acredita seis versiones de Chrome, Edge y Firefox: 78 estados y 504 comprobaciones aprobadas, con reintento identificado. Se corrigió la superposición decorativa de Inicio en móvil y se solicitó lectura fresca a la API como medida preventiva. La revisión del cliente o del usuario incluye lector de pantalla, comprensión, observaciones y aceptación, y permanece pendiente. La [prueba técnica final de NVDA](<../Calidad/06 Prueba con lector de pantalla.md>) aprobó 53/53 comprobaciones tras corregir la región principal, los mensajes de éxito y el foco al salir. El intento inicial interrumpido se conserva como antecedente. No se atribuyen sesiones ni aprobaciones personales.
 
 El [plan nominal de cierre](<../03 Implementación/Sprint 03/Revisión técnica y plan de cierre V_1_0_0.md>) distribuye trabajo entre los cinco integrantes. Jira conserva responsables y seguimiento: Sprint 1 cerrado administrativamente con 10/10 tarjetas ya finalizadas y Sprint 3 activo desde el 25/10/2026 a las 16:07:13 (Lima), con fin planificado el 08/11. La versión 1.3.0 permanece sin liberar. Sprint 2 conserva ECO-18 en QA; ese punto sigue condicionado a la revisión del cliente o usuario.
 
@@ -53,3 +53,4 @@ La [matriz de entrega frente a la consigna](<../03 Implementación/Sprint 03/Mat
 | V_1_0_4 | 25/10/2026 | Revisión técnica, compatibilidad ampliada, responsables nominales y seguimiento actualizado. |
 | V_1_0_5 | 25/10/2026 | Cierre administrativo y activación verificados en Jira; protocolo de revisión preparado. |
 | V_1_0_6 | 25/10/2026 | Resultados parciales reales de NVDA y alcance restante documentado. |
+| V_1_0_7 | 25/10/2026 | Recorrido NVDA aprobado, correcciones verificadas y aceptación del cliente o usuario pendiente. |

@@ -320,7 +320,7 @@ La [matriz de trazabilidad BDD](docs/Calidad/01 Matriz de pruebas BDD.md) relaci
 
 ### Entrega consolidada del Sprint 3
 
-La [versión 1.3.0 del Sprint 3](docs/Versiones/1.3.0.md) reúne implementación, calidad de código y evaluación en localhost. La [evidencia SonarQube 1.3.0](<docs/03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) acredita Quality Gate aprobado, cobertura global 92,4 %, código nuevo 100 %, duplicación 0 % y cero problemas abiertos. La [guía de ejecución](<docs/Calidad/03 SonarQube local.md>) permite reproducir el análisis.
+La [versión 1.3.0 del Sprint 3](docs/Versiones/1.3.0.md) reúne implementación, calidad de código y evaluación en localhost. La [evidencia SonarQube 1.3.0](<docs/03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) acredita Quality Gate aprobado, cobertura global 92,6 %, código nuevo 100 %, duplicación 0 % y cero problemas abiertos. La [guía de ejecución](<docs/Calidad/03 SonarQube local.md>) permite reproducir el análisis.
 
 ### Entregables del Sprint 3
 
@@ -336,7 +336,7 @@ La [matriz de entrega y rúbrica](<docs/03 Implementación/Sprint 03/Matriz de e
 
 El [alcance vigente](<docs/03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>) se limita a localhost. La [guía de staging local](<docs/Despliegue/Guía de staging.md>) describe HTTP en 8080 y TLS en 8443. La evaluación de interfaz acredita 437 comprobaciones de contraste y 16 de interacción sobre 13 estados; quedan demostración/aceptación con interesados, revisión independiente y límites de tecnología de asistencia/navegadores. No se requiere infraestructura remota.
 
-La [prueba parcial con lector de pantalla](<docs/Calidad/06 Prueba con lector de pantalla.md>) acredita seis comprobaciones del acceso e Inicio con salida real de NVDA 2026.2. El recorrido completo de los módulos y la comprensión en la revisión del cliente o del usuario permanecen pendientes.
+La [prueba técnica con lector de pantalla](<docs/Calidad/06 Prueba con lector de pantalla.md>) aprobó **53/53 comprobaciones con NVDA 2026.2 y Edge 156**: acceso, cuatro módulos, formularios, registro de cliente y cierre de sesión. Se conservan transcripción, intentos anteriores y correcciones. La comprensión y aceptación en la revisión del cliente o del usuario permanecen pendientes.
 
 **Checklist acumulado:** [seguimiento de correcciones en Jira y GitHub](docs/Calidad/02 Checklist de validación.md), con evidencias técnicas y pendientes que requieren decisión humana.
 

@@ -5,7 +5,7 @@
 **Nombre del Proyecto:** EcoLogística Lima<br>
 **Líder del Proyecto:** Marco Jhair Martinez Llanos, según el acta de constitución.<br>
 **Sprint:** 3 — Calidad, seguridad, accesibilidad y mantenibilidad.<br>
-**Versión documental:** V_1_0_6 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_7 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Rama de entrega:** `Sprint-3`.
 
 **Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
@@ -100,7 +100,9 @@ No se incluyen en esta entrega US-016 a US-023: optimización, reoptimización, 
 
 La [consulta posterior](evidencias/jira-seguimiento-1.3.0.json) verifica **ECO-52 a ECO-58 en Finalizada**: informe retrospectivo, calidad, seguridad, evaluación WCAG, organización, versionado y publicación documental. Cada tarjeta registra el motivo y el alcance del cierre. El [corte anterior](evidencias/jira-seguimiento-antes-cierre-entregables.json) se conserva.
 
-El cierre de ECO-55 corresponde al informe de evaluación, que incluye límites y comprobaciones pendientes; no declara recorrido integral NVDA aprobado ni conformidad AA universal. **ECO-51 y ECO-18 siguen en QA; ECO-47 a ECO-49 y ECO-59 siguen en curso; ECO-50 sigue en QA.** El recorrido NVDA restante se conserva en ECO-48. No se libera la versión ni se cierra la épica por completar los documentos.
+El cierre de ECO-55 corresponde al informe de evaluación; la prueba técnica NVDA posterior aprobó 53/53 comprobaciones en el alcance documentado, sin declarar conformidad AA universal. **ECO-51 y ECO-18 siguen en QA; ECO-47 a ECO-49 y ECO-59 siguen en curso; ECO-50 sigue en QA.** ECO-48 registra la prueba técnica NVDA aprobada y conserva pendiente la comprensión y aceptación del cliente o del usuario. No se libera la versión ni se cierra la épica por completar los documentos.
+
+La [prueba técnica NVDA](<../../Calidad/06 Prueba con lector de pantalla.md>) aprobó 53/53 comprobaciones tras corregir tres problemas de anuncios y foco. La revisión del cliente o del usuario y su aceptación permanecen pendientes.
 
 ## Control documental
 
@@ -113,5 +115,6 @@ El cierre de ECO-55 corresponde al informe de evaluación, que incluye límites 
 | V_1_0_4 | 25/10/2026 | Revisión técnica, distribución nominal y revisión del cliente o del usuario pendiente. |
 | V_1_0_5 | 25/10/2026 | Regularización administrativa comprobada y registro de revisión del cliente preparado. |
 | V_1_0_6 | 25/10/2026 | Siete entregables finalizados en Jira; prueba parcial NVDA y pendientes conservados. |
+| V_1_0_7 | 25/10/2026 | Prueba técnica NVDA 53/53 aprobada y Jira actualizado; aceptación pendiente. |
 
 [← Volver al README](../../../README.md)
