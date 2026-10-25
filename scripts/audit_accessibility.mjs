@@ -10,6 +10,8 @@ import { demonstrateWorkflows } from './demonstrate_workflows.mjs'
 const repository = fileURLToPath(new URL('../', import.meta.url))
 const frontend = path.join(repository, 'src', 'frontend')
 const requireFrontend = createRequire(path.join(frontend, 'package.json'))
+const applicationVersion = requireFrontend('./package.json').version
+assert.match(applicationVersion, /^\d+\.\d+\.\d+$/)
 const { chromium, firefox } = requireFrontend('playwright')
 const AxeBuilder = requireFrontend('@axe-core/playwright').default
 const runLabel = process.argv[2] || 'actual'
@@ -122,8 +124,8 @@ try {
   assert.equal(initialization.status, 0, initialization.stderr)
   startProcess(python, ['-m', 'uvicorn', 'app.main:app', '--host', '127.0.0.1', '--port', '8003'], path.join(repository, 'src', 'backend'))
   await waitUntilReady(`${backendUrl}/health`)
-  report.applicationVersion = (await (await fetch(`${backendUrl}/openapi.json`)).json()).info.version
-  assert.equal(report.applicationVersion, requireFrontend('./package.json').version)
+  report.applicationVersion = applicationVersion
+  assert.equal((await (await fetch(`${backendUrl}/openapi.json`)).json()).info.version, applicationVersion)
   startProcess(process.execPath, [path.join(frontend, 'node_modules', 'vite', 'bin', 'vite.js'), '--host', '127.0.0.1', '--port', '5175', '--strictPort'], frontend)
   await waitUntilReady(frontendUrl)
   browser = engine === 'firefox' ? await firefox.launch({ headless: true }) : await chromium.launch({ channel: 'msedge', headless: true })
@@ -162,9 +164,12 @@ try {
   report.interactionChecks.push({ name: 'Reflow de clientes a 320 px', passed: await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1) })
   if (recordDemonstration) report.demonstration = await demonstrateWorkflows(page, evidenceDirectory)
   await page.getByRole('button', { name: 'Salir', exact: true }).click()
+  await page.getByRole('heading', { name: /Bienvenido de nuevo/ }).waitFor()
   await page.getByLabel('Correo electrónico').fill(environment.BOOTSTRAP_OPERATOR_EMAIL)
   await page.getByLabel('Contraseña').fill('intento-incorrecto-de-auditoria')
+  const invalidLoginResponse = page.waitForResponse(response => response.url().endsWith('/api/v1/auth/login') && response.request().method() === 'POST')
   await page.getByRole('button', { name: 'Ingresar', exact: true }).click()
+  assert.equal((await invalidLoginResponse).status(), 401, 'El acceso incorrecto debe rechazarse con HTTP 401')
   await page.getByRole('alert').waitFor()
   report.interactionChecks.push({ name: 'Error de autenticación se anuncia como alerta', passed: await page.getByRole('alert').isVisible() })
   await inspectState(page, 'LoginError', { width: 360, height: 800 })
@@ -180,7 +185,7 @@ try {
   if (recordDemonstration) {
     const video = page.video()
     await browserContext.close()
-    report.demonstrationVideo = `demostracion-${report.applicationVersion}.webm`
+    report.demonstrationVideo = `demostracion-${applicationVersion}.webm`
     await video.saveAs(path.join(evidenceDirectory, report.demonstrationVideo))
   }
   await writeFile(path.join(evidenceDirectory, `accesibilidad-${runLabel}.json`), JSON.stringify(report, null, 2) + '\n')

@@ -21,6 +21,7 @@ build/
 tmp/
 *.log
 *.bak
+*.dpapi
 .idea/
 .vscode/
 *.swp

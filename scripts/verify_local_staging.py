@@ -8,16 +8,16 @@ from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
+from local_staging_settings import load_settings
+
 
 def verify() -> None:
     repository = Path(__file__).resolve().parents[1]
     directory = Path(os.environ["LOCALAPPDATA"]) / "EcoLogistica"
-    settings = dict(
-        line.split("=", 1) for line in (directory / "staging.env").read_text(encoding="utf-8").splitlines()
-        if line and not line.startswith("#")
-    )
+    settings = load_settings(directory)
     authority = directory / "localhost-root.crt"
     context = ssl.create_default_context(cafile=str(authority))
+    context.minimum_version = ssl.TLSVersion.TLSv1_2
     port = int(settings["STAGING_HTTPS_PORT"])
     base_url = f"https://localhost:{port}"
 

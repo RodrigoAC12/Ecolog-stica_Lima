@@ -2,7 +2,7 @@
 
 # Guía de staging local — EcoLogística Lima
 
-**Versión documental:** 1.0.1 · **Actualizado:** 25/10/2026 (Lima).
+**Versión documental:** 1.0.2 · **Actualizado:** 25/10/2026 (Lima).
 
 El entorno se ejecuta exclusivamente en localhost. Docker Compose levanta PostgreSQL, API y frontend compilado detrás de Caddy. Solo el gateway publica puertos, enlazados a 127.0.0.1; la API y la base permanecen en la red interna. No se necesita dominio público ni servidor adicional.
 
@@ -12,12 +12,13 @@ Desde la raíz del repositorio, con Docker Desktop activo:
 
 ```powershell
 & .venv/Scripts/python.exe scripts/prepare_local_staging.py
-$localEnvironment = Join-Path $env:LOCALAPPDATA 'EcoLogistica/staging.env'
-docker compose --project-name ecologistica-staging-local --env-file $localEnvironment -f docker-compose.staging.yml config --quiet
-docker compose --project-name ecologistica-staging-local --env-file $localEnvironment -f docker-compose.staging.yml up -d --build --wait
+& .venv/Scripts/python.exe scripts/manage_local_staging.py config --quiet
+& .venv/Scripts/python.exe scripts/manage_local_staging.py up -d --build --wait
 ```
 
-El preparador genera una configuración privada fuera del repositorio y no sobrescribe una existente. Allí se encuentran la cuenta local y sus credenciales. No publicar ese archivo ni imprimir la configuración Compose expandida. La plantilla versionada contiene únicamente valores de ejemplo.
+El preparador conserva las credenciales existentes y almacena la configuración cifrada con DPAPI en `%LOCALAPPDATA%/EcoLogistica/staging.settings.dpapi`, fuera del repositorio. Si encuentra el archivo anterior `staging.env`, cifra sus valores, verifica que pueden recuperarse sin cambios y retira únicamente ese archivo de texto después de comprobar la migración.
+
+El administrador descifra los valores en memoria y los entrega al proceso Compose mediante su entorno; no genera otro archivo de contraseñas. `config` exige `--quiet` para evitar mostrar la configuración operativa. La plantilla versionada contiene únicamente valores de ejemplo. La protección corresponde al usuario de Windows: copiar el archivo a otra cuenta no constituye un procedimiento de recuperación; conservar el perfil y planificar la recuperación de credenciales con el responsable técnico. [Referencia de Microsoft](https://learn.microsoft.com/en-us/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata).
 
 ## Acceso
 
@@ -25,16 +26,15 @@ El preparador genera una configuración privada fuera del repositorio y no sobre
 - Aplicación con TLS local: [https://localhost:8443](https://localhost:8443).
 - Salud de API por TLS: [https://localhost:8443/health](https://localhost:8443/health).
 
-Caddy utiliza una CA interna para localhost. La confianza del navegador se administra por separado; no se modifica automáticamente el almacén de certificados de Windows. El acceso HTTP está limitado a la interfaz local. La comprobación TLS valida la cadena y el nombre del certificado mediante la CA seleccionada, sin desactivar la verificación.
+Caddy utiliza una CA interna para localhost. La confianza del navegador se administra por separado; no se modifica automáticamente el almacén de certificados de Windows. El acceso HTTP está limitado a la interfaz local. La comprobación TLS valida la cadena y el nombre del certificado mediante la CA seleccionada, exige como mínimo TLS 1.2 y comprueba la versión realmente negociada, sin desactivar la verificación.
 
 ## Verificación
 
 Copiar únicamente el certificado público y ejecutar el comprobador:
 
 ```powershell
-$localEnvironment = Join-Path $env:LOCALAPPDATA 'EcoLogistica/staging.env'
 $localAuthority = Join-Path $env:LOCALAPPDATA 'EcoLogistica/localhost-root.crt'
-docker compose --project-name ecologistica-staging-local --env-file $localEnvironment -f docker-compose.staging.yml cp gateway:/data/caddy/pki/authorities/local/root.crt $localAuthority
+& .venv/Scripts/python.exe scripts/manage_local_staging.py cp gateway:/data/caddy/pki/authorities/local/root.crt $localAuthority
 & .venv/Scripts/python.exe scripts/verify_local_staging.py
 ```
 
@@ -45,7 +45,7 @@ Se verifica frontend HTTP/HTTPS, salud, cabeceras, rechazo sin autenticación, l
 Los volúmenes persistentes pertenecen al proyecto Compose ecologistica-staging-local. Para detenerlo conservando datos:
 
 ```powershell
-docker compose --project-name ecologistica-staging-local --env-file $localEnvironment -f docker-compose.staging.yml down
+& .venv/Scripts/python.exe scripts/manage_local_staging.py down
 ```
 
 No utilizar down -v para una parada normal. Antes de migrar datos existentes, respaldarlos y revisar duplicados de correo. La validación local no acredita operación remota ni aprobación funcional de interesados.
@@ -56,3 +56,4 @@ No utilizar down -v para una parada normal. Antes de migrar datos existentes, re
 |---|---|---|
 | 1.0.0 | 24/10/2026 | Configuración inicial de staging. |
 | 1.0.1 | 25/10/2026 | Alcance localhost, acceso loopback y verificación TLS con CA local. |
+| 1.0.2 | 25/10/2026 | Secretos cifrados con DPAPI, migración comprobada, Compose con variables en memoria y TLS mínimo explícito. |

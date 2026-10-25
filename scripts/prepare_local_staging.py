@@ -1,14 +1,14 @@
-import os
 import secrets
-from pathlib import Path
+
+from local_staging_settings import load_settings, save_settings, settings_directory
 
 
 def prepare() -> None:
-    directory = Path(os.environ["LOCALAPPDATA"]) / "EcoLogistica"
+    directory = settings_directory()
     directory.mkdir(parents=True, exist_ok=True)
-    destination = directory / "staging.env"
-    if destination.exists():
-        print(f"Se conserva la configuración existente: {destination}")
+    if (directory / "staging.settings.dpapi").exists() or (directory / "staging.env").exists():
+        load_settings(directory)
+        print("Se conserva la configuración existente, protegida con DPAPI de Windows")
         return
     database_password = secrets.token_hex(24)
     values = {
@@ -23,9 +23,8 @@ def prepare() -> None:
         "BOOTSTRAP_OPERATOR_EMAIL": "operador.local@example.test",
         "BOOTSTRAP_OPERATOR_PASSWORD": secrets.token_urlsafe(24),
     }
-    with destination.open("x", encoding="utf-8") as configuration:
-        configuration.write("\n".join(f"{name}={value}" for name, value in values.items()) + "\n")
-    print(f"Configuración privada creada: {destination}")
+    save_settings(values, directory)
+    print("Configuración privada creada y protegida con DPAPI de Windows")
 
 
 if __name__ == "__main__":

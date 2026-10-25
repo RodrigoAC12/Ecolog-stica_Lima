@@ -289,7 +289,7 @@ Los principales criterios de evaluación serán:
 ---
 
 
-[Revisión técnica, responsables y plan de cierre del Sprint 3](<docs/03 Implementación/Sprint 03/Revisión técnica y plan de cierre V_1_0_0.md>) · [Compatibilidad de navegadores](<docs/Calidad/04 Compatibilidad de navegadores.md>).
+[Revisión técnica, responsables y plan de cierre del Sprint 3](<docs/03 Implementación/Sprint 03/Revisión técnica y plan de cierre V_1_0_0.md>) · [Compatibilidad de navegadores](<docs/Calidad/04 Compatibilidad de navegadores.md>) · [Seguridad de herramientas locales](<docs/Calidad/05 Seguridad de herramientas locales.md>).
 
 ## Equipo
 

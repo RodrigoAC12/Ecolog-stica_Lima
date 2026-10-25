@@ -2,7 +2,7 @@
 
 # Revisión técnica y plan de cierre — Sprint 3
 
-**Versión documental:** V_1_0_0 · **Proyecto:** EcoLogística Lima 1.3.0 · **Fecha:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_1 · **Proyecto:** EcoLogística Lima 1.3.0 · **Fecha:** 25/10/2026 (Lima).<br>
 **Alcance:** aplicación, API y bases de evaluación en localhost; historias US-001 a US-015.
 
 ## Responsables y seguimiento
@@ -39,6 +39,8 @@ La [matriz consolidada de navegadores](evidencias/compatibilidad-1.3.0.json) reg
 
 La API del frontend solicita respuestas sin almacenamiento en caché como medida preventiva de consistencia y privacidad; no se presenta una causa de fallo de caché como confirmada.
 
+La [remediación de herramientas locales](<../../Calidad/05 Seguridad de herramientas locales.md>) incorpora configuración cifrada con DPAPI, migración sin cambio de credenciales, mínimo TLS explícito y nombre de video controlado localmente. Las cuatro pruebas de configuración y la repetición de 13 estados de interfaz aprobaron; el nuevo CodeQL verifica el cierre de las alertas registradas.
+
 ## Plan priorizado de mejoras de seguridad
 
 La acción de esta entrega es evaluar y priorizar las mejoras. Implementarlas corresponde a su planificación posterior; no se convierten en exigencias adicionales de la consigna.
@@ -69,5 +71,6 @@ La consigna cita además «TP2-ISI Consigna del repositorio PFA». Ese texto no 
 | Versión | Fecha | Cambio |
 |---|---|---|
 | V_1_0_0 | 25/10/2026 | Revisión técnica, distribución nominal, mejoras priorizadas y seguimiento de cierre. |
+| V_1_0_1 | 25/10/2026 | Correcciones y comprobaciones de las herramientas locales de evaluación. |
 
 [← Volver al README](../../../README.md)
