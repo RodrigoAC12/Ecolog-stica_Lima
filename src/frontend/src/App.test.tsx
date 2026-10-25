@@ -22,6 +22,34 @@ beforeEach(() => {
 afterEach(() => { cleanup(); vi.unstubAllGlobals() })
 
 describe('flujos principales', () => {
+  it.each([
+    { page: 'Vehículos', endpoint: '/vehiculos', item: { vehiculo_id: 'v1', placa: 'PRU-101', marca: 'Toyota', modelo: 'Hiace', capacidad_kg: '1200', capacidad_m3: '8', consumo_km_l: null, factor_emision_kg_co2_km: null, estado: 'DISPONIBLE' }, changes: { 'Consumo (km/l)': '12', 'Emisión (kg CO₂/km)': '0.2' }, select: 'Estado', option: 'MANTENIMIENTO' },
+    { page: 'Conductores', endpoint: '/conductores', item: { conductor_id: 'd1', nombres: 'Ana', apellidos: 'Pérez', numero_licencia: 'LIC-101', categoria_licencia: 'A-IIb', telefono: null, experiencia_anios: null, estado: 'DISPONIBLE' }, changes: { 'Experiencia (años)': '5' }, select: 'Estado', option: 'DESCANSO' },
+    { page: 'Clientes', endpoint: '/clientes', item: { cliente_id: 'c1', nombre: 'Cliente original', telefono: null, email: null, preferencia_entrega: null, restriccion_acceso: null, estado: 'ACTIVO' }, changes: { 'Teléfono': '999111222' }, select: 'Estado', option: 'INACTIVO' },
+    { page: 'Pedidos', endpoint: '/pedidos', item: { pedido_id: 'p1', cliente_id: 'c1', codigo_pedido: 'PED-101', direccion_entrega: 'Av. Lima 100', referencia_entrega: null, latitud: '-12.04', longitud: '-77.02', peso_kg: '25', volumen_m3: '0.125', ventana_inicio: '2026-10-25T14:00:00Z', ventana_fin: '2026-10-25T17:00:00Z', prioridad: 'MEDIA', tipo_producto: null, estado: 'PENDIENTE' }, changes: { 'Referencia': 'Puerta lateral', 'Tipo de producto': 'Alimentos' }, select: 'Prioridad', option: 'ALTA' },
+  ])('cancelar edición en $page descarta los cambios sin enviar una escritura', async scenario => {
+    const original = structuredClone(scenario.item)
+    const fetchMock = vi.fn(async (input: string, init?: RequestInit) => {
+      if (input.endsWith('/auth/login')) return json({ access_token: 'token' })
+      if (input.includes('/clientes?activo=true')) return json([{ cliente_id: 'c1', nombre: 'Cliente original' }])
+      if (input.endsWith(scenario.endpoint) && !init?.method) return json([scenario.item])
+      throw new Error(`Unexpected request ${input}`)
+    })
+    vi.stubGlobal('fetch', fetchMock)
+    render(<App />); await login()
+    await userEvent.click(screen.getByRole('button', { name: scenario.page }))
+    await userEvent.click(await screen.findByRole('button', { name: /^Editar$/ }))
+    for (const [label, value] of Object.entries(scenario.changes)) {
+      fireEvent.change(screen.getByLabelText(label), { target: { value } })
+      expect(screen.getByLabelText(label)).toHaveValue(label.includes('años') ? Number(value) : label.includes('km') ? Number(value) : value)
+    }
+    await userEvent.selectOptions(screen.getByLabelText(scenario.select), scenario.option)
+    await userEvent.click(screen.getByRole('button', { name: /^Cancelar edición$/ }))
+    expect(screen.queryByRole('button', { name: 'Guardar cambios' })).not.toBeInTheDocument()
+    expect(scenario.item).toEqual(original)
+    expect(fetchMock.mock.calls.filter(([input, init]) => !input.endsWith('/auth/login') && ['POST', 'PUT', 'PATCH', 'DELETE'].includes(init?.method ?? 'GET'))).toHaveLength(0)
+  })
+
   it('sitúa el foco en el contenido después del login y de cambiar de vista', async () => {
     vi.stubGlobal('fetch', vi.fn(async (input: string) => {
       if (input.endsWith('/auth/login')) return json({ access_token: 'token' })

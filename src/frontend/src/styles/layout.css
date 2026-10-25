@@ -6,7 +6,7 @@
   gap: clamp(1rem, 3vw, 2.5rem);
   min-height: 86px;
   padding: 1rem max(1.25rem, calc((100vw - 1300px) / 2));
-  background: #131719ec;
+  background: #131719;
   border-bottom: 1px solid #ffffff24;
   backdrop-filter: blur(16px);
 }

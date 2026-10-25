@@ -32,7 +32,6 @@
 
 /* Home */
 .home-hero { position: relative; overflow: hidden; min-height: 335px; padding: clamp(1.7rem, 4vw, 3.4rem); background: #182026; border: 1px solid #53636d; box-shadow: 9px 9px 0 #080b0c; }
-.home-hero::before { content: ''; position: absolute; inset: 0; opacity: .6; pointer-events: none; background: radial-gradient(circle at 83% 45%, #19886a60, transparent 33%), linear-gradient(135deg, transparent 50%, #ffffff0b 50%, transparent 51%); }
 .home-hero > *:not(.hero-decoration) { position: relative; z-index: 1; }
 .home-hero h1 { color: var(--blue); }
 .home-hero > p:not(.eyebrow) { max-width: 35rem; color: #e0e9e5; font-size: clamp(1rem, 1.7vw, 1.3rem); margin: 1.25rem 0 0; }
