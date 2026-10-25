@@ -2,7 +2,7 @@
 
 # Checklist de validación — Pre-Sprint 3
 
-**Versión documental:** 1.0.4 · **Versión del Sprint 3:** 1.3.0 · **Actualizado:** 25/10/2026. Se identifican los resultados históricos y las adendas posteriores.
+**Versión documental:** 1.0.5 · **Versión del Sprint 3:** 1.3.0 · **Actualizado:** 25/10/2026. Se identifican los resultados históricos y las adendas posteriores.
 
 **Corte histórico de base:** versión 1.2.4 · **Rama:** `Pre-Sprint-3` · **Fecha:** 24/10/2026.
 
@@ -35,8 +35,8 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [x] Staging en localhost verificado el 25/10/2026, con HTTPS local y secretos fuera del repositorio.
 - [ ] Pruebas manuales de accesibilidad WCAG, 360 px, teclado y navegadores soportados.
 - [ ] Demostración y aceptación de los escenarios oficiales Gherkin por interesados.
-- [ ] Revisión independiente del código y aprobación del Pull Request por el propietario.
-- [x] Integración técnica de la base 1.2.4 mediante [PR #3](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/3), 24/10/2026; no sustituye la revisión independiente requerida.
+- [ ] Revisión independiente del código y aceptación del equipo responsable.
+- [x] Integración técnica de la base 1.2.4 con 24/10/2026; no sustituye la revisión independiente requerida.
 - [ ] Confirmación de responsables, estado de sprints y ceremonias reales en Jira; no inventar reuniones ni fechas.
 
 **Referencias:** [Informe de seguridad](<../03 Implementación/Pre-Sprint 3/02 Informe de seguridad V_1_0_0.md>), [Integridad y auditoría](<../03 Implementación/Pre-Sprint 3/03 Informe de integridad y auditoría V_1_0_0.md>) y [Versión 1.2.4](../Versiones/1.2.4.md).
@@ -50,7 +50,7 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [x] 36 pruebas backend en SQLite y PostgreSQL; migraciones verificadas.
 - [x] 11 pruebas frontend y compilación; 92,19 % de líneas, cuatro formularios 100 % y App 90 %.
 - [x] Auditorías de dependencias sin avisos conocidos en el corte conservado.
-- [x] Sonar del commit `3c1b45d` aprobado: tres condiciones, 92,4 % global, 100 % nuevo y cero problemas abiertos.
+- [x] Sonar 1.3.0 del commit `3ea875b` aprobado: tres condiciones, 92,4 % global, 100 % nuevo y cero problemas abiertos.
 - [x] 13 estados de accesibilidad automática y 16 comprobaciones dirigidas aprobadas.
 - [x] Contraste funcional medido: 437 comprobaciones, mínimo 6,66:1; restantes incompletos decorativos identificados.
 - [ ] Acreditar uso humano de lector de pantalla y navegadores del alcance completo.
@@ -59,10 +59,9 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [ ] Confirmar acuerdos personales, calendario y cierre administrativo en Jira.
 
 - [x] Versión del Sprint 3 corregida a 1.3.0 y [matriz de los ocho criterios](<../03 Implementación/Sprint 03/Matriz de entrega y rúbrica V_1_0_0.md>) actualizada.
-- [x] Envío retirado: [PR #4 cerrado](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/4), sin fusionar ni solicitud de revisión activa.
-- [ ] Revisión previa del solicitante y nueva orden expresa antes de cualquier envío al propietario.
+- [x] Recorrido técnico grabado: once operaciones comprobadas sobre las quince historias, con capturas, observaciones y resultados.
 - [ ] Demostración a interesados y observaciones acreditadas para completar el criterio 1.
-- [ ] Aprobación e integración por el propietario; no se marca como realizada por publicar el PR.
+- [ ] Aceptación e incorporación final; los resultados técnicos no sustituyen la aprobación correspondiente.
 
 Consultar el [registro de entrega del Sprint 3](<../Versiones/Sprint 3 V_1_0_0.md>) para resultados, límites y trazabilidad. La preparación de documentos no convierte en realizadas las validaciones pendientes.
 
@@ -74,4 +73,5 @@ Consultar el [registro de entrega del Sprint 3](<../Versiones/Sprint 3 V_1_0_0.m
 | 1.0.1 | 24/10/2026 | Adenda del incremento de Sprint 3. |
 | 1.0.2 | 25/10/2026 | Alcance y comprobación localhost. |
 | 1.0.3 | 25/10/2026 | Evidencias de contraste, cobertura, Sonar y matriz de entrega única. |
-| 1.0.4 | 25/10/2026 | Versión 1.3.0 y envío al propietario retirado; nueva orden requerida para reenviar. |
+| 1.0.4 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
+| 1.0.5 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |

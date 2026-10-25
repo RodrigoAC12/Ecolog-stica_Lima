@@ -5,6 +5,7 @@ import { createRequire } from 'node:module'
 import { mkdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { demonstrateWorkflows } from './demonstrate_workflows.mjs'
 
 const repository = fileURLToPath(new URL('../', import.meta.url))
 const frontend = path.join(repository, 'src', 'frontend')
@@ -15,6 +16,7 @@ const runLabel = process.argv[2] || 'actual'
 assert.match(runLabel, /^[a-z0-9-]+$/)
 const engine = process.argv[3] || 'edge'
 assert.ok(['edge', 'firefox'].includes(engine))
+const recordDemonstration = process.argv[4] === 'demo'
 const evidenceDirectory = path.join(repository, 'docs', '03 Implementación', 'Sprint 03', 'evidencias')
 const temporaryDirectory = path.join(repository, 'tmp', `audit-${Date.now()}-${process.pid}`)
 const python = path.join(repository, '.venv', 'Scripts', 'python.exe')
@@ -120,11 +122,13 @@ try {
   assert.equal(initialization.status, 0, initialization.stderr)
   startProcess(python, ['-m', 'uvicorn', 'app.main:app', '--host', '127.0.0.1', '--port', '8003'], path.join(repository, 'src', 'backend'))
   await waitUntilReady(`${backendUrl}/health`)
+  report.applicationVersion = (await (await fetch(`${backendUrl}/openapi.json`)).json()).info.version
+  assert.equal(report.applicationVersion, requireFrontend('./package.json').version)
   startProcess(process.execPath, [path.join(frontend, 'node_modules', 'vite', 'bin', 'vite.js'), '--host', '127.0.0.1', '--port', '5175', '--strictPort'], frontend)
   await waitUntilReady(frontendUrl)
   browser = engine === 'firefox' ? await firefox.launch({ headless: true }) : await chromium.launch({ channel: 'msedge', headless: true })
   report.browser = browser.version()
-  const browserContext = await browser.newContext({ viewport: { width: 1440, height: 1000 } })
+  const browserContext = await browser.newContext({ viewport: { width: 1440, height: 1000 }, ...(recordDemonstration ? { recordVideo: { dir: temporaryDirectory, size: { width: 1280, height: 888 } } } : {}) })
   const page = await browserContext.newPage()
   await page.goto(frontendUrl)
   await page.getByRole('heading', { name: /Bienvenido de nuevo/ }).waitFor()
@@ -139,7 +143,10 @@ try {
   for (const viewport of [{ width: 1440, height: 1000 }, { width: 360, height: 800 }]) await inspectState(page, 'Login', viewport)
   await page.getByLabel('Correo electrónico').fill(environment.BOOTSTRAP_OPERATOR_EMAIL)
   await page.getByLabel('Contraseña').fill(password)
+  assert.equal(await page.locator('form').evaluate(form => form.checkValidity()), true, 'El formulario de acceso no es válido')
+  const loginResponse = page.waitForResponse(response => response.url().endsWith('/api/v1/auth/login') && response.request().method() === 'POST')
   await page.getByRole('button', { name: 'Ingresar', exact: true }).click()
+  assert.equal((await loginResponse).status(), 200, 'La autenticación del entorno de evaluación falló')
   await page.getByRole('heading', { name: 'Inicio', exact: true }).waitFor()
   report.interactionChecks.push({ name: 'Inicio de sesión mueve el foco al contenido', passed: await page.locator('#main-content').evaluate(element => element === document.activeElement) })
   for (const name of ['Inicio', 'Vehículos', 'Pedidos', 'Conductores', 'Clientes']) {
@@ -153,6 +160,7 @@ try {
   }
   await page.setViewportSize({ width: 320, height: 800 })
   report.interactionChecks.push({ name: 'Reflow de clientes a 320 px', passed: await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1) })
+  if (recordDemonstration) report.demonstration = await demonstrateWorkflows(page, evidenceDirectory)
   await page.getByRole('button', { name: 'Salir', exact: true }).click()
   await page.getByLabel('Correo electrónico').fill(environment.BOOTSTRAP_OPERATOR_EMAIL)
   await page.getByLabel('Contraseña').fill('intento-incorrecto-de-auditoria')
@@ -168,6 +176,12 @@ try {
     reflowFailures: report.states.filter(state => !state.reflow.passed).length,
     textContrastNodesPassed: report.states.reduce((total, state) => total + state.contrastTextNodesPassed, 0),
     actionableIncompleteNodes: report.states.reduce((total, state) => total + state.incompleteRules.reduce((count, rule) => count + rule.nodes.filter(node => !node.decorative).length, 0), 0),
+  }
+  if (recordDemonstration) {
+    const video = page.video()
+    await browserContext.close()
+    report.demonstrationVideo = `demostracion-${report.applicationVersion}.webm`
+    await video.saveAs(path.join(evidenceDirectory, report.demonstrationVideo))
   }
   await writeFile(path.join(evidenceDirectory, `accesibilidad-${runLabel}.json`), JSON.stringify(report, null, 2) + '\n')
   process.stdout.write(JSON.stringify(report.summary) + '\n')

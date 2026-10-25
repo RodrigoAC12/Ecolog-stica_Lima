@@ -4,9 +4,9 @@
 
 **Nombre del Proyecto:** EcoLogística Lima<br>
 **Líder del Proyecto:** Marco Jhair Martinez Llanos, según el acta de constitución.<br>
-**Versión documental:** V_1_0_2 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
+**Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
 
-**Estado de revisión:** primero con el solicitante. El envío del PR #4 al propietario se retiró; no reanudarlo hasta nueva orden expresa.
+**Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
 
 ## ¿Qué aprendimos?
 
@@ -35,7 +35,7 @@ Distribuir con claridad la revisión de seguridad, accesibilidad y documentació
 
 ### Relaciones
 
-Hacer explícita la revisión entre pares y recoger las observaciones de interesados sobre el incremento. La aprobación del propietario y la revisión técnica tienen propósitos diferentes y deben quedar registradas.
+Hacer explícita la revisión entre pares y recoger las observaciones de interesados sobre el incremento. La aceptación funcional y la revisión técnica tienen propósitos diferentes y deben quedar registradas.
 
 ### Procesos
 
@@ -49,11 +49,11 @@ Ejecutar CI, CodeQL y auditorías sobre `main` y la rama de entrega. Mantener un
 
 | Acción verificable | Responsable propuesto | Plazo de referencia | Evidencia de cumplimiento |
 |---|---|---|---|
-| Revisar el PR y las correcciones sin cambiar umbrales para ocultar hallazgos | Par técnico distinto del autor | Antes de integrar | Revisión registrada y CI aprobado |
+| Revisar el incremento y las correcciones sin cambiar umbrales para ocultar hallazgos | Par técnico distinto del autor | Antes de integrar | Revisión registrada y CI aprobado |
 | Conservar la evidencia del contraste resuelto y completar lector de pantalla/navegadores del DoD | Calidad/UX | Antes de declarar conformidad AA completa | [Evaluación vigente](evidencias/accesibilidad-entrega-edge.json); validación humana aún pendiente |
 | Priorizar limitación de intentos y auditoría/alertas de login; mantener seguridad local | Backend/infraestructura | Backlog de mejora, según riesgo | Nuevas tareas y pruebas cuando se implemente; no es un requisito adicional de la consigna |
 | Conciliar responsables, fechas y estados de Jira | Líder del proyecto y equipo | Antes del cierre administrativo | Tablero y acuerdos con fechas reales |
-| Mantener las regresiones de cancelación y priorizar escenarios restantes según riesgo | Desarrollo frontend | En cada cambio afectado | 11 pruebas aprobadas y [cobertura por módulo](evidencias/frontend-cobertura-entrega.json); formularios 100 % de líneas |
+| Mantener las regresiones de cancelación y priorizar escenarios restantes según riesgo | Desarrollo frontend | En cada cambio afectado | 11 pruebas aprobadas y [cobertura por módulo](evidencias/frontend-cobertura-1.3.0.json); formularios 100 % de líneas |
 | Conservar los cinco informes y validar enlaces tras cada cambio | Responsable documental | En cada entrega | Comprobador de enlaces aprobado |
 
 Las acciones representan el plan de mejora derivado del trabajo observado. Los responsables concretos y fechas de calendario requieren confirmación del equipo; no se registran como compromisos personales ya aceptados.
@@ -64,6 +64,7 @@ Las acciones representan el plan de mejora derivado del trabajo observado. Los r
 |---|---|---|
 | V_1_0_0 | 24/10/2026 | Aprendizajes sustentados, cuatro dimensiones de mejora y acciones verificables. |
 | V_1_0_1 | 25/10/2026 | Resultados del contraste y cobertura, acciones realizadas y mejoras futuras diferenciadas. |
-| V_1_0_2 | 25/10/2026 | Versión 1.3.0 y revisión previa antes de un nuevo envío al propietario. |
+| V_1_0_2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
+| V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
 
 [← Volver al README](../../../README.md)

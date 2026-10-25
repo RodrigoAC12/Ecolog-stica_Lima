@@ -4,7 +4,7 @@
 
 **Nombre del Proyecto:** EcoLogística Lima<br>
 **Herramienta de Escaneo:** SonarQube Community Build 26.10.0.133078; complementos Pytest, pip-audit y npm audit.<br>
-**Versión documental:** V_1_0_2 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Alcance:** API FastAPI, persistencia y frontend de las funcionalidades US-001 a US-015, en la rama `Sprint-3`.
 
 ## 1. Matriz de Cumplimiento OWASP Top 10 2025
@@ -30,7 +30,7 @@ Se utiliza la [lista oficial OWASP 2025](https://top10.owasp.org/2025/). La tabl
 
 ## 2. Detalles de Security Hotspots y Vulnerabilidades Críticas
 
-SonarQube no generó security hotspots ni vulnerabilidades en el [análisis de entrega](evidencias/sonar-entrega.json), revisión `3c1b45d`, con Quality Gate aprobado. **Hotspot #1 y Hotspot #2: no aplican; se detectaron cero.** El análisis usa los perfiles activos `Sonar way core`; no sustituye una prueba de penetración ni todos los controles de OWASP. Los cuatro problemas corregidos S9011 son de fiabilidad, no se presentan como vulnerabilidades.
+SonarQube no generó security hotspots ni vulnerabilidades en el [análisis 1.3.0](evidencias/sonar-1.3.0.json), revisión `3ea875b`, con Quality Gate aprobado. **Hotspot #1 y Hotspot #2: no aplican; se detectaron cero.** El análisis usa los perfiles activos `Sonar way core`; no sustituye una prueba de penetración ni todos los controles de OWASP. Los cuatro problemas corregidos S9011 son de fiabilidad, no se presentan como vulnerabilidades.
 
 ### SEC-01 — Token firmado sin fecha de expiración
 
@@ -65,5 +65,6 @@ El informe registra resultados técnicos sobre datos de pruebas. Antes del cierr
 | V_1_0_0 | 24/10/2026 | Matriz OWASP 2025, auditorías reales y remediación de JWT sin expiración. |
 | V_1_0_1 | 25/10/2026 | Evidencia del commit de entrega, cero hotspots y despliegue localhost ya acreditado; límites y backlog explícitos. |
 | V_1_0_2 | 25/10/2026 | Versión del proyecto 1.3.0; evidencias anteriores conservadas en su corte original. |
+| V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
 
 [← Volver al README](../../../README.md)

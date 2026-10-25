@@ -208,7 +208,7 @@ La revisión documenta el estado **antes** de la presentación del 29/09/2026. L
 
 El [seguimiento Jira del Sprint 2](<docs/02 Planificación/Anexos/Seguimiento Jira Sprint 2 V_1_0_3.md>) recoge las cinco historias, Story Points y estado del tablero consultado el 06/10/2026. La documentación distingue funcionalidades implementadas de historias formalmente aceptadas; la demostración y retrospectiva del equipo siguen sin evidencia de realización.
 
-Jira programó el Sprint 2 del **22/09/2026 a las 19:59:45** al **06/10/2026 a las 19:59:35**, hora de Lima. El commit y el PR de implementación tienen fecha del 06/10; no se atribuye desarrollo a días anteriores sin evidencia. **Una historia solo se cierra cuando cumple todos los puntos aplicables del Definition of Done**; los escenarios BDD están incluidos en DoD-10. Los pendientes sin fecha propia en Jira requieren replanificación si exceden el fin programado.
+Jira programó el Sprint 2 del **22/09/2026 a las 19:59:45** al **06/10/2026 a las 19:59:35**, hora de Lima. Los registros de implementación tienen fecha del 06/10; no se atribuye desarrollo a días anteriores sin evidencia. **Una historia solo se cierra cuando cumple todos los puntos aplicables del Definition of Done**; los escenarios BDD están incluidos en DoD-10. Los pendientes sin fecha propia en Jira requieren replanificación si exceden el fin programado.
 
 Para ejecutar el proyecto, consultar las instrucciones técnicas del [backend](src/backend/README.md) y el [frontend](src/frontend/README.md). Los criterios oficiales de aceptación y el Definition of Done están en [Transformando a ágil](<docs/02 Planificación/01 Transformando a ágil V_1_0_1.md>). Las capturas de planificación, identificadas según su contenido real, están en [Artefactos Jira](<docs/02 Planificación/02 Artefactos Jira V_1_0_2.md>).
 
@@ -314,7 +314,7 @@ La [matriz de trazabilidad BDD](docs/Calidad/01 Matriz de pruebas BDD.md) relaci
 
 ### Entrega consolidada del Sprint 3
 
-La [versión 1.3.0 del Sprint 3](docs/Versiones/1.3.0.md) permanece en la rama `Sprint-3` del fork para revisión previa del solicitante. El [PR #4](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/4) está **cerrado**, sin fusionar y sin solicitud de revisión activa. No se reenviará al propietario hasta una nueva orden expresa. La [guía Sonar](<docs/Calidad/03 SonarQube local.md>) conserva la evidencia del commit `3c1b45d`: gate aprobado, 92,4 % global, 100 % nuevo y cero problemas abiertos. Ese análisis precede a la corrección de los metadatos de versión a 1.3.0.
+La [versión 1.3.0 del Sprint 3](docs/Versiones/1.3.0.md) reúne implementación, calidad de código y evaluación en localhost. La [evidencia SonarQube 1.3.0](<docs/03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) acredita Quality Gate aprobado, cobertura global 92,4 %, código nuevo 100 %, duplicación 0 % y cero problemas abiertos. La [guía de ejecución](<docs/Calidad/03 SonarQube local.md>) permite reproducir el análisis.
 
 ### Entregables del Sprint 3
 
@@ -332,7 +332,7 @@ El [alcance vigente](<docs/03 Implementación/Sprint 03/Alcance de validación l
 
 **Checklist acumulado:** [seguimiento de correcciones en Jira y GitHub](docs/Calidad/02 Checklist de validación.md), con evidencias técnicas y pendientes que requieren decisión humana.
 
-**Control posterior al merge, 24/10/2026:** la versión 1.2.4 se integró al `main` original mediante [PR #3](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/3), commit `da3eef2`. La entrega posterior del Sprint 3 se prepara en `Sprint-3` y requiere revisión propia. La [conciliación de Sprints 1 y 2](<docs/03 Implementación/Pre-Sprint 3/04 Estado de Sprints 1 y 2 V_1_0_0.md>) conserva el corte anterior: cuatro historias de Sprint 2 finalizadas y ECO-18 en QA. No se infieren cambios de calendario ni aceptación por la integración técnica.
+**Estado de la base, 24/10/2026:** la versión 1.2.4 corresponde al commit `da3eef2`. El Sprint 3 continúa esa base como versión 1.3.0. La [conciliación de Sprints 1 y 2](<docs/03 Implementación/Pre-Sprint 3/04 Estado de Sprints 1 y 2 V_1_0_0.md>) conserva el corte anterior: cuatro historias de Sprint 2 finalizadas y ECO-18 en QA. Los resultados técnicos se distinguen de la aceptación funcional y las decisiones de calendario.
 
 **Fase del incremento técnico al 06/10/2026:** incremento técnico del Sprint 2 publicado en `sprint-2` e integrado en `main`. Incorpora US-011 a US-015 sobre la base técnica del Sprint 1; la aceptación formal y el estado de Jira siguen pendientes de conciliación.
 
@@ -353,7 +353,7 @@ Los documentos de definición inicial se encuentran en `docs/01 Inicio/`, la pla
 | 1.2.2 | 06/10/2026 | Calendario exacto de Jira, DoD como criterio único de cierre, seguimiento revisado y alcance de las verificaciones del informe técnico. |
 | 1.2.3 | 06/10/2026 | Resultados locales con Docker, PostgreSQL y frontend, y estado de revisión de las cinco historias en Jira. |
 | 1.2.4 | 24/10/2026 | Preparación Pre-Sprint 3: planificación completa, evidencias y arquitectura técnica, pruebas de integridad, CI, accesibilidad y modularización de interfaz. |
-| 1.3.0 | 25/10/2026 | Sprint 3: cinco informes, evidencia de calidad/seguridad/accesibilidad, alcance localhost, versiones unificadas y revisión previa. PR #4 cerrado y revisión del propietario retirada. |
+| 1.3.0 | 25/10/2026 | Sprint 3: cinco informes, evidencia de calidad/seguridad/accesibilidad, alcance localhost, versiones unificadas y revisión previa. |
 
 ---
 

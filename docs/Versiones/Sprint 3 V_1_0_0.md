@@ -2,10 +2,10 @@
 
 # Entrega técnica del Sprint 3
 
-**Versión documental:** V_1_0_2 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
-**Base integrada:** versión 1.2.4, commit `da3eef2`, PR #3.<br>
+**Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Base:** versión 1.2.4, commit `da3eef2`.<br>
 **Rama:** `Sprint-3`.<br>
-**Estado de entrega:** revisión previa del solicitante en la rama `Sprint-3` del fork. El [PR #4](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/4) está cerrado, sin fusionar y sin solicitud de revisión activa. Su reapertura o cualquier nuevo envío al propietario requiere una nueva orden expresa del solicitante. Consultar las [notas de la versión 1.3.0](1.3.0.md).
+**Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
 
 ## Cambios del incremento
 
@@ -23,7 +23,7 @@
 - Backend: 36 pruebas aprobadas en SQLite y 36 en PostgreSQL 16 aislado; cobertura 93,43 %.
 - Migraciones: revisión `0002_clients_email_unique` en head; sin nuevas operaciones en `alembic check`.
 - Frontend: 11 pruebas y compilación aprobadas; cobertura de líneas 92,19 %, cuatro formularios 100 % y App 90 %.
-- Sonar: [corte registrado](<../03 Implementación/Sprint 03/evidencias/sonar-entrega.json>) del commit `3c1b45d`; Quality Gate aprobado con tres condiciones, cobertura global 92,4 %, nueva 100 %, duplicación 0 % y cero problemas abiertos. Precede a la corrección de metadatos de versión; no se presenta como análisis ejecutado con la etiqueta 1.3.0.
+- Sonar: [análisis de la versión 1.3.0](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) del commit `3ea875b`; Quality Gate aprobado con tres condiciones, cobertura global 92,4 %, nueva 100 %, duplicación 0 % y cero problemas abiertos.
 - Auditorías Python/npm: sin vulnerabilidades conocidas detectadas en las ejecuciones conservadas.
 - Interfaz: 13 estados axe sin infracciones automáticas; 16 comprobaciones dirigidas, 437 comprobaciones de contraste y ningún resultado incompleto sobre contenido funcional. Sin desbordamientos en el alcance medido.
 - Infraestructura local: configuraciones Compose de desarrollo y staging validadas sin imprimir credenciales; los servicios de otros proyectos no se modificaron.
@@ -36,14 +36,15 @@ El contraste del contenido funcional quedó medido y aprobado; los resultados in
 
 La [revisión](<../03 Implementación/Sprint 03/01 Revisión del Sprint V_1_0_0.md>) y la [retrospectiva](<../03 Implementación/Sprint 03/02 Retrospectiva del Sprint V_1_0_0.md>) documentan el incremento y su plan de mejora con hechos observables. Los acuerdos personales y aprobaciones requieren registro por el equipo.
 
-El proyecto, la versión OpenAPI, el paquete frontend y la configuración del próximo análisis Sonar se identifican como **1.3.0**. Los identificadores `1.2.4-sprint3-*` distinguen cortes de análisis anteriores y no se modifican retrospectivamente. Los V_1_0_x son versiones documentales. Los informes de Sprints 1 y 2 se conservan como antecedentes.
+El proyecto, la versión OpenAPI, el paquete frontend y la configuración del análisis Sonar se identifican como **1.3.0**. Los identificadores `1.2.4-sprint3-*` distinguen cortes de análisis anteriores y no se modifican retrospectivamente. Los V_1_0_x son versiones documentales. Los informes de Sprints 1 y 2 se conservan como antecedentes.
 
-La [matriz de entrega frente a la consigna](<../03 Implementación/Sprint 03/Matriz de entrega y rúbrica V_1_0_0.md>) relaciona los ocho criterios con sus evidencias y distingue lo revisable por el propietario de los puntos de aceptación todavía pendientes.
+La [matriz de entrega frente a la consigna](<../03 Implementación/Sprint 03/Matriz de entrega y rúbrica V_1_0_0.md>) relaciona los ocho criterios con sus evidencias y distingue las evidencias técnicas de los puntos de aceptación todavía pendientes.
 
 ## Control documental
 
 | Versión | Fecha | Cambio |
 |---|---|---|
 | V_1_0_0 | 24/10/2026 | Preparación de la entrega y resultados iniciales. |
-| V_1_0_1 | 25/10/2026 | PR único, evidencias del código consolidado, contraste y cobertura actualizados. |
-| V_1_0_2 | 25/10/2026 | Versión 1.3.0 y retiro del envío al propietario para revisión previa del solicitante. |
+| V_1_0_1 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
+| V_1_0_2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
+| V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |

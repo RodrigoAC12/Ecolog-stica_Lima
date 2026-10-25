@@ -5,10 +5,10 @@
 **Nombre del Proyecto:** EcoLogística Lima<br>
 **Líder del Proyecto:** Marco Jhair Martinez Llanos, según el acta de constitución.<br>
 **Sprint:** 3 — Calidad, seguridad, accesibilidad y mantenibilidad.<br>
-**Versión documental:** V_1_0_2 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
+**Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).<br>
 **Rama de entrega:** `Sprint-3`.
 
-**Estado:** revisión previa con el solicitante. PR #4 cerrado y solicitud de revisión retirada; no enviar al propietario hasta una nueva orden expresa.
+**Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
 
 ## Historias de Usuario completadas en este Sprint
 
@@ -38,34 +38,50 @@ La [matriz BDD](<../../Calidad/01 Matriz de pruebas BDD.md>) detalla la trazabil
 
 ## Demostración del trabajo completado
 
-El recorrido de demostración permite presentar el login, el inicio y las pantallas de vehículos, pedidos, conductores y clientes. Se utiliza la aplicación real con API FastAPI y una base exclusiva de auditoría. La evidencia permite reproducir los siguientes puntos:
+**Fecha del recorrido:** 25/10/2026, 01:57:38 (Lima).<br>
+**Versión:** 1.3.0 · **Entorno:** aplicación web y API reales en localhost, con base exclusiva de evaluación.<br>
+**Registro:** [video del recorrido](evidencias/demostracion-1.3.0.webm) y [resultados verificables](evidencias/accesibilidad-demostracion-1-3-0.json).
 
-1. Acceso por teclado al contenido y rechazo visible de credenciales incorrectas.
-2. Navegación entre módulos con el foco ubicado en el contenido principal.
-3. Formularios y listados a 1.440 y 360 px; comprobación adicional de clientes a 320 px.
-4. Controles de seguridad, pruebas de regresión y correcciones verificadas por SonarQube.
-5. Informes y resultados antes/después, con enlaces a las evidencias.
+Se ejecutó el recorrido de los cuatro módulos, verificando operaciones sobre registros de evaluación, cambios de estado y mensajes de resultado. Los datos se conservaron durante la ejecución para comprobar que la desactivación y cancelación no eliminan los registros. La base de la aplicación de uso habitual no se modificó.
 
-| Evidencia del recorrido | Ubicación |
+| Operación demostrada | Historias relacionadas | Resultado visible comprobado | Evidencia |
+|---|---|---|---|
+| Registro y consulta del cliente | US-013, US-014 | Cliente registrado. | [Captura](evidencias/demostracion-01.png) |
+| Actualización de condiciones y consulta de clientes activos | US-014, US-015 | Cliente actualizado. | [Captura](evidencias/demostracion-02.png) |
+| Registro y consulta del vehículo | US-001, US-002 | Vehículo registrado. | [Captura](evidencias/demostracion-03.png) |
+| Actualización de capacidad del vehículo | US-003 | Vehículo actualizado. | [Captura](evidencias/demostracion-04.png) |
+| Desactivación lógica conservando el vehículo | US-004 | Vehículo desactivado. | [Captura](evidencias/demostracion-05.png) |
+| Registro y consulta del conductor | US-009, US-010 | Conductor registrado. | [Captura](evidencias/demostracion-06.png) |
+| Actualización del contacto del conductor | US-011 | Conductor actualizado. | [Captura](evidencias/demostracion-07.png) |
+| Desactivación y exclusión del filtro de conductores disponibles | US-010, US-012 | Conductor desactivado. | [Captura](evidencias/demostracion-08.png) |
+| Registro y consulta del pedido pendiente | US-005, US-006 | Pedido registrado. | [Captura](evidencias/demostracion-09.png) |
+| Edición del pedido pendiente | US-007 | Pedido actualizado. | [Captura](evidencias/demostracion-10.png) |
+| Cancelación y consulta del pedido cancelado | US-006, US-008 | Pedido cancelado. | [Captura](evidencias/demostracion-11.png) |
+
+### Observaciones de la revisión técnica
+
+| Observación | Resultado y acción |
 |---|---|
-| Resultado automatizado, contraste y comprobaciones de teclado | [accesibilidad-entrega-edge.json](evidencias/accesibilidad-entrega-edge.json) |
-| Captura de login | [Login 360 px](evidencias/entrega-edge-login-360.png) |
-| Captura de conductores | [Conductores 360 px](evidencias/entrega-edge-conductores-360.png) |
-| Captura de clientes | [Clientes 360 px](evidencias/entrega-edge-clientes-360.png) |
-| Pruebas sobre PostgreSQL | [backend-postgres.xml](evidencias/backend-postgres.xml) |
+| Las condiciones de entrega deben mantenerse después de editar el cliente | Se guardó una preferencia distinta y se verificó su presentación en el listado. |
+| Desactivar conserva la trazabilidad del vehículo y conductor | El vehículo permanece como INACTIVO; el conductor deja de aparecer al filtrar disponibles. |
+| Los pedidos pendientes deben poder editarse y cancelarse | La dirección actualizada aparece en el listado; la cancelación cambia el estado a CANCELADO y se comprueba su filtro. |
+| La navegación debe ser operable con teclado y mostrar el foco | Los cinco formularios y cambios de vista pasan las 16 comprobaciones dirigidas del recorrido. |
+| Los errores de autenticación deben ser perceptibles | El intento con credenciales incorrectas muestra una alerta visible. |
 
-La revisión con interesados debe registrar sus observaciones y aceptación sobre este incremento. **Demostración a stakeholders: pendiente de acreditación.** El recorrido reproducible y sus capturas están disponibles para presentarlo desde localhost; no se registran asistentes ni aprobaciones inexistentes. El criterio 1 queda explícitamente parcial hasta incorporar ese resultado.
+### Resultado de la revisión de historias y Done
+
+Los pasos ejercitan las 15 historias existentes, con resultados técnicos aprobados en el alcance descrito. Se complementan con 36 pruebas backend y 11 frontend, cobertura por componente, análisis SonarQube 1.3.0 y comprobación del entorno local. El registro corresponde a la demostración técnica; la validación de interesados y su aceptación funcional se mantienen por confirmar.
 
 ## Pendientes
 
 | Pendiente | Acción de cierre | Responsable |
 |---|---|---|
-| Revisión del incremento | Revisar PR y evidencias; registrar observaciones | Par técnico distinto del autor, por confirmar |
+| Revisión del incremento | Revisar código y evidencias; registrar observaciones | Par técnico distinto del autor, por confirmar |
 | Aceptación de interesados | Validar escenarios oficiales y documentar resultado | Líder e interesados |
 | Tecnología de asistencia y navegadores | Completar validación humana y compatibilidad del DoD; el contraste funcional medido ya pasa | Equipo de calidad/UX, por asignar |
 | Mejoras de seguridad | Priorizar limitación de intentos y alertas/retención en el backlog; no son requisitos adicionales de la consigna | Equipo técnico, por asignar |
 | Conciliación Jira | Regularizar fechas y responsables con decisiones reales; conservar ECO-18 en revisión mientras corresponda | Líder y equipo |
-| Integración | Revisar primero con el solicitante. Solo tras su nueva orden, enviar al propietario y solicitar revisión/aprobación | Solicitante, equipo y propietario |
+| Preparación de la versión final | Revisar resultados funcionales y completar la aceptación aplicable | Equipo responsable |
 
 No se incluyen en esta entrega US-016 a US-023: optimización, reoptimización, mapa, indicadores y sostenibilidad funcional continúan en su backlog.
 
@@ -75,6 +91,7 @@ No se incluyen en esta entrega US-016 a US-023: optimización, reoptimización, 
 |---|---|---|
 | V_1_0_0 | 24/10/2026 | Revisión del incremento técnico, recorrido reproducible y pendientes de aceptación. |
 | V_1_0_1 | 25/10/2026 | Evidencias vigentes, historias y DoD trazados, publicación única y demostración a interesados diferenciada. |
-| V_1_0_2 | 25/10/2026 | Identificación 1.3.0 y envío al propietario retirado para revisión previa. |
+| V_1_0_2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
+| V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
 
 [← Volver al README](../../../README.md)

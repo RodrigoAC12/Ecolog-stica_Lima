@@ -2,11 +2,11 @@
 
 # Preparación del análisis local con SonarQube
 
-**Versión documental:** 1.0.4 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
+**Versión documental:** 1.0.5 · **Versión del proyecto:** 1.3.0 · **Actualizado:** 25/10/2026 (Lima).
 
 ## Alcance
 
-Análisis local de ECO-53 sobre la base integrada 1.2.4 y el incremento del Sprint 3, ahora identificado como proyecto 1.3.0. La entrega permanece en `Sprint-3` para revisión previa; el [PR #4](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/4) está cerrado y no debe reenviarse hasta nueva orden del solicitante. El corte registrado identifica `3c1b45d` y un árbol limpio al comenzar; precede a la actualización de metadatos de versión. Los JSON y las secciones iniciales conservan sus identificadores históricos. El próximo análisis usará `sonar.projectVersion=1.3.0`. Sonar no acredita aceptación humana ni todas las categorías OWASP. El despliegue localhost se verifica [por separado](<../03 Implementación/Sprint 03/evidencias/staging-local.json>).
+Análisis local de ECO-53 para la versión 1.3.0. La [evidencia actual](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) identifica la revisión `3ea875b`, procesada el 25/10/2026 a las 01:51:17 de Lima con árbol de trabajo limpio. El Quality Gate aprueba las tres condiciones, cobertura global 92,4 %, nueva 100 %, duplicación 0 % y cero problemas abiertos. Las secciones posteriores conservan los cortes históricos. El despliegue localhost se comprueba por separado; Sonar no sustituye aceptación funcional.
 
 ## Herramientas y configuración
 
@@ -121,7 +121,7 @@ La [evidencia final](<../03 Implementación/Sprint 03/evidencias/sonar-final.jso
 
 La [evaluación de accesibilidad](<../03 Implementación/Sprint 03/05 WCAG V_1_0_0.md>) conserva resultados automáticos y pendientes humanos. La rama de entrega es `Sprint-3`; los resultados de los dos cortes anteriores se mantienen como antecedentes.
 
-### Corte consolidado para revisión — 25/10/2026
+### Corte consolidado anterior — 25/10/2026
 
 La [evidencia vigente](<../03 Implementación/Sprint 03/evidencias/sonar-entrega.json>) corresponde al análisis `7e922f0a-7e3c-467e-ab4a-1052f14d1855`, procesado a las 01:15:24 de Lima sobre `3c1b45d2f98011a0c355f9343b10928aed5c7269`. Quality Gate `OK`, tres condiciones evaluadas, cobertura global 92,4 %, código nuevo 100 %, duplicación 0 %, cero problemas abiertos y deuda Sonar 0 minutos. No se cambiaron umbrales, perfiles ni exclusiones. Se revocó el token temporal al terminar.
 
@@ -142,4 +142,5 @@ La ejecución previa del commit publicado `cde28d7`, análisis `dfc82560-3601-49
 | 1.0.1 | 24/10/2026 | Corrección de los cuatro botones, pruebas frontend y segundo análisis con condiciones de Quality Gate aprobadas. |
 | 1.0.2 | 24/10/2026 | Corte completo del Sprint 3, seguridad, accesibilidad y enlace a los cinco informes oficiales. |
 | 1.0.3 | 25/10/2026 | Análisis sobre commit limpio, resultados actuales y antecedentes de la revisión publicada. |
-| 1.0.4 | 25/10/2026 | Configuración 1.3.0 para próximos análisis y envío al propietario retirado. |
+| 1.0.4 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
+| 1.0.5 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |

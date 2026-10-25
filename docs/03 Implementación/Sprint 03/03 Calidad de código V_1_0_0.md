@@ -3,13 +3,13 @@
 # Evaluación de Calidad de Código — SonarQube
 
 **Nombre del Proyecto:** EcoLogística Lima<br>
-**Fecha de Análisis:** 2026-10-25, 01:15:24 (America/Lima).<br>
-**Versión documental:** V_1_0_2 · **Versión del proyecto:** 1.3.0<br>
-**Versión del Análisis:** V_1_0_1, corte del 25/10/2026 a las 01:15:24 (Lima).<br>
+**Fecha de Análisis:** 2026-10-25, 01:51:17 (America/Lima).<br>
+**Versión documental:** V_1_0_3 · **Versión del proyecto:** 1.3.0<br>
+**Versión del Análisis:** V_1_0_3, corte del 25/10/2026 a las 01:51:17 (Lima).<br>
 **Herramientas:** SonarQube Community Build 26.10.0.133078, SonarScanner para NPM 5.0.2.<br>
-**Revisión Git analizada:** `3c1b45d2f98011a0c355f9343b10928aed5c7269`, sin cambios sin commit al iniciar el scanner.<br>
-**Versión técnica del corte registrado:** `1.2.4-sprint3-final`, anterior a la corrección de metadatos a 1.3.0.
-**Estado documental:** revisión previa del solicitante en `Sprint-3`; [PR #4 cerrado](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/4), sin solicitud de revisión activa. Después del análisis se corrige la versión OpenAPI a 1.3.0 y se sincronizan metadatos; no se altera retrospectivamente el JSON ni se atribuye a ese corte el nuevo identificador de versión. El próximo análisis está configurado con `sonar.projectVersion=1.3.0`.
+**Revisión Git analizada:** `3ea875bf82f7a8b4ecb0a134dc04cb2767833eed`, sin cambios sin commit al iniciar el scanner.<br>
+**Versión técnica analizada:** `1.3.0`.
+**Estado documental:** versión 1.3.0 con evidencias conservadas para revisión.
 
 ## 1. Resumen Ejecutivo de Quality Gate
 
@@ -21,7 +21,7 @@ El despliegue se evalúa exclusivamente en localhost conforme a la [adenda del 2
 - **Cobertura de líneas:** 93,2 %; **cobertura de condiciones:** 88,1 %.
 - **Código fuente no comentado:** 1.529 líneas.
 
-El análisis `7e922f0a-7e3c-467e-ab4a-1052f14d1855` finalizó con procesamiento `SUCCESS`. Esta ejecución evaluó tres condiciones respecto de `1.2.4-sprint3-remediacion`, sin ignorar ninguna:
+El análisis `a010e846-b105-4213-9984-5553d32a6e57` finalizó con procesamiento `SUCCESS`. Esta ejecución evaluó tres condiciones respecto de `1.2.4-sprint3-final`, sin ignorar ninguna:
 
 | Condición de código nuevo | Umbral aplicado por el servidor | Resultado | Estado |
 |---|---|---:|---|
@@ -29,7 +29,7 @@ El análisis `7e922f0a-7e3c-467e-ab4a-1052f14d1855` finalizó con procesamiento 
 | Duplicación | Como máximo 3 % | 0,0 % | Aprobado |
 | Nuevos problemas | 0 | 0 | Aprobado |
 
-**Evidencia vigente:** [sonar-entrega.json](evidencias/sonar-entrega.json), [cobertura frontend por archivo](evidencias/frontend-cobertura-entrega.json), [guía reproducible](<../../Calidad/03 SonarQube local.md>) y [panel local](http://localhost:9000/dashboard?id=ecologistica-lima). Los JSON permiten revisar los resultados sin acceso al servidor de esta PC.
+**Evidencia vigente:** [sonar-1.3.0.json](evidencias/sonar-1.3.0.json), [cobertura frontend por archivo](evidencias/frontend-cobertura-1.3.0.json), [guía reproducible](<../../Calidad/03 SonarQube local.md>) y [panel local](http://localhost:9000/dashboard?id=ecologistica-lima). Los JSON permiten revisar los resultados sin acceso al servidor de esta PC.
 
 **Antecedentes conservados:** [análisis inicial](../../Calidad/evidencias-sonar/2026-10-24-inicial.json), [primera remediación](../../Calidad/evidencias-sonar/2026-10-24-remediacion.json) y [corte previo a publicar](evidencias/sonar-final.json). El análisis posterior de `cde28d7` (`dfc82560-3601-494b-9ee7-6182c662f80b`) obtuvo 89,9 % global y 95,8 % nuevo; el corte vigente incorpora las nuevas pruebas y no reemplaza retrospectivamente esos valores.
 
@@ -50,9 +50,9 @@ Los cuatro bugs iniciales tienen impacto de fiabilidad `MEDIUM` en la API del se
 | Frontend local, Node.js 24.14.1 y Vitest 5.0.5 | 11 aprobadas después de corregir | 92,19 % de líneas; 91,53 % de sentencias; 88,13 % de ramas; 94,82 % de funciones |
 | TypeScript y Vite | Compilación aprobada | No sustituye pruebas en navegadores ni aceptación BDD |
 
-Las cifras de Pytest y Vitest tienen denominadores diferentes de SonarQube. La [cobertura por archivo](evidencias/frontend-cobertura-entrega.json) acredita 100 % de líneas en los cuatro formularios y 90 % en `App.tsx`; el backend de seguridad alcanza 95 % redondeado en Pytest. Las cuatro pruebas añadidas verifican que cancelar una edición con cambios no provoca escrituras al servidor ni altera el registro original. No se excluyó código para elevar cobertura.
+Las cifras de Pytest y Vitest tienen denominadores diferentes de SonarQube. La [cobertura por archivo](evidencias/frontend-cobertura-1.3.0.json) acredita 100 % de líneas en los cuatro formularios y 90 % en `App.tsx`; el backend de seguridad alcanza 95 % redondeado en Pytest. Las cuatro pruebas añadidas verifican que cancelar una edición con cambios no provoca escrituras al servidor ni altera el registro original. No se excluyó código para elevar cobertura.
 
-El CI del proyecto utiliza Node.js 22. La revisión publicada `80abefc` aprobó [CI](https://github.com/jmartinez278/Ecolog-stica_Lima/actions/runs/40167430467), [CodeQL](https://github.com/jmartinez278/Ecolog-stica_Lima/actions/runs/40167430417) y [auditoría](https://github.com/jmartinez278/Ecolog-stica_Lima/actions/runs/40167430573); los controles del último commit se consultan en el PR único antes de integrar.
+La versión 1.3.0, revisión `3ea875b`, aprobó [CI en Node.js 22](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40169865983), [CodeQL](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40169865979) y [auditoría de dependencias](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40169865986). Los controles de cada nueva revisión se consultan en la rama Sprint-3.
 
 ## 3. Plan de Remediación y Deuda Técnica
 
@@ -73,10 +73,10 @@ La evaluación posterior incorporó dos mejoras adicionales: validación obligat
 |---|---|---|---|
 | Cobertura por componente y funciones frontend | Verificación actual: formularios 100 % de líneas y App 90 %; mantener regresiones y priorizar el resto según riesgo | Equipo de desarrollo | En cada cambio afectado |
 | Dependencias y alcance de seguridad | Mantener auditorías Python/npm y evaluación OWASP; el scanner omitió SCA | Por asignar en Jira | Informe de seguridad y revisión final |
-| Revisión independiente y publicación | Revisar PR, ejecutar CI y analizar la revisión definitiva | Revisor técnico por confirmar | Antes de integrar |
+| Revisión independiente y publicación | Revisar código, ejecutar CI y analizar la revisión definitiva | Revisor técnico por confirmar | Antes de integrar |
 | Accesibilidad y aceptación | Evaluación WCAG y escenarios BDD con evidencia real | Equipo e interesados por confirmar | Antes del cierre del sprint |
 
-No se cambiaron umbrales, perfiles ni exclusiones para resolver los hallazgos. El análisis utiliza los perfiles `Sonar way core` disponibles. Cero vulnerabilidades detectadas no es una certificación de seguridad: el informe OWASP documenta los controles complementarios. El scanner vigente identifica `3c1b45d`, recupera la información SCM y analiza un árbol de trabajo limpio; debe repetirse si cambia el código fuente posteriormente. El token temporal se revocó al terminar.
+No se cambiaron umbrales, perfiles ni exclusiones para resolver los hallazgos. El análisis utiliza los perfiles `Sonar way core` disponibles. Cero vulnerabilidades detectadas no es una certificación de seguridad: el informe OWASP documenta los controles complementarios. El scanner vigente identifica `3ea875b`, recupera la información SCM y analiza un árbol de trabajo limpio; debe repetirse si cambia el código fuente posteriormente. El token temporal se revocó al terminar.
 
 ## Control documental
 
@@ -84,6 +84,7 @@ No se cambiaron umbrales, perfiles ni exclusiones para resolver los hallazgos. E
 |---|---|---|
 | V_1_0_0 | 24/10/2026 | Informe oficial de los cortes inicial/final, remediación, seguridad, accesibilidad y límites de aceptación. |
 | V_1_0_1 | 25/10/2026 | Análisis del commit de entrega, severidad MEDIUM respaldada por API y cobertura de los cuatro formularios. |
-| V_1_0_2 | 25/10/2026 | Versión del proyecto 1.3.0, corte Sonar histórico identificado y envío retirado. |
+| V_1_0_2 | 25/10/2026 | Actualización de versión, evidencias y trazabilidad documental. |
+| V_1_0_3 | 25/10/2026 | Análisis 1.3.0, recorrido técnico registrado y actualización editorial. |
 
 [← Volver al README](../../../README.md)
