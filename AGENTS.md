@@ -2,10 +2,11 @@
 
 ## Contexto y alcance
 
-- **Rama de desarrollo vigente:** `Pre-Sprint-3`, en el fork `RodrigoAC12/Ecolog-stica_Lima`; `main` del propietario permanece intacto hasta revisar y aprobar el PR.
+- **Rama de desarrollo vigente:** `Sprint-3`, autorizada por el usuario en el fork `RodrigoAC12/Ecolog-stica_Lima`. La base 1.2.4 ya está integrada en `jmartinez278/Ecolog-stica_Lima:main` mediante PR #3, commit `da3eef2`; la entrega del Sprint 3 requiere su propia revisión e integración.
 - **Versión del proyecto:** 1.2.4. Los documentos académicos numerados `V_1_0_0` conservan su versión individual.
 - Sprint 1 abarca US-001 a US-010; Sprint 2, US-011 a US-015. El trabajo de Pre-Sprint 3 solo prepara y verifica esa funcionalidad; no implementa US-016 en adelante.
 - Los entregables históricos están en `docs/03 Implementación/Sprint 1/` y `docs/03 Implementación/Sprint 2/`; mover un archivo no significa que su sesión o aceptación histórica haya ocurrido.
+- Los cinco informes oficiales del Sprint 3 están en `docs/03 Implementación/Sprint 03/`; conservar sus enlaces bidireccionales y evidencias, sin presentar resultados automáticos como aprobación humana.
 - Los cuatro entregables obligatorios de planificación están en `docs/02 Planificación/`; el seguimiento adicional está en `Anexos/`.
 - Registrar las mejoras frente al último `main` en [docs/Versiones/1.2.4.md](docs/Versiones/1.2.4.md). Consultar pruebas y validaciones en `docs/Calidad/`.
 - El estado de Jira y las ceremonias se basan en datos reales. No inventar revisores, fechas, sesiones, aprobaciones ni despliegues de staging.

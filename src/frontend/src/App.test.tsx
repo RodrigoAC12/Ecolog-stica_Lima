@@ -22,6 +22,23 @@ beforeEach(() => {
 afterEach(() => { cleanup(); vi.unstubAllGlobals() })
 
 describe('flujos principales', () => {
+  it('sitúa el foco en el contenido después del login y de cambiar de vista', async () => {
+    vi.stubGlobal('fetch', vi.fn(async (input: string) => {
+      if (input.endsWith('/auth/login')) return json({ access_token: 'token' })
+      return json([])
+    }))
+    render(<App />)
+    await login()
+    expect(document.getElementById('main-content')).toHaveFocus()
+    await userEvent.click(screen.getByRole('button', { name: 'Vehículos' }))
+    await screen.findByRole('heading', { name: 'Vehículos' })
+    expect(document.getElementById('main-content')).toHaveFocus()
+    await userEvent.click(screen.getByRole('button', { name: 'Inicio' }))
+    expect(document.getElementById('main-content')).toHaveFocus()
+    await userEvent.click(screen.getByRole('button', { name: 'Inicio' }))
+    expect(document.getElementById('main-content')).toHaveFocus()
+  })
+
   it('incluye acceso por teclado al contenido principal desde el login', async () => {
     render(<App />)
     const skip = screen.getByRole('link', { name: 'Saltar al contenido' })

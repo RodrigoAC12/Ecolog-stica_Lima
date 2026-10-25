@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Page } from './types'
 import { LoginPage } from './pages/LoginPage'
 import { HomePage } from './pages/HomePage'
@@ -11,9 +11,13 @@ import { AppHeader } from './components/layout/AppHeader'
 export function App() {
   const [token, setToken] = useState('')
   const [page, setPage] = useState<Page>('Inicio')
+  useEffect(() => {
+    if (token) document.getElementById('main-content')?.focus({ preventScroll: true })
+  }, [token, page])
   function navigate(target: Page) {
     setPage(target)
     window.scrollTo(0, 0)
+    if (target === page) document.getElementById('main-content')?.focus({ preventScroll: true })
   }
   if (!token) return <LoginPage onLogin={value => { setToken(value); window.scrollTo(0, 0) }} />
   return <div className="app-shell">

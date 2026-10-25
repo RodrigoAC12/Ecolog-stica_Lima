@@ -20,6 +20,6 @@ export function ClientFormView({ form, editing, busy, set, submit, onCancel }: {
         <Field label="Preferencia de entrega"><textarea maxLength={2000} rows={3} value={form.preferencia_entrega ?? ''} onChange={e => set('preferencia_entrega', e.target.value || null)} /></Field>
         <Field label="Restricción de acceso"><textarea maxLength={2000} rows={3} value={form.restriccion_acceso ?? ''} onChange={e => set('restriccion_acceso', e.target.value || null)} /></Field>
         <Field label="Estado"><select value={form.estado} onChange={e => set('estado', e.target.value as ClientForm['estado'])}><option>ACTIVO</option><option>INACTIVO</option></select></Field>
-        <div className="actions"><button disabled={busy}>{editing ? 'Guardar cambios' : 'Registrar'}</button>{editing && <button type="button" className="secondary" onClick={() => { onCancel() }}>Cancelar edición</button>}</div>
+        <div className="actions"><button type="submit" disabled={busy}>{editing ? 'Guardar cambios' : 'Registrar'}</button>{editing && <button type="button" className="secondary" onClick={() => { onCancel() }}>Cancelar edición</button>}</div>
       </form>
 }

@@ -11,6 +11,8 @@ __pycache__/
 .coverage
 htmlcov/
 coverage/
+coverage.xml
+.scannerwork/
 dist/
 build/
 *.tsbuildinfo
@@ -23,5 +25,6 @@ tmp/
 .vscode/
 *.swp
 *.tmp
+*~
 .DS_Store
 Thumbs.db

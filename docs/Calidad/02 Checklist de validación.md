@@ -2,6 +2,8 @@
 
 # Checklist de validación — Pre-Sprint 3
 
+**Versión documental:** 1.0.1. El cuerpo original conserva el corte preparatorio; la adenda final incorpora la entrega posterior del Sprint 3.
+
 **Versión del proyecto:** 1.2.4 · **Rama:** `Pre-Sprint-3` · **Fecha:** 24/10/2026.
 
 Este registro distingue **implementación técnica en la rama** de **aceptación formal**. Cada control de CI debe comprobarse nuevamente en el commit definitivo.
@@ -34,6 +36,24 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [ ] Pruebas manuales de accesibilidad WCAG, 360 px, teclado y navegadores soportados.
 - [ ] Demostración y aceptación de los escenarios oficiales Gherkin por interesados.
 - [ ] Revisión independiente del código y aprobación del Pull Request por el propietario.
+- [x] Integración técnica de la base 1.2.4 mediante [PR #3](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/3), 24/10/2026; no sustituye la revisión independiente requerida.
 - [ ] Confirmación de responsables, estado de sprints y ceremonias reales en Jira; no inventar reuniones ni fechas.
 
 **Referencias:** [Informe de seguridad](<../03 Implementación/Pre-Sprint 3/02 Informe de seguridad V_1_0_0.md>), [Integridad y auditoría](<../03 Implementación/Pre-Sprint 3/03 Informe de integridad y auditoría V_1_0_0.md>) y [Versión 1.2.4](../Versiones/1.2.4.md).
+
+## Adenda de Sprint 3 — versión documental 1.0.1
+
+- [x] Cinco informes oficiales preparados en `docs/03 Implementación/Sprint 03/` con retorno al README.
+- [x] Cuatro hallazgos S9011 corregidos y reanalizados.
+- [x] JWT sin expiración rechazado y probado.
+- [x] Gestión de foco corregida y comprobada en la aplicación real.
+- [x] 36 pruebas backend en SQLite y PostgreSQL; migraciones verificadas.
+- [x] 7 pruebas frontend y compilación; cobertura XML/LCOV.
+- [x] Auditorías de dependencias sin avisos conocidos en el corte conservado.
+- [x] Sonar final aprobado con tres condiciones evaluadas y cero problemas abiertos.
+- [x] 13 estados de accesibilidad automática y 11 comprobaciones dirigidas aprobadas tras corregir.
+- [ ] Acreditar contraste pendiente, lector de pantalla y navegadores del alcance completo.
+- [ ] Acreditar aceptación de interesados, revisión independiente y staging externo.
+- [ ] Confirmar acuerdos personales, calendario y cierre administrativo en Jira.
+
+Consultar el [registro de entrega del Sprint 3](<../Versiones/Sprint 3 V_1_0_0.md>) para resultados, límites y trazabilidad. La preparación de documentos no convierte en realizadas las validaciones pendientes.

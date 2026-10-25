@@ -1,6 +1,6 @@
 # EcoLogística Lima
 
-**Versión de este README:** 1.2.4 · **Actualizado:** 24/10/2026
+**Versión de este README:** 1.2.5 · **Actualizado:** 24/10/2026
 
 **EcoLogística Lima** es un proyecto de software orientado a la optimización sostenible de rutas de distribución de última milla para el escenario empresarial de **DistriRápido S.A.C.**
 
@@ -312,9 +312,25 @@ La [matriz de trazabilidad BDD](docs/Calidad/01 Matriz de pruebas BDD.md) relaci
 
 ## Estado
 
+### Preparación local de calidad del Sprint 3
+
+La [guía de SonarQube local](<docs/Calidad/03 SonarQube local.md>) describe el scanner y la cobertura backend/frontend. La [entrega técnica del Sprint 3](<docs/Versiones/Sprint 3 V_1_0_0.md>) se presenta en la rama `Sprint-3` para revisión mediante PR; no acredita por sí sola el cierre de ECO-53 o del Sprint 3.
+
+### Entregables del Sprint 3
+
+| Criterio | Documento |
+|---|---|
+| Revisión del sprint | [01 Revisión del Sprint V_1_0_0](<docs/03 Implementación/Sprint 03/01 Revisión del Sprint V_1_0_0.md>) |
+| Retrospectiva | [02 Retrospectiva del Sprint V_1_0_0](<docs/03 Implementación/Sprint 03/02 Retrospectiva del Sprint V_1_0_0.md>) |
+| Calidad de código | [03 Calidad de código V_1_0_0](<docs/03 Implementación/Sprint 03/03 Calidad de código V_1_0_0.md>) |
+| Seguridad OWASP 2025 | [04 OWASP V_1_0_0](<docs/03 Implementación/Sprint 03/04 OWASP V_1_0_0.md>) |
+| Accesibilidad WCAG | [05 WCAG V_1_0_0](<docs/03 Implementación/Sprint 03/05 WCAG V_1_0_0.md>) |
+
+La [adenda de planificación del Sprint 3](<docs/02 Planificación/Anexos/Planificación Sprint 3 V_1_0_0.md>) incorpora EP-06 y relaciona los ocho criterios con RF/RNF y DoD. La evaluación comprende pruebas reales y sus límites; revisión independiente, aceptación de interesados, contraste pendiente y staging externo se verifican por separado.
+
 **Checklist acumulado:** [seguimiento de correcciones en Jira y GitHub](docs/Calidad/02 Checklist de validación.md), con evidencias técnicas y pendientes que requieren decisión humana.
 
-**Control al 24/10/2026:** la preparación técnica anterior al Sprint 3 se desarrolla en la [rama `Pre-Sprint-3` del fork](https://github.com/RodrigoAC12/Ecolog-stica_Lima/tree/Pre-Sprint-3), no en `main` original. [Conciliación actual de los Sprints 1 y 2](<docs/03 Implementación/Pre-Sprint 3/04 Estado de Sprints 1 y 2 V_1_0_0.md>): cuatro historias de Sprint 2 están `Finalizada` y ECO-18 está en `In Review / QA`; la documentación histórica refleja el 06/10. Persisten validaciones de DoD, responsables y calendario por confirmar. No se declara empezado Sprint 3 ni aprobada la integración.
+**Control posterior al merge, 24/10/2026:** la versión 1.2.4 se integró al `main` original mediante [PR #3](https://github.com/jmartinez278/Ecolog-stica_Lima/pull/3), commit `da3eef2`. La entrega posterior del Sprint 3 se prepara en `Sprint-3` y requiere revisión propia. La [conciliación de Sprints 1 y 2](<docs/03 Implementación/Pre-Sprint 3/04 Estado de Sprints 1 y 2 V_1_0_0.md>) conserva el corte anterior: cuatro historias de Sprint 2 finalizadas y ECO-18 en QA. No se infieren cambios de calendario ni aceptación por la integración técnica.
 
 **Fase del incremento técnico al 06/10/2026:** incremento técnico del Sprint 2 publicado en `sprint-2` e integrado en `main`. Incorpora US-011 a US-015 sobre la base técnica del Sprint 1; la aceptación formal y el estado de Jira siguen pendientes de conciliación.
 
@@ -335,6 +351,7 @@ Los documentos de definición inicial se encuentran en `docs/01 Inicio/`, la pla
 | 1.2.2 | 06/10/2026 | Calendario exacto de Jira, DoD como criterio único de cierre, seguimiento revisado y alcance de las verificaciones del informe técnico. |
 | 1.2.3 | 06/10/2026 | Resultados locales con Docker, PostgreSQL y frontend, y estado de revisión de las cinco historias en Jira. |
 | 1.2.4 | 24/10/2026 | Preparación Pre-Sprint 3: planificación completa, evidencias y arquitectura técnica, pruebas de integridad, CI, accesibilidad y modularización de interfaz. |
+| 1.2.5 | 24/10/2026 | Cinco informes del Sprint 3, evidencias de calidad/seguridad/accesibilidad, adenda EP-06 y aclaración del estado posterior al merge. |
 
 ---
 

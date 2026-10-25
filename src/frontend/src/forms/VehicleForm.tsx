@@ -24,7 +24,7 @@ export function VehicleFormView({ form, editing, busy, set, submit, onCancel }: 
         <Field label="Estado"><select value={form.estado} onChange={e => set('estado', e.target.value)}>
           {['DISPONIBLE', 'EN_RUTA', 'MANTENIMIENTO', 'INACTIVO'].map(state => <option key={state}>{state}</option>)}
         </select></Field>
-        <div className="actions"><button disabled={busy}>{editing ? 'Guardar cambios' : 'Registrar'}</button>
+        <div className="actions"><button type="submit" disabled={busy}>{editing ? 'Guardar cambios' : 'Registrar'}</button>
           {editing && <button type="button" className="secondary" onClick={() => { onCancel() }}>Cancelar edición</button>}
         </div>
       </form>
