@@ -26,8 +26,8 @@ const evidence = path.join(root, 'docs/03 Implementación/Sprint 03/evidencias')
 const python = path.join(root, '.venv/Scripts/python.exe')
 const password = randomBytes(24).toString('base64url')
 const environment = { ...process.env, DATABASE_URL: `sqlite:///${path.join(temporary, 'test_reader.db').replaceAll('\\', '/')}`, JWT_SECRET: randomBytes(48).toString('hex'), BOOTSTRAP_OPERATOR_EMAIL: 'lector@sprint3.example.test', BOOTSTRAP_OPERATOR_PASSWORD: password, VITE_API_PROXY_TARGET: 'http://127.0.0.1:8004' }
-const report = { executedAt: new Date().toISOString(), applicationVersion: version, sourceCommit: spawnSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).stdout.trim(), sourceFiles: {}, method: 'NVDA real, extensión pre_speech de solo lectura, Edge visible, foco y eventos de la aplicación real; síntesis silenciosa y transcripción textual anterior al sintetizador.', scope: 'Acceso, error de autenticación y entrada a Inicio en localhost 5176/8004; SQLite y operador sintéticos exclusivos; perfil NVDA y navegador desechables.', checks: [], limits: ['No evalúa la calidad acústica, pronunciación ni comprensión de una persona: se recoge la salida textual real de NVDA con sintetizador silencioso.', 'Acredita únicamente la combinación y los controles identificados, no conformidad WCAG AA universal.', 'Los cuatro módulos, sus formularios, mensajes de éxito y cierre de sesión requieren una evaluación NVDA adicional.', 'La revisión del cliente o del usuario y su aceptación permanecen pendientes.'] }
-for (const relative of ['src/frontend/src/App.tsx', 'src/frontend/src/forms/ClientForm.tsx', 'src/frontend/src/forms/VehicleForm.tsx', 'src/frontend/src/forms/OrderForm.tsx', 'src/frontend/src/forms/DriverForm.tsx', 'src/frontend/src/components/common/StatusMessage.tsx']) report.sourceFiles[relative] = createHash('sha256').update(readFileSync(path.join(root, relative))).digest('hex')
+const report = { executedAt: new Date().toISOString(), applicationVersion: version, sourceCommit: spawnSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).stdout.trim(), sourceFiles: {}, method: 'NVDA real, extensión pre_speech de solo lectura, Edge visible, foco y eventos de la aplicación real; síntesis silenciosa y transcripción textual anterior al sintetizador.', scope: 'Acceso, Inicio, navegación, formularios de cuatro módulos, mensajes y cierre de sesión en localhost 5176/8004; SQLite y operador sintéticos exclusivos; perfil NVDA y navegador desechables.', checks: [], limits: ['No evalúa la calidad acústica, pronunciación ni comprensión de una persona: se recoge la salida textual real de NVDA con sintetizador silencioso.', 'Acredita únicamente la combinación y los controles identificados, no conformidad WCAG AA universal.', 'La revisión del cliente o del usuario y su aceptación permanecen pendientes.'] }
+for (const relative of ['src/frontend/src/App.tsx', 'src/frontend/src/pages/LoginPage.tsx', 'src/frontend/src/forms/ClientForm.tsx', 'src/frontend/src/forms/VehicleForm.tsx', 'src/frontend/src/forms/OrderForm.tsx', 'src/frontend/src/forms/DriverForm.tsx', 'src/frontend/src/components/common/StatusMessage.tsx']) report.sourceFiles[relative] = createHash('sha256').update(readFileSync(path.join(root, relative))).digest('hex')
 const children = []
 let server, browser, nvdaStarted = false, browserPid
 const pause = ms => new Promise(resolve => setTimeout(resolve, ms))
@@ -50,7 +50,7 @@ const normalized = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
 async function check(name, action, expected) {
   writeFileSync(path.join(profile, 'target.json'), JSON.stringify({ pid: browserPid, step: name }))
   await action()
-  await pause(1300)
+  await pause(1800)
   let events = transcript().filter(event => event.step === name)
   for (let i = 0; i < 8 && !expected(events.map(event => event.text).join(' ')); i++) {
     await pause(300)
@@ -69,6 +69,7 @@ try {
   start(nvda, ['--minimal', '--no-sr-flag', '--config-path=' + profile, '--log-file=' + path.join(profile, 'nvda.log')], path.dirname(nvda))
   nvdaStarted = true
   await until(() => existsSync(path.join(profile, 'ready.json')) && existsSync(path.join(profile, 'nvda.log')) && readFileSync(path.join(profile, 'nvda.log'), 'utf8').includes('NVDA initialized'), 'NVDA inicializado')
+  report.workingTreeDirtyAtStart = Boolean(spawnSync('git', ['status', '--porcelain'], { cwd: root, encoding: 'utf8' }).stdout.trim())
   report.nvdaVersion = readFileSync(path.join(profile, 'nvda.log'), 'utf8').match(/Starting NVDA version (.+)/)?.[1].trim()
   server = await chromium.launchServer({ channel: 'msedge', headless: false, args: ['--force-renderer-accessibility'] })
   browserPid = server.process().pid
@@ -85,11 +86,27 @@ try {
   await check('Error de autenticación anunciado sin mover el foco', async () => { await page.getByRole('button', { name: 'Ingresar', exact: true }).click(); await page.getByRole('alert').waitFor() }, text => /alerta Credenciales inválidas/i.test(text))
   await page.getByLabel('Contraseña').fill(password)
   await check('Autenticación: región principal', async () => { await page.getByRole('button', { name: 'Ingresar', exact: true }).click(); await page.getByRole('heading', { name: 'Inicio', exact: true }).waitFor() }, text => /principal región/i.test(text))
+  for (const name of ['Vehículos', 'Pedidos', 'Conductores', 'Clientes']) {
+    const destination = page.getByRole('navigation').getByRole('button', { name, exact: true })
+    await check(`Navegación: ${name}`, () => destination.focus(), text => normalized(text).includes(normalized(name)) && /botón/i.test(text))
+    await check(`Contenido: ${name}`, async () => { await page.keyboard.press('Enter'); await page.getByRole('heading', { name, exact: true }).waitFor() }, text => normalized(text).includes(normalized(name + ' principal región')))
+    const controls = page.locator('main form input:not([type="hidden"]), main form select, main form textarea, main form button:not(:disabled)')
+    for (const control of await controls.all()) {
+      const details = await control.evaluate(element => ({ label: element.labels?.[0]?.querySelector('span')?.textContent.trim() || element.textContent.trim(), tag: element.tagName, type: element.type }))
+      const expectedLabel = normalized(details.label.split('(')[0].trim())
+      await check(`${name}: ${details.label}`, () => control.focus(), text => normalized(text).includes(expectedLabel))
+      report.checks.at(-1).control = details
+    }
+  }
+  await page.getByLabel('Nombre', { exact: true }).fill('Cliente lector de pantalla')
+  await check('Éxito: registro de cliente anunciado sin mover el foco', async () => { await page.getByRole('button', { name: 'Registrar', exact: true }).click(); await page.getByRole('status').waitFor() }, text => /Cliente registrado/i.test(text))
+  await check('Cierre de sesión', async () => { await page.getByRole('button', { name: 'Salir', exact: true }).click(); await page.getByRole('heading', { name: /Bienvenido de nuevo/ }).waitFor() }, text => /Acceso principal región/i.test(text))
   report.transcript = transcript()
-  report.summary = { completeScreenReaderEvaluation: false, total: report.checks.length, passed: report.checks.filter(item => item.passed).length, failed: report.checks.filter(item => !item.passed).length, utterances: report.transcript.length }
+  report.summary = { completeScreenReaderEvaluation: report.checks.every(item => item.passed), total: report.checks.length, passed: report.checks.filter(item => item.passed).length, failed: report.checks.filter(item => !item.passed).length, utterances: report.transcript.length }
   report.finishedAt = new Date().toISOString()
+  report.status = report.summary.failed === 0 ? 'passed-scoped-evaluation' : 'failed-checks'
   const serialized = JSON.stringify(report, null, 2).replaceAll(password, '[PROTEGIDO]') + '\n'
-  writeFileSync(path.join(evidence, `lector-pantalla-${version}.json`), serialized)
+  writeFileSync(path.join(evidence, `lector-pantalla-reintento-${version}.json`), serialized)
   process.stdout.write(JSON.stringify(report.summary) + '\n')
   assert.equal(report.summary.failed, 0, 'Consulte las comprobaciones fallidas en la evidencia; no se declara aprobado.')
 } finally {

@@ -1,0 +1,1282 @@
+{
+  "executedAt": "2026-10-25T21:56:18.238Z",
+  "applicationVersion": "1.3.0",
+  "sourceCommit": "5409a8c6dbb2b5a5410f6413262de07c016d357e",
+  "sourceFiles": {
+    "src/frontend/src/App.tsx": "568e0a51112af4ef019d30c2dfefa68b9b4bd4340e3616dcaa3350f82426dc67",
+    "src/frontend/src/forms/ClientForm.tsx": "fdd6e61a384a77fac50d399e7fba20ed392c60768ced9f667f304aa37728f759",
+    "src/frontend/src/forms/VehicleForm.tsx": "9d8845cde2c92a178927632790634588d5bd9090b3b6bffb6f800fe61f092980",
+    "src/frontend/src/forms/OrderForm.tsx": "2472c6feb636d0cf0dc87c561ebde149f6be8c8006c196de8bbf9a861a83b3f4",
+    "src/frontend/src/forms/DriverForm.tsx": "76b79273128cf0fbfa95a7789cf8164b8aec1b2949142c4761824f2f8b8a6444",
+    "src/frontend/src/components/common/StatusMessage.tsx": "151daae3fb7a8191da37582631acac50a2a69c893036fbb0fa51ea5bff700444"
+  },
+  "method": "NVDA real, extensión pre_speech de solo lectura, Edge visible, foco y eventos de la aplicación real; síntesis silenciosa y transcripción textual anterior al sintetizador.",
+  "scope": "Acceso, Inicio, navegación, formularios de cuatro módulos, mensajes y cierre de sesión en localhost 5176/8004; SQLite y operador sintéticos exclusivos; perfil NVDA y navegador desechables.",
+  "checks": [
+    {
+      "name": "Carga y enlace de salto",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:29.855862+00:00",
+          "step": "Carga y enlace de salto",
+          "text": "EcoLogística Lima - Perfil 1: Microsoft​ Edge ventana"
+        },
+        {
+          "at": "2026-10-25T21:56:29.863803+00:00",
+          "step": "Carga y enlace de salto",
+          "text": "EcoLogística Lima"
+        },
+        {
+          "at": "2026-10-25T21:56:29.900337+00:00",
+          "step": "Carga y enlace de salto",
+          "text": "cliqueable misma página enlace  Saltar al contenido"
+        },
+        {
+          "at": "2026-10-25T21:56:29.936387+00:00",
+          "step": "Carga y enlace de salto",
+          "text": "Acceso principal región  región  ECOLOGÍSTICA / LIMA encabezado  nivel 1 La operación,\n encabezado  nivel 1 en orden."
+        },
+        {
+          "at": "2026-10-25T21:56:30.858653+00:00",
+          "step": "Carga y enlace de salto",
+          "text": "cliqueable Saltar al contenido misma página enlace "
+        }
+      ]
+    },
+    {
+      "name": "Login: correo requerido",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:32.715156+00:00",
+          "step": "Login: correo requerido",
+          "text": "Acceso principal región"
+        },
+        {
+          "at": "2026-10-25T21:56:32.718900+00:00",
+          "step": "Login: correo requerido",
+          "text": "formulario región"
+        },
+        {
+          "at": "2026-10-25T21:56:32.738237+00:00",
+          "step": "Login: correo requerido",
+          "text": "Correo electrónico edición requerido operador@empresa.com en blanco"
+        }
+      ]
+    },
+    {
+      "name": "Login: contraseña protegida requerida por Tab",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:34.493223+00:00",
+          "step": "Login: contraseña protegida requerida por Tab",
+          "text": "Contraseña edición contraseña requerido Tu contraseña en blanco"
+        }
+      ]
+    },
+    {
+      "name": "Login: botón por Tab",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:36.322224+00:00",
+          "step": "Login: botón por Tab",
+          "text": "Ingresar botón "
+        }
+      ]
+    },
+    {
+      "name": "Error de autenticación anunciado sin mover el foco",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:38.151409+00:00",
+          "step": "Error de autenticación anunciado sin mover el foco",
+          "text": "Correo electrónico edición requerido lector@sprint3.example.test"
+        },
+        {
+          "at": "2026-10-25T21:56:38.245728+00:00",
+          "step": "Error de autenticación anunciado sin mover el foco",
+          "text": "Contraseña edición contraseña requerido ••••••••••"
+        },
+        {
+          "at": "2026-10-25T21:56:38.337479+00:00",
+          "step": "Error de autenticación anunciado sin mover el foco",
+          "text": "Ingresando… botón no disponible "
+        },
+        {
+          "at": "2026-10-25T21:56:38.586192+00:00",
+          "step": "Error de autenticación anunciado sin mover el foco",
+          "text": "alerta Credenciales inválidas"
+        }
+      ]
+    },
+    {
+      "name": "Autenticación: región principal",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:40.990353+00:00",
+          "step": "Autenticación: región principal",
+          "text": "Acceso principal región"
+        },
+        {
+          "at": "2026-10-25T21:56:40.996380+00:00",
+          "step": "Autenticación: región principal",
+          "text": "formulario región"
+        },
+        {
+          "at": "2026-10-25T21:56:41.015232+00:00",
+          "step": "Autenticación: región principal",
+          "text": "Contraseña edición contraseña requerido ••••••••••••••••••••••••••••••••"
+        },
+        {
+          "at": "2026-10-25T21:56:41.098811+00:00",
+          "step": "Autenticación: región principal",
+          "text": "Ingresando… botón no disponible "
+        },
+        {
+          "at": "2026-10-25T21:56:41.253301+00:00",
+          "step": "Autenticación: región principal",
+          "text": "Inicio principal región PANEL / OPERACIÓN LOGÍSTICA Inicio encabezado  nivel 1 Un espacio para mantener tu operación en movimiento. Elige un módulo para empezar. ESPACIO DE TRABAJO Módulos operativos encabezado  nivel 2 04 MÓDULOS DISPONIBLES /01 Vehículos encabezado  nivel 3 Gestiona la flota, sus capacidades y estados. Abrir vehículos  botón  /02 Pedidos encabezado  nivel 3 Organiza las entregas y sus ventanas de tiempo. Abrir pedidos  botón  /03 Conductores encabezado  nivel 3 Consulta quiénes están disponibles para operar. Abrir conductores  botón  /04 Clientes encabezado  nivel 3 Gestiona contactos, preferencias y restricciones de entrega. Abrir clientes "
+        }
+      ]
+    },
+    {
+      "name": "Navegación: Vehículos",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:43.114930+00:00",
+          "step": "Navegación: Vehículos",
+          "text": "título región  Navegación principal navegación región Vehículos botón "
+        }
+      ]
+    },
+    {
+      "name": "Contenido: Vehículos",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:44.958208+00:00",
+          "step": "Contenido: Vehículos",
+          "text": "Inicio principal región PANEL / OPERACIÓN LOGÍSTICA Inicio encabezado  nivel 1 Un espacio para mantener tu operación en movimiento. Elige un módulo para empezar. ESPACIO DE TRABAJO Módulos operativos encabezado  nivel 2 04 MÓDULOS DISPONIBLES /01 Vehículos encabezado  nivel 3 Gestiona la flota, sus capacidades y estados. Abrir vehículos  botón  /02 Pedidos encabezado  nivel 3 Organiza las entregas y sus ventanas de tiempo. Abrir pedidos  botón  /03 Conductores encabezado  nivel 3 Consulta quiénes están disponibles para operar. Abrir conductores  botón  /04 Clientes encabezado  nivel 3 Gestiona contactos, preferencias y restricciones de entrega. Abrir clientes "
+        }
+      ]
+    },
+    {
+      "name": "Vehículos: Placa",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:46.893393+00:00",
+          "step": "Vehículos: Placa",
+          "text": "formulario región"
+        },
+        {
+          "at": "2026-10-25T21:56:46.909419+00:00",
+          "step": "Vehículos: Placa",
+          "text": "Placa edición requerido en blanco"
+        }
+      ],
+      "control": {
+        "label": "Placa",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Vehículos: Marca",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:48.673330+00:00",
+          "step": "Vehículos: Marca",
+          "text": "Marca edición requerido en blanco"
+        }
+      ],
+      "control": {
+        "label": "Marca",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Vehículos: Modelo",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:50.529001+00:00",
+          "step": "Vehículos: Modelo",
+          "text": "Modelo edición requerido en blanco"
+        }
+      ],
+      "control": {
+        "label": "Modelo",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Vehículos: Capacidad (kg)",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:52.363525+00:00",
+          "step": "Vehículos: Capacidad (kg)",
+          "text": "Capacidad (kg) botón Giratorio requerido editable en blanco"
+        }
+      ],
+      "control": {
+        "label": "Capacidad (kg)",
+        "tag": "INPUT",
+        "type": "number"
+      }
+    },
+    {
+      "name": "Vehículos: Capacidad (m³)",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:54.195875+00:00",
+          "step": "Vehículos: Capacidad (m³)",
+          "text": "Capacidad (m³) botón Giratorio requerido editable en blanco"
+        }
+      ],
+      "control": {
+        "label": "Capacidad (m³)",
+        "tag": "INPUT",
+        "type": "number"
+      }
+    },
+    {
+      "name": "Vehículos: Consumo (km/l)",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:56.001145+00:00",
+          "step": "Vehículos: Consumo (km/l)",
+          "text": "Consumo (km/l) botón Giratorio editable en blanco"
+        }
+      ],
+      "control": {
+        "label": "Consumo (km/l)",
+        "tag": "INPUT",
+        "type": "number"
+      }
+    },
+    {
+      "name": "Vehículos: Emisión (kg CO₂/km)",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:57.848363+00:00",
+          "step": "Vehículos: Emisión (kg CO₂/km)",
+          "text": "Emisión (kg CO₂/km) botón Giratorio editable en blanco"
+        }
+      ],
+      "control": {
+        "label": "Emisión (kg CO₂/km)",
+        "tag": "INPUT",
+        "type": "number"
+      }
+    },
+    {
+      "name": "Vehículos: Estado",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:56:59.643361+00:00",
+          "step": "Vehículos: Estado",
+          "text": "Estado cuadro combinado DISPONIBLE contraído"
+        }
+      ],
+      "control": {
+        "label": "Estado",
+        "tag": "SELECT",
+        "type": "select-one"
+      }
+    },
+    {
+      "name": "Vehículos: Registrar",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:01.481123+00:00",
+          "step": "Vehículos: Registrar",
+          "text": "Registrar botón "
+        }
+      ],
+      "control": {
+        "label": "Registrar",
+        "tag": "BUTTON",
+        "type": "submit"
+      }
+    },
+    {
+      "name": "Navegación: Pedidos",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:03.283327+00:00",
+          "step": "Navegación: Pedidos",
+          "text": "título región  Navegación principal navegación región Pedidos botón "
+        }
+      ]
+    },
+    {
+      "name": "Contenido: Pedidos",
+      "passed": false,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:05.123201+00:00",
+          "step": "Contenido: Pedidos",
+          "text": "Vehículos principal región MÓDULO / 01 Vehículos encabezado  nivel 1 Organiza la flota y mantén sus datos operativos al día. ECOLOGÍSTICA · 1.3.0 FLOTA / FORMULARIO Registrar vehículo encabezado  nivel 2 Datos que identifican y describen la capacidad de cada unidad. sección  Placa Placa edición requerido    Marca Marca edición requerido    Modelo Modelo edición requerido    Capacidad (kg) Capacidad (kg) botón Giratorio requerido editable    Capacidad (m³) Capacidad (m³) botón Giratorio requerido editable    Consumo (km/l) Consumo (km/l) botón Giratorio editable    Emisión (kg CO₂/km) Emisión (kg CO₂/km) botón Giratorio editable    Estado Estado cuadro combinado contraído  DISPONIBLE Registrar botón  fuera de sección FLOTA / REGISTROS Flota registrada encabezado  nivel 2 0 No existen vehículos registrados."
+        }
+      ]
+    },
+    {
+      "name": "Pedidos: Cliente",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:09.507617+00:00",
+          "step": "Pedidos: Cliente",
+          "text": "formulario región"
+        },
+        {
+          "at": "2026-10-25T21:57:09.514457+00:00",
+          "step": "Pedidos: Cliente",
+          "text": "Cliente cuadro combinado Selecciona un cliente contraído requerido entrada inválida"
+        }
+      ],
+      "control": {
+        "label": "Cliente",
+        "tag": "SELECT",
+        "type": "select-one"
+      }
+    },
+    {
+      "name": "Pedidos: Código de pedido",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:11.294798+00:00",
+          "step": "Pedidos: Código de pedido",
+          "text": "Código de pedido edición requerido en blanco"
+        }
+      ],
+      "control": {
+        "label": "Código de pedido",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Pedidos: Dirección de entrega",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:13.120900+00:00",
+          "step": "Pedidos: Dirección de entrega",
+          "text": "Dirección de entrega edición requerido en blanco"
+        }
+      ],
+      "control": {
+        "label": "Dirección de entrega",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Pedidos: Referencia",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:14.943517+00:00",
+          "step": "Pedidos: Referencia",
+          "text": "Referencia edición en blanco"
+        }
+      ],
+      "control": {
+        "label": "Referencia",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Pedidos: Latitud",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:16.762087+00:00",
+          "step": "Pedidos: Latitud",
+          "text": "Latitud botón Giratorio requerido editable en blanco"
+        }
+      ],
+      "control": {
+        "label": "Latitud",
+        "tag": "INPUT",
+        "type": "number"
+      }
+    },
+    {
+      "name": "Pedidos: Longitud",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:18.597244+00:00",
+          "step": "Pedidos: Longitud",
+          "text": "Longitud botón Giratorio requerido editable en blanco"
+        }
+      ],
+      "control": {
+        "label": "Longitud",
+        "tag": "INPUT",
+        "type": "number"
+      }
+    },
+    {
+      "name": "Pedidos: Peso (kg)",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:20.428698+00:00",
+          "step": "Pedidos: Peso (kg)",
+          "text": "Peso (kg) botón Giratorio requerido editable en blanco"
+        }
+      ],
+      "control": {
+        "label": "Peso (kg)",
+        "tag": "INPUT",
+        "type": "number"
+      }
+    },
+    {
+      "name": "Pedidos: Volumen (m³)",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:22.353409+00:00",
+          "step": "Pedidos: Volumen (m³)",
+          "text": "Volumen (m³) botón Giratorio requerido editable en blanco"
+        }
+      ],
+      "control": {
+        "label": "Volumen (m³)",
+        "tag": "INPUT",
+        "type": "number"
+      }
+    },
+    {
+      "name": "Pedidos: Inicio de ventana",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:24.129306+00:00",
+          "step": "Pedidos: Inicio de ventana",
+          "text": "Inicio de ventana cuadro de edición de fecha requerido entrada inválida"
+        },
+        {
+          "at": "2026-10-25T21:57:24.133848+00:00",
+          "step": "Pedidos: Inicio de ventana",
+          "text": "Día Inicio de ventana botón Giratorio 0"
+        }
+      ],
+      "control": {
+        "label": "Inicio de ventana",
+        "tag": "INPUT",
+        "type": "datetime-local"
+      }
+    },
+    {
+      "name": "Pedidos: Fin de ventana",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:25.954708+00:00",
+          "step": "Pedidos: Fin de ventana",
+          "text": "Fin de ventana cuadro de edición de fecha requerido entrada inválida"
+        },
+        {
+          "at": "2026-10-25T21:57:25.960498+00:00",
+          "step": "Pedidos: Fin de ventana",
+          "text": "Día Fin de ventana botón Giratorio 0"
+        }
+      ],
+      "control": {
+        "label": "Fin de ventana",
+        "tag": "INPUT",
+        "type": "datetime-local"
+      }
+    },
+    {
+      "name": "Pedidos: Prioridad",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:27.727374+00:00",
+          "step": "Pedidos: Prioridad",
+          "text": "Prioridad cuadro combinado MEDIA contraído"
+        }
+      ],
+      "control": {
+        "label": "Prioridad",
+        "tag": "SELECT",
+        "type": "select-one"
+      }
+    },
+    {
+      "name": "Pedidos: Tipo de producto",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:29.592889+00:00",
+          "step": "Pedidos: Tipo de producto",
+          "text": "Tipo de producto edición en blanco"
+        }
+      ],
+      "control": {
+        "label": "Tipo de producto",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Pedidos: Registrar",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:31.399571+00:00",
+          "step": "Pedidos: Registrar",
+          "text": "Registrar botón "
+        }
+      ],
+      "control": {
+        "label": "Registrar",
+        "tag": "BUTTON",
+        "type": "submit"
+      }
+    },
+    {
+      "name": "Navegación: Conductores",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:33.212555+00:00",
+          "step": "Navegación: Conductores",
+          "text": "título región  Navegación principal navegación región Conductores botón "
+        }
+      ]
+    },
+    {
+      "name": "Contenido: Conductores",
+      "passed": false,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:35.046642+00:00",
+          "step": "Contenido: Conductores",
+          "text": "Pedidos principal región MÓDULO / 02 Pedidos encabezado  nivel 1 Registra entregas, revisa su estado y actualiza las solicitudes pendientes. ECOLOGÍSTICA · 1.3.0 ENTREGAS / FORMULARIO Registrar pedido encabezado  nivel 2 Define destino, carga y una ventana de tiempo válida. sección  Cliente Cliente cuadro combinado contraído requerido entrada inválida  Selecciona un cliente Código de pedido Código de pedido edición requerido    Dirección de entrega Dirección de entrega edición requerido    Referencia Referencia edición    Latitud Latitud botón Giratorio requerido editable    Longitud Longitud botón Giratorio requerido editable    Peso (kg) Peso (kg) botón Giratorio requerido editable    Volumen (m³) Volumen (m³) botón Giratorio requerido editable    Inicio de ventana cliqueable 0 Día Inicio de ventana botón Giratorio  / 0 Mes Inicio de ventana botón Giratorio  / 0 Año Inicio de ventana botón Giratorio    0 Horas Inicio de ventana botón Giratorio  : 0 Minutos Inicio de ventana botón Giratorio    0 A.M./P.M. Inicio de ventana botón Giratorio  Mostrar fecha local y selector de hora Inicio de ventana botón de menú submenú  Fin de ventana cliqueable 0 Día Fin de ventana botón Giratorio  / 0 Mes Fin de ventana botón Giratorio  / 0 Año Fin de ventana botón Giratorio    0 Horas Fin de ventana botón Giratorio  : 0 Minutos Fin de ventana botón Giratorio    0 A.M./P.M. Fin de ventana botón Giratorio  Mostrar fecha local y selector de hora Fin de ventana botón de menú submenú  Prioridad Prioridad cuadro combinado contraído  MEDIA Tipo de producto Tipo de producto edición    Registrar botón  fuera de sección ENTREGAS / REGISTROS Pedidos registrados encabezado  nivel 2 0 Filtrar por estado Filtrar por estado cuadro combinado contraído  Todos No hay pedidos para el filtro seleccionado."
+        }
+      ]
+    },
+    {
+      "name": "Conductores: Nombres",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:39.387743+00:00",
+          "step": "Conductores: Nombres",
+          "text": "formulario región"
+        },
+        {
+          "at": "2026-10-25T21:57:39.397431+00:00",
+          "step": "Conductores: Nombres",
+          "text": "Nombres edición requerido en blanco"
+        }
+      ],
+      "control": {
+        "label": "Nombres",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Conductores: Apellidos",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:41.192779+00:00",
+          "step": "Conductores: Apellidos",
+          "text": "Apellidos edición requerido en blanco"
+        }
+      ],
+      "control": {
+        "label": "Apellidos",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Conductores: Número de licencia",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:43.012363+00:00",
+          "step": "Conductores: Número de licencia",
+          "text": "Número de licencia edición requerido en blanco"
+        }
+      ],
+      "control": {
+        "label": "Número de licencia",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Conductores: Categoría de licencia",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:44.839585+00:00",
+          "step": "Conductores: Categoría de licencia",
+          "text": "Categoría de licencia edición requerido en blanco"
+        }
+      ],
+      "control": {
+        "label": "Categoría de licencia",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Conductores: Teléfono",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:46.664486+00:00",
+          "step": "Conductores: Teléfono",
+          "text": "Teléfono edición en blanco"
+        }
+      ],
+      "control": {
+        "label": "Teléfono",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Conductores: Experiencia (años)",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:48.491512+00:00",
+          "step": "Conductores: Experiencia (años)",
+          "text": "Experiencia (años) botón Giratorio editable en blanco"
+        }
+      ],
+      "control": {
+        "label": "Experiencia (años)",
+        "tag": "INPUT",
+        "type": "number"
+      }
+    },
+    {
+      "name": "Conductores: Estado",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:50.316657+00:00",
+          "step": "Conductores: Estado",
+          "text": "Estado cuadro combinado DISPONIBLE contraído"
+        }
+      ],
+      "control": {
+        "label": "Estado",
+        "tag": "SELECT",
+        "type": "select-one"
+      }
+    },
+    {
+      "name": "Conductores: Registrar",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:52.142504+00:00",
+          "step": "Conductores: Registrar",
+          "text": "Registrar botón "
+        }
+      ],
+      "control": {
+        "label": "Registrar",
+        "tag": "BUTTON",
+        "type": "submit"
+      }
+    },
+    {
+      "name": "Navegación: Clientes",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:53.965668+00:00",
+          "step": "Navegación: Clientes",
+          "text": "título región  Navegación principal navegación región Clientes botón "
+        }
+      ]
+    },
+    {
+      "name": "Contenido: Clientes",
+      "passed": false,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:57:55.808793+00:00",
+          "step": "Contenido: Clientes",
+          "text": "Conductores principal región MÓDULO / 03 Conductores encabezado  nivel 1 Registra, consulta y mantén actualizada la disponibilidad del equipo. ECOLOGÍSTICA · 1.3.0 EQUIPO / FORMULARIO Registrar conductor encabezado  nivel 2 Mantén la información de licencia y disponibilidad en un solo lugar. sección  Nombres Nombres edición requerido    Apellidos Apellidos edición requerido    Número de licencia Número de licencia edición requerido    Categoría de licencia Categoría de licencia edición requerido    Teléfono Teléfono edición    Experiencia (años) Experiencia (años) botón Giratorio editable    Estado Estado cuadro combinado contraído  DISPONIBLE Registrar botón  fuera de sección EQUIPO / REGISTROS Conductores registrados encabezado  nivel 2 0 Solo disponibles casilla de verificación sin marcar  No existen conductores registrados."
+        }
+      ]
+    },
+    {
+      "name": "Clientes: Nombre",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:58:00.183719+00:00",
+          "step": "Clientes: Nombre",
+          "text": "formulario región"
+        },
+        {
+          "at": "2026-10-25T21:58:00.195829+00:00",
+          "step": "Clientes: Nombre",
+          "text": "Nombre edición requerido en blanco"
+        }
+      ],
+      "control": {
+        "label": "Nombre",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Clientes: Teléfono",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:58:01.967859+00:00",
+          "step": "Clientes: Teléfono",
+          "text": "Teléfono edición en blanco"
+        }
+      ],
+      "control": {
+        "label": "Teléfono",
+        "tag": "INPUT",
+        "type": "text"
+      }
+    },
+    {
+      "name": "Clientes: Correo electrónico",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:58:03.795003+00:00",
+          "step": "Clientes: Correo electrónico",
+          "text": "Correo electrónico edición en blanco"
+        }
+      ],
+      "control": {
+        "label": "Correo electrónico",
+        "tag": "INPUT",
+        "type": "email"
+      }
+    },
+    {
+      "name": "Clientes: Preferencia de entrega",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:58:05.602959+00:00",
+          "step": "Clientes: Preferencia de entrega",
+          "text": "Preferencia de entrega edición multilínea en blanco"
+        }
+      ],
+      "control": {
+        "label": "Preferencia de entrega",
+        "tag": "TEXTAREA",
+        "type": "textarea"
+      }
+    },
+    {
+      "name": "Clientes: Restricción de acceso",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:58:07.422828+00:00",
+          "step": "Clientes: Restricción de acceso",
+          "text": "Restricción de acceso edición multilínea en blanco"
+        }
+      ],
+      "control": {
+        "label": "Restricción de acceso",
+        "tag": "TEXTAREA",
+        "type": "textarea"
+      }
+    },
+    {
+      "name": "Clientes: Estado",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:58:09.298376+00:00",
+          "step": "Clientes: Estado",
+          "text": "Estado cuadro combinado ACTIVO contraído"
+        }
+      ],
+      "control": {
+        "label": "Estado",
+        "tag": "SELECT",
+        "type": "select-one"
+      }
+    },
+    {
+      "name": "Clientes: Registrar",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:58:11.072046+00:00",
+          "step": "Clientes: Registrar",
+          "text": "Registrar botón "
+        }
+      ],
+      "control": {
+        "label": "Registrar",
+        "tag": "BUTTON",
+        "type": "submit"
+      }
+    },
+    {
+      "name": "Éxito: registro de cliente anunciado sin mover el foco",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:58:12.918603+00:00",
+          "step": "Éxito: registro de cliente anunciado sin mover el foco",
+          "text": "Nombre edición requerido en blanco"
+        },
+        {
+          "at": "2026-10-25T21:58:12.957965+00:00",
+          "step": "Éxito: registro de cliente anunciado sin mover el foco",
+          "text": "Cliente registrado. "
+        },
+        {
+          "at": "2026-10-25T21:58:12.988321+00:00",
+          "step": "Éxito: registro de cliente anunciado sin mover el foco",
+          "text": "EcoLogística Lima documento ￼"
+        }
+      ]
+    },
+    {
+      "name": "Cierre de sesión",
+      "passed": true,
+      "utterances": [
+        {
+          "at": "2026-10-25T21:58:14.868336+00:00",
+          "step": "Cierre de sesión",
+          "text": "Acceso principal región La operación, en orden. región ECOLOGÍSTICA / LIMA La operación,\nen orden. encabezado  nivel 1 Vehículos, pedidos y conductores en un mismo lugar. Una base clara para cada entrega. fuera de región ACCESO / OPERADOR● SISTEMA LOCAL Bienvenido de nuevo. encabezado  nivel 2 Ingresa con tu cuenta de operador para continuar. sección  Correo electrónico Correo electrónico edición requerido  operador@empresa.com   Contraseña Contraseña edición contraseña requerido  Tu contraseña   Ingresar botón  fuera de sección GESTIÓN LOGÍSTICA / LIMA, PERÚ"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No evalúa la calidad acústica, pronunciación ni comprensión de una persona: se recoge la salida textual real de NVDA con sintetizador silencioso.",
+    "Acredita únicamente la combinación y los controles identificados, no conformidad WCAG AA universal.",
+    "La revisión del cliente o del usuario y su aceptación permanecen pendientes."
+  ],
+  "nvdaVersion": "2026.2 AMD64",
+  "browser": {
+    "name": "Microsoft Edge",
+    "version": "156.0.4314.42",
+    "platform": "win32"
+  },
+  "transcript": [
+    {
+      "at": "2026-10-25T21:56:29.855862+00:00",
+      "step": "Carga y enlace de salto",
+      "text": "EcoLogística Lima - Perfil 1: Microsoft​ Edge ventana"
+    },
+    {
+      "at": "2026-10-25T21:56:29.863803+00:00",
+      "step": "Carga y enlace de salto",
+      "text": "EcoLogística Lima"
+    },
+    {
+      "at": "2026-10-25T21:56:29.900337+00:00",
+      "step": "Carga y enlace de salto",
+      "text": "cliqueable misma página enlace  Saltar al contenido"
+    },
+    {
+      "at": "2026-10-25T21:56:29.936387+00:00",
+      "step": "Carga y enlace de salto",
+      "text": "Acceso principal región  región  ECOLOGÍSTICA / LIMA encabezado  nivel 1 La operación,\n encabezado  nivel 1 en orden."
+    },
+    {
+      "at": "2026-10-25T21:56:30.858653+00:00",
+      "step": "Carga y enlace de salto",
+      "text": "cliqueable Saltar al contenido misma página enlace "
+    },
+    {
+      "at": "2026-10-25T21:56:32.715156+00:00",
+      "step": "Login: correo requerido",
+      "text": "Acceso principal región"
+    },
+    {
+      "at": "2026-10-25T21:56:32.718900+00:00",
+      "step": "Login: correo requerido",
+      "text": "formulario región"
+    },
+    {
+      "at": "2026-10-25T21:56:32.738237+00:00",
+      "step": "Login: correo requerido",
+      "text": "Correo electrónico edición requerido operador@empresa.com en blanco"
+    },
+    {
+      "at": "2026-10-25T21:56:34.493223+00:00",
+      "step": "Login: contraseña protegida requerida por Tab",
+      "text": "Contraseña edición contraseña requerido Tu contraseña en blanco"
+    },
+    {
+      "at": "2026-10-25T21:56:36.322224+00:00",
+      "step": "Login: botón por Tab",
+      "text": "Ingresar botón "
+    },
+    {
+      "at": "2026-10-25T21:56:38.151409+00:00",
+      "step": "Error de autenticación anunciado sin mover el foco",
+      "text": "Correo electrónico edición requerido lector@sprint3.example.test"
+    },
+    {
+      "at": "2026-10-25T21:56:38.245728+00:00",
+      "step": "Error de autenticación anunciado sin mover el foco",
+      "text": "Contraseña edición contraseña requerido ••••••••••"
+    },
+    {
+      "at": "2026-10-25T21:56:38.337479+00:00",
+      "step": "Error de autenticación anunciado sin mover el foco",
+      "text": "Ingresando… botón no disponible "
+    },
+    {
+      "at": "2026-10-25T21:56:38.586192+00:00",
+      "step": "Error de autenticación anunciado sin mover el foco",
+      "text": "alerta Credenciales inválidas"
+    },
+    {
+      "at": "2026-10-25T21:56:40.990353+00:00",
+      "step": "Autenticación: región principal",
+      "text": "Acceso principal región"
+    },
+    {
+      "at": "2026-10-25T21:56:40.996380+00:00",
+      "step": "Autenticación: región principal",
+      "text": "formulario región"
+    },
+    {
+      "at": "2026-10-25T21:56:41.015232+00:00",
+      "step": "Autenticación: región principal",
+      "text": "Contraseña edición contraseña requerido ••••••••••••••••••••••••••••••••"
+    },
+    {
+      "at": "2026-10-25T21:56:41.098811+00:00",
+      "step": "Autenticación: región principal",
+      "text": "Ingresando… botón no disponible "
+    },
+    {
+      "at": "2026-10-25T21:56:41.253301+00:00",
+      "step": "Autenticación: región principal",
+      "text": "Inicio principal región PANEL / OPERACIÓN LOGÍSTICA Inicio encabezado  nivel 1 Un espacio para mantener tu operación en movimiento. Elige un módulo para empezar. ESPACIO DE TRABAJO Módulos operativos encabezado  nivel 2 04 MÓDULOS DISPONIBLES /01 Vehículos encabezado  nivel 3 Gestiona la flota, sus capacidades y estados. Abrir vehículos  botón  /02 Pedidos encabezado  nivel 3 Organiza las entregas y sus ventanas de tiempo. Abrir pedidos  botón  /03 Conductores encabezado  nivel 3 Consulta quiénes están disponibles para operar. Abrir conductores  botón  /04 Clientes encabezado  nivel 3 Gestiona contactos, preferencias y restricciones de entrega. Abrir clientes "
+    },
+    {
+      "at": "2026-10-25T21:56:43.114930+00:00",
+      "step": "Navegación: Vehículos",
+      "text": "título región  Navegación principal navegación región Vehículos botón "
+    },
+    {
+      "at": "2026-10-25T21:56:44.958208+00:00",
+      "step": "Contenido: Vehículos",
+      "text": "Inicio principal región PANEL / OPERACIÓN LOGÍSTICA Inicio encabezado  nivel 1 Un espacio para mantener tu operación en movimiento. Elige un módulo para empezar. ESPACIO DE TRABAJO Módulos operativos encabezado  nivel 2 04 MÓDULOS DISPONIBLES /01 Vehículos encabezado  nivel 3 Gestiona la flota, sus capacidades y estados. Abrir vehículos  botón  /02 Pedidos encabezado  nivel 3 Organiza las entregas y sus ventanas de tiempo. Abrir pedidos  botón  /03 Conductores encabezado  nivel 3 Consulta quiénes están disponibles para operar. Abrir conductores  botón  /04 Clientes encabezado  nivel 3 Gestiona contactos, preferencias y restricciones de entrega. Abrir clientes "
+    },
+    {
+      "at": "2026-10-25T21:56:46.893393+00:00",
+      "step": "Vehículos: Placa",
+      "text": "formulario región"
+    },
+    {
+      "at": "2026-10-25T21:56:46.909419+00:00",
+      "step": "Vehículos: Placa",
+      "text": "Placa edición requerido en blanco"
+    },
+    {
+      "at": "2026-10-25T21:56:48.673330+00:00",
+      "step": "Vehículos: Marca",
+      "text": "Marca edición requerido en blanco"
+    },
+    {
+      "at": "2026-10-25T21:56:50.529001+00:00",
+      "step": "Vehículos: Modelo",
+      "text": "Modelo edición requerido en blanco"
+    },
+    {
+      "at": "2026-10-25T21:56:52.363525+00:00",
+      "step": "Vehículos: Capacidad (kg)",
+      "text": "Capacidad (kg) botón Giratorio requerido editable en blanco"
+    },
+    {
+      "at": "2026-10-25T21:56:54.195875+00:00",
+      "step": "Vehículos: Capacidad (m³)",
+      "text": "Capacidad (m³) botón Giratorio requerido editable en blanco"
+    },
+    {
+      "at": "2026-10-25T21:56:56.001145+00:00",
+      "step": "Vehículos: Consumo (km/l)",
+      "text": "Consumo (km/l) botón Giratorio editable en blanco"
+    },
+    {
+      "at": "2026-10-25T21:56:57.848363+00:00",
+      "step": "Vehículos: Emisión (kg CO₂/km)",
+      "text": "Emisión (kg CO₂/km) botón Giratorio editable en blanco"
+    },
+    {
+      "at": "2026-10-25T21:56:59.643361+00:00",
+      "step": "Vehículos: Estado",
+      "text": "Estado cuadro combinado DISPONIBLE contraído"
+    },
+    {
+      "at": "2026-10-25T21:57:01.481123+00:00",
+      "step": "Vehículos: Registrar",
+      "text": "Registrar botón "
+    },
+    {
+      "at": "2026-10-25T21:57:03.283327+00:00",
+      "step": "Navegación: Pedidos",
+      "text": "título región  Navegación principal navegación región Pedidos botón "
+    },
+    {
+      "at": "2026-10-25T21:57:05.123201+00:00",
+      "step": "Contenido: Pedidos",
+      "text": "Vehículos principal región MÓDULO / 01 Vehículos encabezado  nivel 1 Organiza la flota y mantén sus datos operativos al día. ECOLOGÍSTICA · 1.3.0 FLOTA / FORMULARIO Registrar vehículo encabezado  nivel 2 Datos que identifican y describen la capacidad de cada unidad. sección  Placa Placa edición requerido    Marca Marca edición requerido    Modelo Modelo edición requerido    Capacidad (kg) Capacidad (kg) botón Giratorio requerido editable    Capacidad (m³) Capacidad (m³) botón Giratorio requerido editable    Consumo (km/l) Consumo (km/l) botón Giratorio editable    Emisión (kg CO₂/km) Emisión (kg CO₂/km) botón Giratorio editable    Estado Estado cuadro combinado contraído  DISPONIBLE Registrar botón  fuera de sección FLOTA / REGISTROS Flota registrada encabezado  nivel 2 0 No existen vehículos registrados."
+    },
+    {
+      "at": "2026-10-25T21:57:09.507617+00:00",
+      "step": "Pedidos: Cliente",
+      "text": "formulario región"
+    },
+    {
+      "at": "2026-10-25T21:57:09.514457+00:00",
+      "step": "Pedidos: Cliente",
+      "text": "Cliente cuadro combinado Selecciona un cliente contraído requerido entrada inválida"
+    },
+    {
+      "at": "2026-10-25T21:57:11.294798+00:00",
+      "step": "Pedidos: Código de pedido",
+      "text": "Código de pedido edición requerido en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:13.120900+00:00",
+      "step": "Pedidos: Dirección de entrega",
+      "text": "Dirección de entrega edición requerido en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:14.943517+00:00",
+      "step": "Pedidos: Referencia",
+      "text": "Referencia edición en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:16.762087+00:00",
+      "step": "Pedidos: Latitud",
+      "text": "Latitud botón Giratorio requerido editable en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:18.597244+00:00",
+      "step": "Pedidos: Longitud",
+      "text": "Longitud botón Giratorio requerido editable en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:20.428698+00:00",
+      "step": "Pedidos: Peso (kg)",
+      "text": "Peso (kg) botón Giratorio requerido editable en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:22.353409+00:00",
+      "step": "Pedidos: Volumen (m³)",
+      "text": "Volumen (m³) botón Giratorio requerido editable en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:24.129306+00:00",
+      "step": "Pedidos: Inicio de ventana",
+      "text": "Inicio de ventana cuadro de edición de fecha requerido entrada inválida"
+    },
+    {
+      "at": "2026-10-25T21:57:24.133848+00:00",
+      "step": "Pedidos: Inicio de ventana",
+      "text": "Día Inicio de ventana botón Giratorio 0"
+    },
+    {
+      "at": "2026-10-25T21:57:25.954708+00:00",
+      "step": "Pedidos: Fin de ventana",
+      "text": "Fin de ventana cuadro de edición de fecha requerido entrada inválida"
+    },
+    {
+      "at": "2026-10-25T21:57:25.960498+00:00",
+      "step": "Pedidos: Fin de ventana",
+      "text": "Día Fin de ventana botón Giratorio 0"
+    },
+    {
+      "at": "2026-10-25T21:57:27.727374+00:00",
+      "step": "Pedidos: Prioridad",
+      "text": "Prioridad cuadro combinado MEDIA contraído"
+    },
+    {
+      "at": "2026-10-25T21:57:29.592889+00:00",
+      "step": "Pedidos: Tipo de producto",
+      "text": "Tipo de producto edición en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:31.399571+00:00",
+      "step": "Pedidos: Registrar",
+      "text": "Registrar botón "
+    },
+    {
+      "at": "2026-10-25T21:57:33.212555+00:00",
+      "step": "Navegación: Conductores",
+      "text": "título región  Navegación principal navegación región Conductores botón "
+    },
+    {
+      "at": "2026-10-25T21:57:35.046642+00:00",
+      "step": "Contenido: Conductores",
+      "text": "Pedidos principal región MÓDULO / 02 Pedidos encabezado  nivel 1 Registra entregas, revisa su estado y actualiza las solicitudes pendientes. ECOLOGÍSTICA · 1.3.0 ENTREGAS / FORMULARIO Registrar pedido encabezado  nivel 2 Define destino, carga y una ventana de tiempo válida. sección  Cliente Cliente cuadro combinado contraído requerido entrada inválida  Selecciona un cliente Código de pedido Código de pedido edición requerido    Dirección de entrega Dirección de entrega edición requerido    Referencia Referencia edición    Latitud Latitud botón Giratorio requerido editable    Longitud Longitud botón Giratorio requerido editable    Peso (kg) Peso (kg) botón Giratorio requerido editable    Volumen (m³) Volumen (m³) botón Giratorio requerido editable    Inicio de ventana cliqueable 0 Día Inicio de ventana botón Giratorio  / 0 Mes Inicio de ventana botón Giratorio  / 0 Año Inicio de ventana botón Giratorio    0 Horas Inicio de ventana botón Giratorio  : 0 Minutos Inicio de ventana botón Giratorio    0 A.M./P.M. Inicio de ventana botón Giratorio  Mostrar fecha local y selector de hora Inicio de ventana botón de menú submenú  Fin de ventana cliqueable 0 Día Fin de ventana botón Giratorio  / 0 Mes Fin de ventana botón Giratorio  / 0 Año Fin de ventana botón Giratorio    0 Horas Fin de ventana botón Giratorio  : 0 Minutos Fin de ventana botón Giratorio    0 A.M./P.M. Fin de ventana botón Giratorio  Mostrar fecha local y selector de hora Fin de ventana botón de menú submenú  Prioridad Prioridad cuadro combinado contraído  MEDIA Tipo de producto Tipo de producto edición    Registrar botón  fuera de sección ENTREGAS / REGISTROS Pedidos registrados encabezado  nivel 2 0 Filtrar por estado Filtrar por estado cuadro combinado contraído  Todos No hay pedidos para el filtro seleccionado."
+    },
+    {
+      "at": "2026-10-25T21:57:39.387743+00:00",
+      "step": "Conductores: Nombres",
+      "text": "formulario región"
+    },
+    {
+      "at": "2026-10-25T21:57:39.397431+00:00",
+      "step": "Conductores: Nombres",
+      "text": "Nombres edición requerido en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:41.192779+00:00",
+      "step": "Conductores: Apellidos",
+      "text": "Apellidos edición requerido en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:43.012363+00:00",
+      "step": "Conductores: Número de licencia",
+      "text": "Número de licencia edición requerido en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:44.839585+00:00",
+      "step": "Conductores: Categoría de licencia",
+      "text": "Categoría de licencia edición requerido en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:46.664486+00:00",
+      "step": "Conductores: Teléfono",
+      "text": "Teléfono edición en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:48.491512+00:00",
+      "step": "Conductores: Experiencia (años)",
+      "text": "Experiencia (años) botón Giratorio editable en blanco"
+    },
+    {
+      "at": "2026-10-25T21:57:50.316657+00:00",
+      "step": "Conductores: Estado",
+      "text": "Estado cuadro combinado DISPONIBLE contraído"
+    },
+    {
+      "at": "2026-10-25T21:57:52.142504+00:00",
+      "step": "Conductores: Registrar",
+      "text": "Registrar botón "
+    },
+    {
+      "at": "2026-10-25T21:57:53.965668+00:00",
+      "step": "Navegación: Clientes",
+      "text": "título región  Navegación principal navegación región Clientes botón "
+    },
+    {
+      "at": "2026-10-25T21:57:55.808793+00:00",
+      "step": "Contenido: Clientes",
+      "text": "Conductores principal región MÓDULO / 03 Conductores encabezado  nivel 1 Registra, consulta y mantén actualizada la disponibilidad del equipo. ECOLOGÍSTICA · 1.3.0 EQUIPO / FORMULARIO Registrar conductor encabezado  nivel 2 Mantén la información de licencia y disponibilidad en un solo lugar. sección  Nombres Nombres edición requerido    Apellidos Apellidos edición requerido    Número de licencia Número de licencia edición requerido    Categoría de licencia Categoría de licencia edición requerido    Teléfono Teléfono edición    Experiencia (años) Experiencia (años) botón Giratorio editable    Estado Estado cuadro combinado contraído  DISPONIBLE Registrar botón  fuera de sección EQUIPO / REGISTROS Conductores registrados encabezado  nivel 2 0 Solo disponibles casilla de verificación sin marcar  No existen conductores registrados."
+    },
+    {
+      "at": "2026-10-25T21:58:00.183719+00:00",
+      "step": "Clientes: Nombre",
+      "text": "formulario región"
+    },
+    {
+      "at": "2026-10-25T21:58:00.195829+00:00",
+      "step": "Clientes: Nombre",
+      "text": "Nombre edición requerido en blanco"
+    },
+    {
+      "at": "2026-10-25T21:58:01.967859+00:00",
+      "step": "Clientes: Teléfono",
+      "text": "Teléfono edición en blanco"
+    },
+    {
+      "at": "2026-10-25T21:58:03.795003+00:00",
+      "step": "Clientes: Correo electrónico",
+      "text": "Correo electrónico edición en blanco"
+    },
+    {
+      "at": "2026-10-25T21:58:05.602959+00:00",
+      "step": "Clientes: Preferencia de entrega",
+      "text": "Preferencia de entrega edición multilínea en blanco"
+    },
+    {
+      "at": "2026-10-25T21:58:07.422828+00:00",
+      "step": "Clientes: Restricción de acceso",
+      "text": "Restricción de acceso edición multilínea en blanco"
+    },
+    {
+      "at": "2026-10-25T21:58:09.298376+00:00",
+      "step": "Clientes: Estado",
+      "text": "Estado cuadro combinado ACTIVO contraído"
+    },
+    {
+      "at": "2026-10-25T21:58:11.072046+00:00",
+      "step": "Clientes: Registrar",
+      "text": "Registrar botón "
+    },
+    {
+      "at": "2026-10-25T21:58:12.918603+00:00",
+      "step": "Éxito: registro de cliente anunciado sin mover el foco",
+      "text": "Nombre edición requerido en blanco"
+    },
+    {
+      "at": "2026-10-25T21:58:12.957965+00:00",
+      "step": "Éxito: registro de cliente anunciado sin mover el foco",
+      "text": "Cliente registrado. "
+    },
+    {
+      "at": "2026-10-25T21:58:12.988321+00:00",
+      "step": "Éxito: registro de cliente anunciado sin mover el foco",
+      "text": "EcoLogística Lima documento ￼"
+    },
+    {
+      "at": "2026-10-25T21:58:14.868336+00:00",
+      "step": "Cierre de sesión",
+      "text": "Acceso principal región La operación, en orden. región ECOLOGÍSTICA / LIMA La operación,\nen orden. encabezado  nivel 1 Vehículos, pedidos y conductores en un mismo lugar. Una base clara para cada entrega. fuera de región ACCESO / OPERADOR● SISTEMA LOCAL Bienvenido de nuevo. encabezado  nivel 2 Ingresa con tu cuenta de operador para continuar. sección  Correo electrónico Correo electrónico edición requerido  operador@empresa.com   Contraseña Contraseña edición contraseña requerido  Tu contraseña   Ingresar botón  fuera de sección GESTIÓN LOGÍSTICA / LIMA, PERÚ"
+    }
+  ],
+  "summary": {
+    "completeScreenReaderEvaluation": false,
+    "total": 53,
+    "passed": 50,
+    "failed": 3,
+    "utterances": 74
+  },
+  "finishedAt": "2026-10-25T21:58:16.627Z",
+  "status": "failed-checks"
+}

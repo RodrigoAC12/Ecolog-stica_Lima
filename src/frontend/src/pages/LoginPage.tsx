@@ -26,7 +26,7 @@ export function LoginPage({ onLogin }: { onLogin: (token: string) => void }) {
     }
   }
 
-  return <><a className="skip-link" href="#main-content">Saltar al contenido</a><main id="main-content" tabIndex={-1} className="login-shell"><div className="login-layout">
+  return <><a className="skip-link" href="#main-content">Saltar al contenido</a><main id="main-content" aria-label="Acceso" tabIndex={-1} className="login-shell"><div className="login-layout">
     <section className="login-story" aria-labelledby="login-title">
       <p className="eyebrow"><span className="eyebrow-mark" /> ECOLOGÍSTICA / LIMA</p>
       <h1 id="login-title">La operación,<br /><span>en orden.</span></h1>

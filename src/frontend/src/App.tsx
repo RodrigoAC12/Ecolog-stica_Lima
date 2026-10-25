@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { Page } from './types'
 import { LoginPage } from './pages/LoginPage'
 import { HomePage } from './pages/HomePage'
@@ -11,8 +11,10 @@ import { AppHeader } from './components/layout/AppHeader'
 export function App() {
   const [token, setToken] = useState('')
   const [page, setPage] = useState<Page>('Inicio')
+  const previousToken = useRef('')
   useEffect(() => {
-    if (token) document.getElementById('main-content')?.focus({ preventScroll: true })
+    if (token || previousToken.current) document.getElementById('main-content')?.focus({ preventScroll: true })
+    previousToken.current = token
   }, [token, page])
   function navigate(target: Page) {
     setPage(target)
@@ -23,7 +25,7 @@ export function App() {
   return <div className="app-shell">
     <a className="skip-link" href="#main-content">Saltar al contenido</a>
     <AppHeader page={page} navigate={navigate} onLogout={() => {setToken(''); setPage('Inicio')}} />
-    <main id="main-content" tabIndex={-1} className="content">
+    <main key={page} id="main-content" aria-label={page} tabIndex={-1} className="content">
       {page === 'Inicio' && <HomePage onNavigate={navigate} />}
       {page === 'Vehículos' && <VehiclesPage token={token} />}
       {page === 'Pedidos' && <OrdersPage token={token} />}

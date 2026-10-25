@@ -57,14 +57,16 @@ describe('flujos principales', () => {
     }))
     render(<App />)
     await login()
-    expect(document.getElementById('main-content')).toHaveFocus()
+    expect(screen.getByRole('main', { name: 'Inicio' })).toHaveFocus()
     await userEvent.click(screen.getByRole('button', { name: 'Vehículos' }))
     await screen.findByRole('heading', { name: 'Vehículos' })
-    expect(document.getElementById('main-content')).toHaveFocus()
+    expect(screen.getByRole('main', { name: 'Vehículos' })).toHaveFocus()
     await userEvent.click(screen.getByRole('button', { name: 'Inicio' }))
     expect(document.getElementById('main-content')).toHaveFocus()
     await userEvent.click(screen.getByRole('button', { name: 'Inicio' }))
     expect(document.getElementById('main-content')).toHaveFocus()
+    await userEvent.click(screen.getByRole('button', { name: 'Salir' }))
+    expect(screen.getByRole('main', { name: 'Acceso' })).toHaveFocus()
   })
 
   it('incluye acceso por teclado al contenido principal desde el login', async () => {

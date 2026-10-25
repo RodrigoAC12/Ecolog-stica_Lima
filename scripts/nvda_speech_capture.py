@@ -25,6 +25,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
             target = json.loads(self.base.joinpath("target.json").read_text(encoding="utf-8"))
             foreground = api.getForegroundObject()
             if foreground.processID != target["pid"] or "EcoLogística" not in (foreground.name or ""):
+                diagnostic = {
+                    "at": datetime.now(timezone.utc).isoformat(),
+                    "step": target.get("step"),
+                    "processMatches": foreground.processID == target["pid"],
+                    "titleMatches": "EcoLogística" in (foreground.name or ""),
+                }
+                with self.base.joinpath("diagnostics.jsonl").open("a", encoding="utf-8") as stream:
+                    stream.write(json.dumps(diagnostic) + "\n")
                 return
             text = " ".join(item for item in speechSequence if isinstance(item, str))
             if not text or not target.get("step"):
