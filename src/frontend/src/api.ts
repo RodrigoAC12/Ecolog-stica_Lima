@@ -52,6 +52,7 @@ export type Client = {
 export async function api<T>(path: string, token: string, init: RequestInit = {}): Promise<T> {
   const response = await fetch(`/api/v1${path}`, {
     ...init,
+    cache: 'no-store',
     headers: {
       'Content-Type': 'application/json',
       ...(token ? { Authorization: `Bearer ${token}` } : {}),

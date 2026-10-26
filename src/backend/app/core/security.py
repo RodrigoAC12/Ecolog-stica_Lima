@@ -46,7 +46,10 @@ def create_token(user_id: UUID) -> str:
 
 def user_from_token(token: str, db: Session) -> User | None:
     try:
-        payload = jwt.decode(token, settings.jwt_secret, algorithms=["HS256"])
+        payload = jwt.decode(
+            token, settings.jwt_secret, algorithms=["HS256"],
+            options={"require": ["exp", "sub"]},
+        )
         user_id = UUID(payload["sub"])
     except (jwt.PyJWTError, ValueError, KeyError):
         return None

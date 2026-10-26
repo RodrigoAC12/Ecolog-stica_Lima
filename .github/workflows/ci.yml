@@ -2,7 +2,7 @@ name: ECO - CI de calidad
 
 on:
   push:
-    branches: [Pre-Sprint-3]
+    branches: [main, Sprint-3]
   pull_request:
     branches: [main]
 
@@ -102,6 +102,13 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
       - name: Pruebas de frontend
-        run: npm test
+        run: npm run test:coverage
+      - name: Conservar cobertura frontend
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cobertura-frontend
+          path: src/frontend/coverage/lcov.info
+          if-no-files-found: error
       - name: TypeScript y compilacion
         run: npm run build

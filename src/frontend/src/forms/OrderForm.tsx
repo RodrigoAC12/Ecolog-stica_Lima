@@ -30,7 +30,7 @@ export function OrderFormView({ form, editing, busy, set, submit, onCancel, clie
           {['ALTA', 'MEDIA', 'BAJA'].map(priority => <option key={priority}>{priority}</option>)}
         </select></Field>
         <Field label="Tipo de producto"><input value={form.tipo_producto ?? ''} onChange={e => set('tipo_producto', e.target.value || null)} /></Field>
-        <div className="actions"><button disabled={busy || clients.length === 0}>{editing ? 'Guardar cambios' : 'Registrar'}</button>
+        <div className="actions"><button type="submit" disabled={busy || clients.length === 0}>{editing ? 'Guardar cambios' : 'Registrar'}</button>
           {editing && <button type="button" className="secondary" onClick={() => { onCancel() }}>Cancelar edición</button>}
         </div>
       </form>

@@ -2,12 +2,14 @@
 
 ## Contexto y alcance
 
-- **Rama de desarrollo vigente:** `Pre-Sprint-3`, en el fork `RodrigoAC12/Ecolog-stica_Lima`; `main` del propietario permanece intacto hasta revisar y aprobar el PR.
-- **Versión del proyecto:** 1.2.4. Los documentos académicos numerados `V_1_0_0` conservan su versión individual.
-- Sprint 1 abarca US-001 a US-010; Sprint 2, US-011 a US-015. El trabajo de Pre-Sprint 3 solo prepara y verifica esa funcionalidad; no implementa US-016 en adelante.
+- **Rama de desarrollo vigente:** `Sprint-3`, autorizada por el usuario en el fork `RodrigoAC12/Ecolog-stica_Lima`. La base 1.2.4 ya está integrada en `jmartinez278/Ecolog-stica_Lima:main` mediante PR #3, commit `da3eef2`; la entrega del Sprint 3 requiere su propia revisión e integración.
+- **Versión del proyecto:** 1.3.0 para Sprint 3; 1.2.4 es la base histórica integrada. Los documentos numerados `V_1_0_0` conservan su versión documental individual.
+- **Envío al propietario retirado:** PR #4 cerrado y solicitud de revisión cancelada. No reabrir, crear otro PR, solicitar revisores ni enviar la entrega al propietario hasta recibir una nueva orden expresa del usuario. La rama `Sprint-3` permanece para revisión previa.
+- Sprint 1 abarca US-001 a US-010; Sprint 2, US-011 a US-015. Sprint 3 verifica y mejora esa funcionalidad como versión 1.3.0; no implementa US-016 en adelante. Los cuatro informes de la base histórica 1.2.4 están integrados en `docs/03 Implementación/Sprint 03/Antecedentes 1.2.4/`; no existe una etapa documental separada de preparación.
 - Los entregables históricos están en `docs/03 Implementación/Sprint 1/` y `docs/03 Implementación/Sprint 2/`; mover un archivo no significa que su sesión o aceptación histórica haya ocurrido.
+- Los cinco informes oficiales del Sprint 3 están en `docs/03 Implementación/Sprint 03/`; conservar sus enlaces bidireccionales y evidencias, sin presentar resultados automáticos como aprobación humana.
 - Los cuatro entregables obligatorios de planificación están en `docs/02 Planificación/`; el seguimiento adicional está en `Anexos/`.
-- Registrar las mejoras frente al último `main` en [docs/Versiones/1.2.4.md](docs/Versiones/1.2.4.md). Consultar pruebas y validaciones en `docs/Calidad/`.
+- Registrar el Sprint 3 en [docs/Versiones/1.3.0.md](docs/Versiones/1.3.0.md); conservar [1.2.4](docs/Versiones/1.2.4.md) como antecedente. Consultar pruebas y validaciones en `docs/Calidad/`.
 - El estado de Jira y las ceremonias se basan en datos reales. No inventar revisores, fechas, sesiones, aprobaciones ni despliegues de staging.
 - No agregar secretos. Archivos `.env` operativos no deben almacenarse en Git.
 
@@ -16,7 +18,7 @@
 - Frontend React + TypeScript + Vite en `src/frontend/src`, con `App.tsx` como composición de páginas, `pages/`, `forms/`, `components/` y `styles/`. El token permanece en memoria.
 - Backend FastAPI + SQLAlchemy + PostgreSQL en `src/backend`: router HTTP → servicio → repositorio → persistencia y auditoría.
 - Alembic mantiene las revisiones `0001_sprint1` y `0002_clients_email_unique`. Al migrar una base ya utilizada, hacer copia de seguridad y resolver duplicados de correo antes de aplicar la revisión incremental; no borrar registros automáticamente.
-- `docker-compose.yml` es para desarrollo local y limita los puertos al anfitrión; `docker-compose.staging.yml` es una configuración distinta. No afirmar despliegue externo sin evidencia de DNS y TLS reales.
+- El despliegue y las comprobaciones se limitan a localhost. `docker-compose.yml` es para desarrollo y `docker-compose.staging.yml` para validación local separada. No exigir servidor ni dominio público; conservar evidencia del entorno realmente ejecutado.
 
 ## Verificación técnica
 
@@ -44,7 +46,7 @@ docker compose --env-file .env.example config --quiet
 docker compose --env-file .env.staging.example -f docker-compose.staging.yml config --quiet
 ```
 
-Los workflows CodeQL y auditoría de dependencias deben pasar en la **rama final**. La revisión humana del PR, WCAG AA/360 px en navegadores reales, BDD con interesados y staging TLS real se comprueban por separado: una prueba automatizada no cierra el Definition of Done por sí misma.
+Los workflows CodeQL y auditoría de dependencias deben pasar en la **rama final**. La revisión humana del PR, WCAG AA/360 px en navegadores reales, BDD con interesados y staging TLS en localhost se comprueban por separado: una prueba automatizada no cierra el Definition of Done por sí misma.
 
 ## Documentos de referencia
 
@@ -52,4 +54,4 @@ Los workflows CodeQL y auditoría de dependencias deben pasar en la **rama final
 - Reglas de negocio: `docs/01 Inicio/09. Reglas de negocio V_1_0_0.md`.
 - Planificación: `docs/02 Planificación/01 Transformando a ágil V_1_0_1.md`.
 - Diseño visual: `DESIGN.md`.
-- Entrega: `docs/Versiones/1.2.4.md`.
+- Entrega en revisión previa: `docs/Versiones/1.3.0.md`.

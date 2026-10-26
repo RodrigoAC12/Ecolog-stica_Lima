@@ -19,7 +19,7 @@
   .form-grid { grid-template-columns: 1fr; }
   .module-section-heading .edition-tag { display: none; }.module-grid { grid-template-columns: 1fr; }
   .module-card { min-height: 220px; }.module-card h3 { margin-top: 1.2rem; }
-  .home-hero { min-height: 300px; }.hero-decoration { opacity: .14; right: -1rem; }
+  .home-hero { min-height: 300px; }.hero-decoration { display: none; }
   .login-shell { padding: 1.25rem 1rem 2rem; align-items: start; }
   .login-story { padding-top: 0; }.login-story h1 { font-size: clamp(3rem, 12vw, 4.5rem); }.login-lead { margin-bottom: 0; }
 }
