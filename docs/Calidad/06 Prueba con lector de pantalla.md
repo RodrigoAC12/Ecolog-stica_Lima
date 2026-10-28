@@ -47,7 +47,7 @@ La prueba técnica de NVDA está aprobada en la combinación y los escenarios id
 - Puertos locales 8004/5176 libres y directorio temporal excluido de Git.
 - [Ejecutor del recorrido](../../scripts/verify_screen_reader.mjs) y [capturador de salida NVDA](../../scripts/nvda_speech_capture.py).
 
-Desde la raíz, ejecutar `node scripts/verify_screen_reader.mjs RUTA_ABSOLUTA_A_NVDA_EXE`. El ejecutor comprueba que no haya NVDA personal activo, usa un perfil scratchpad desechable, inicia sus servicios propios y los detiene al terminar. Su alcance son las 53 comprobaciones técnicas descritas; no sustituye la revisión del cliente o del usuario. El complemento utiliza el [mecanismo de desarrollo documentado por NV Access](https://download.nvaccess.org/releases/2026.2/documentation/developerGuide.html).
+Desde la raíz, ejecutar `node scripts/verify_screen_reader.mjs`. El ejecutor utiliza la ruta fija `tmp/browser-tools/nvda/nvda.exe`, comprueba que no haya NVDA personal activo, usa un perfil scratchpad desechable, inicia sus servicios propios y los detiene al terminar. Su alcance son las 53 comprobaciones técnicas descritas; no sustituye la revisión del cliente o del usuario. El complemento utiliza el [mecanismo de desarrollo documentado por NV Access](https://download.nvaccess.org/releases/2026.2/documentation/developerGuide.html).
 
 ## Control documental
 

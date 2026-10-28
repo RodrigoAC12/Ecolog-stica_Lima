@@ -149,6 +149,7 @@ jobs:
           name: cobertura-herramientas
           path: .
       - name: Analizar codigo completo e importar cobertura
+        id: scan
         uses: SonarSource/sonarqube-scan-action@4d1dc0c91ee400dcf8a6dddf2f705ac36542e304 # v8.4.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -158,6 +159,7 @@ jobs:
         if: always()
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_SCAN_OUTCOME: ${{ steps.scan.outcome }}
         run: python3 scripts/export_sonarcloud_report.py
       - name: Conservar evidencia Cloud
         if: always()

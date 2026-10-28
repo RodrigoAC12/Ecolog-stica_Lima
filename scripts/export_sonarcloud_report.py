@@ -4,7 +4,6 @@ from __future__ import annotations
 import json
 import os
 from datetime import datetime, timezone
-from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
@@ -32,6 +31,7 @@ def export_report():
         "executedAt": datetime.now(timezone.utc).isoformat(),
         "project": PROJECT,
         "branch": "main",
+        "ciScanOutcome": os.environ.get("SONAR_SCAN_OUTCOME", "not-provided"),
         "analysis": analysis,
         "qualityGate": read_api("/api/qualitygates/project_status", {"analysisId": analysis["key"]}),
         "measures": read_api("/api/measures/component", {
@@ -41,8 +41,9 @@ def export_report():
         "issues": read_api("/api/issues/search", {"componentKeys": PROJECT, "branch": "main", "resolved": "false", "ps": 100}),
         "scope": "Código de aplicación, scripts, Dockerfiles y workflows; cobertura backend, frontend y comprobador de enlaces.",
     }
-    destination = Path("sonarcloud-report.json")
-    destination.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    with open("sonarcloud-report.json", "w", encoding="utf-8") as destination:
+        json.dump(report, destination, ensure_ascii=False, indent=2)
+        destination.write("\n")
     print(json.dumps({"revision": analysis.get("revision"), "qualityGate": report["qualityGate"]["projectStatus"]["status"], "openIssues": report["issues"]["paging"]["total"]}))
 
 

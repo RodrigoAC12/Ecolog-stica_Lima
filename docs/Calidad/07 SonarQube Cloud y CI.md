@@ -38,7 +38,11 @@ El secreto `SONAR_TOKEN` ya figura creado en el fork; GitHub no permite recupera
 
 ## Validación y límites
 
-Las comprobaciones locales realizadas incluyen 36 pruebas backend (93,43 % de cobertura de sentencias), 23 pruebas frontend y compilación (93,05 % de cobertura de líneas), y 12 pruebas de herramientas. Los resultados de cobertura de herramientas varían entre Windows y Linux porque DPAPI depende de Windows.
+Las comprobaciones locales realizadas incluyen 36 pruebas backend (93,43 % de cobertura de sentencias), 23 pruebas frontend y compilación (93,05 % de cobertura de líneas), y 15 pruebas de herramientas. Los resultados de cobertura de herramientas varían entre Windows y Linux porque DPAPI depende de Windows.
+
+La ejecución de CI de `d4210cc` aprobó documentación, backend, frontend, integración PostgreSQL y auditorías de dependencias. Cloud rechazó el escáner porque el análisis automático seguía activo. El usuario confirmó su desactivación antes del siguiente intento. Se reforzaron además las herramientas auxiliares: operaciones Compose permitidas desde constantes, rutas de configuración y ejecutables conocidas, eliminación de otra expresión con retroceso y orden explícito de historias. El exportador escribe JSON en un nombre literal; el contenido recibido no selecciona el destino.
+
+El entorno HTTPS local aprobó la comprobación después de actualizar los contenedores. Los volúmenes Caddy existentes necesitaron asignar su propiedad al usuario 10001; se conservó el certificado, comprobando el mismo SHA-256 antes y después. No eliminar los volúmenes para resolver permisos.
 
 Los archivos de bloqueo Python se resolvieron para Python 3.12 en Linux, entorno utilizado por CI y Docker. Incluyen hashes de los paquetes binarios publicados para cada versión. Para desarrollo en Windows se conserva `requirements.txt`; no instalar el bloqueo Linux como si fuera multiplataforma.
 
