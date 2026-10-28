@@ -44,6 +44,8 @@ La ejecución de CI de `d4210cc` aprobó documentación, backend, frontend, inte
 
 El entorno HTTPS local aprobó la comprobación después de actualizar los contenedores. Los volúmenes Caddy existentes necesitaron asignar su propiedad al usuario 10001; se conservó el certificado, comprobando el mismo SHA-256 antes y después. No eliminar los volúmenes para resolver permisos.
 
+El primer análisis con cobertura importada (`6d3d16d`) midió 85,5 % de cobertura nueva y dejó tres observaciones S4036: el analizador no reconocía la notación `C:/...` de las rutas absolutas de Windows. Se utiliza la notación nativa `C:\...`, conservando ejecutables fijos. Se clasifican como pruebas los recorridos de accesibilidad, demostración, compatibilidad, lector de pantalla y HTTPS, junto con el capturador NVDA que utilizan. Permanecen incluidos en el análisis como pruebas; Dockerfiles, workflows y herramientas operativas continúan como código fuente. La cobertura del producto se distingue así de la cobertura del propio código de las pruebas de extremo a extremo.
+
 Los archivos de bloqueo Python se resolvieron para Python 3.12 en Linux, entorno utilizado por CI y Docker. Incluyen hashes de los paquetes binarios publicados para cada versión. Para desarrollo en Windows se conserva `requirements.txt`; no instalar el bloqueo Linux como si fuera multiplataforma.
 
 El entorno de operación continúa en localhost. La revisión del cliente o del usuario sigue pendiente. Las dos advertencias y el riesgo de dependencia mostrado en Cloud deben contrastarse con el nuevo análisis y sus detalles; una auditoría sin vulnerabilidades conocidas no equivale automáticamente a eliminar todos los riesgos que muestra Cloud.

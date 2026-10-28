@@ -13,9 +13,9 @@ const { chromium } = require('playwright')
 const version = require('./package.json').version
 assert.match(version, /^\d+\.\d+\.\d+$/)
 const nvda = path.join(root, 'tmp/browser-tools/nvda/nvda.exe')
-const git = 'C:/Program Files/Git/cmd/git.exe'
+const git = 'C:\\Program Files\\Git\\cmd\\git.exe'
 assert.ok(existsSync(nvda), 'Se requiere NVDA portable instalado; no se descarga ni instala software.')
-const running = spawnSync('C:/Windows/System32/tasklist.exe', ['/FI', 'IMAGENAME eq nvda.exe', '/FO', 'CSV', '/NH'], { encoding: 'utf8', windowsHide: true })
+const running = spawnSync('C:\\Windows\\System32\\tasklist.exe', ['/FI', 'IMAGENAME eq nvda.exe', '/FO', 'CSV', '/NH'], { encoding: 'utf8', windowsHide: true })
 assert.equal(running.status, 0)
 assert.ok(!/"nvda\.exe"/i.test(running.stdout), 'Cierre su sesión personal de NVDA antes de ejecutar este perfil aislado.')
 const temporary = path.join(root, 'tmp', `screen-reader-${Date.now()}-${process.pid}`)
