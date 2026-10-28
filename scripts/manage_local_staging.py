@@ -24,9 +24,10 @@ def compose_arguments(arguments: list[str]) -> list[str]:
     }
     if tuple(arguments) in operations:
         return operations[tuple(arguments)]
-    authority = settings_directory() / "localhost-root.crt"
-    if arguments == ["cp", "gateway:/data/caddy/pki/authorities/local/root.crt", str(authority)]:
-        return ["cp", "gateway:/data/caddy/pki/authorities/local/root.crt", str(authority)]
+    if arguments and arguments[0] == "cp":
+        authority = settings_directory() / "localhost-root.crt"
+        if arguments == ["cp", "gateway:/data/caddy/pki/authorities/local/root.crt", str(authority)]:
+            return ["cp", "gateway:/data/caddy/pki/authorities/local/root.crt", str(authority)]
     raise ValueError("Operación no permitida. Consultar la guía de staging; config exige --quiet.")
 
 
