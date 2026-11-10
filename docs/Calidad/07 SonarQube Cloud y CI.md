@@ -10,7 +10,7 @@ El análisis automático del 27/10 a las 18:52:35 utilizó `da3eef2`, correspond
 
 Se sincronizó `main` del fork con `3f1b4fe`. El análisis automático posterior, a las 18:59:54, acredita esa revisión. La sincronización elimina la causa del desfase; las correcciones y la importación de cobertura requieren un análisis posterior desde CI.
 
-El [análisis local conservado](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) sigue describiendo su revisión y alcance originales. No demuestra por sí solo que Cloud haya aprobado Dockerfiles, workflows y herramientas: Cloud inspecciona un alcance más amplio.
+El [informe oficial de calidad](<../03 Implementación/Sprint 03/03 Calidad de código V_1_0_0.md>) utiliza el análisis real de SonarCloud y sus capturas. No se atribuyen al análisis local resultados del servicio Cloud ni métricas operativas que la herramienta no produce.
 
 ## Cambios preparados
 

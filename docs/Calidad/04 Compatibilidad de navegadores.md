@@ -7,7 +7,7 @@
 
 ## Recursos y alcance
 
-La [matriz consolidada](<../03 Implementación/Sprint 03/evidencias/compatibilidad-1.3.0.json>) evalúa Chrome for Testing 156.0.8078.47 y 155.0.8059.84, Microsoft Edge 156.0.4314.42 y 155.0.4283.62, y Firefox 158.0.1 y 157.0.1 en Windows. La selección toma la versión estable y la familia mayor estable anterior; no pretende probar todos los parches publicados ni versiones futuras.
+La evaluación histórica consideró dos versiones de Chrome, Edge y Firefox en Windows. Sus conclusiones y límites para la entrega se resumen en el [informe WCAG](<../03 Implementación/Sprint 03/05 WCAG V_1_0_0.md>).
 
 | Recurso | Uso | Ubicación o fuente |
 |---|---|---|
@@ -17,7 +17,7 @@ La [matriz consolidada](<../03 Implementación/Sprint 03/evidencias/compatibilid
 | Microsoft Edge y EdgeDriver | Dos familias de Edge con driver compatible | [Catálogo oficial](https://edgeupdates.microsoft.com/api/products?view=enterprise) y [WebDriver de Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) |
 | Firefox y GeckoDriver | Versiones estables de Firefox con perfiles nuevos | [Versión vigente](https://product-details.mozilla.org/1.0/firefox_versions.json), [historial](https://product-details.mozilla.org/1.0/firefox_history_stability_releases.json) y [GeckoDriver](https://github.com/mozilla/geckodriver/releases) |
 | axe-core | Comprobar criterios automáticos y registrar resultados incompletos | Dependencia frontend existente |
-| JSON y capturas | Conservar resultados verificables sin sesiones personales | `docs/03 Implementación/Sprint 03/evidencias/` |
+| Informe oficial | Conservar hallazgos y límites sin anexos innecesarios | `docs/03 Implementación/Sprint 03/05 WCAG V_1_0_0.md` |
 
 Los navegadores descargados, drivers, instaladores y perfiles se guardan en `tmp/`, excluido de Git. Las copias de evaluación no sustituyen las instalaciones personales. El MSI de Edge 155 se verificó contra el SHA-256 publicado por Microsoft y se extrajo para ejecutar su binario sin instalar otra versión del navegador del usuario.
 
@@ -35,7 +35,7 @@ En Chromium el tamaño del contenido se fija mediante CDP y en Firefox mediante 
 
 Cada versión aprobó 84 comprobaciones en 13 estados. En total: seis versiones, 78 estados, 504 comprobaciones y 3.258 ocurrencias de contraste sin infracciones automáticas en el alcance aprobado. Los datos de evaluación crecen dentro de la base exclusiva del recorrido; por eso las ocurrencias de texto no son idénticas entre todas las sesiones.
 
-La evidencia consolidada identifica un reintento de Chrome 155 tras ajustar la espera del fin de envío y actualización del listado. El código de la aplicación se mantiene igual entre el recorrido conjunto final y ese reintento. El [corte anterior](<../03 Implementación/Sprint 03/evidencias/compatibilidad-antes-lecturas.json>) conserva sus resultados; no se declara una única ejecución sin fallos.
+El recorrido histórico requirió un reintento de Chrome tras ajustar la espera del fin de envío y actualización del listado. No se presenta ese antecedente como una única ejecución sin fallos ni como conformidad universal.
 
 La [evaluación WCAG](<../03 Implementación/Sprint 03/05 WCAG V_1_0_0.md>) documenta los cuatro principios, los hallazgos y las correcciones. La revisión del cliente o del usuario sigue pendiente, incluida la comprensión con lector de pantalla. La comprobación de NVDA 2026.2 no quedó acreditada porque el control de Windows se interrumpió al no verificar la URL; no se presenta como prueba aprobada.
 

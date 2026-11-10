@@ -38,7 +38,7 @@ $localAuthority = Join-Path $env:LOCALAPPDATA 'EcoLogistica/localhost-root.crt'
 & .venv/Scripts/python.exe scripts/verify_local_staging.py
 ```
 
-Se verifica frontend HTTP/HTTPS, salud, cabeceras, rechazo sin autenticación, login y lectura de cuatro recursos protegidos. Los resultados sin tokens ni contraseñas se conservan en [staging-local.json](<../03 Implementación/Sprint 03/evidencias/staging-local.json>). Las migraciones deben indicar la revisión 0002_clients_email_unique al consultar Alembic dentro del backend.
+Se verifica frontend HTTP/HTTPS, salud, cabeceras, rechazo sin autenticación, login y lectura de recursos protegidos. El alcance y los pendientes se registran en la [Revisión del Sprint](<../03 Implementación/Sprint 03/01 Revisión del Sprint V_1_0_0.md>). Las migraciones deben llegar a la revisión vigente al consultar Alembic dentro del backend.
 
 ## Operación
 

@@ -6,7 +6,7 @@
 
 ## Alcance
 
-Análisis local de ECO-53 para la versión 1.3.0. La [evidencia actual](<../03 Implementación/Sprint 03/evidencias/sonar-1.3.0.json>) identifica la revisión `7f455d4`, procesada el 25/10/2026 a las 15:44:18 de Lima con árbol de trabajo limpio. El Quality Gate aprueba las tres condiciones, cobertura global 92,4 %, nueva 100 %, duplicación 0 % y cero problemas abiertos. Las secciones posteriores conservan los cortes históricos. El despliegue localhost se comprueba por separado; Sonar no sustituye aceptación funcional.
+Este documento conserva el procedimiento histórico del análisis local de ECO-53. El resultado vigente solicitado para la entrega se documenta con capturas reales de SonarCloud en el [informe oficial de calidad](<../03 Implementación/Sprint 03/03 Calidad de código V_1_0_0.md>). Sonar no sustituye la aceptación funcional ni las mediciones operativas.
 
 ## Herramientas y configuración
 
@@ -122,13 +122,13 @@ Los cambios siguen sin commit y el scanner advierte falta de información `blame
 
 ### Corte del incremento completo del Sprint 3
 
-La [evidencia final](<../03 Implementación/Sprint 03/evidencias/sonar-final.json>) y el [informe oficial](<../03 Implementación/Sprint 03/03 Calidad de código V_1_0_0.md>) incorporan seguridad y accesibilidad: 36 pruebas backend en SQLite y PostgreSQL, 7 frontend, cobertura backend 93,43 % y de líneas frontend 83,41 %. El análisis `27f7541e-5ee3-474a-9461-d27b17198d8f`, del 24/10/2026 a las 23:39:58 de Lima, registra cobertura global 89,9 %, 100 % de cobertura de código nuevo, duplicación 0 % y cero problemas abiertos. Aprueba las tres condiciones del Quality Gate sin modificar sus umbrales.
+El [informe oficial](<../03 Implementación/Sprint 03/03 Calidad de código V_1_0_0.md>) presenta el corte real de SonarCloud que debe utilizarse en la entrega y distingue sus métricas de los requisitos operativos no medidos.
 
 La [evaluación de accesibilidad](<../03 Implementación/Sprint 03/05 WCAG V_1_0_0.md>) conserva resultados automáticos y pendientes humanos. La rama de entrega es `Sprint-3`; los resultados de los dos cortes anteriores se mantienen como antecedentes.
 
 ### Corte consolidado anterior — 25/10/2026
 
-La [evidencia vigente](<../03 Implementación/Sprint 03/evidencias/sonar-entrega.json>) corresponde al análisis `7e922f0a-7e3c-467e-ab4a-1052f14d1855`, procesado a las 01:15:24 de Lima sobre `3c1b45d2f98011a0c355f9343b10928aed5c7269`. Quality Gate `OK`, tres condiciones evaluadas, cobertura global 92,4 %, código nuevo 100 %, duplicación 0 %, cero problemas abiertos y deuda Sonar 0 minutos. No se cambiaron umbrales, perfiles ni exclusiones. Se revocó el token temporal al terminar.
+Los cortes locales anteriores se consideran antecedentes históricos y no se utilizan como evidencia principal de la entrega. El informe oficial identifica el commit y las métricas públicas del análisis Cloud vigente.
 
 La ejecución previa del commit publicado `cde28d7`, análisis `dfc82560-3601-494b-9ee7-6182c662f80b`, aprobó con cobertura global 89,9 % y nueva 95,8 %. La nueva suite de 11 pruebas frontend alcanza 92,19 % de líneas y 100 % en los cuatro formularios; el backend conserva 36 pruebas y 93,43 % de líneas. Consultar el [informe oficial actualizado](<../03 Implementación/Sprint 03/03 Calidad de código V_1_0_0.md>).
 

@@ -10,7 +10,7 @@ Se ejecutó NVDA real sobre la aplicación en localhost, con API, SQLite y opera
 
 ## Resultado comprobado
 
-La [evidencia final](<../03 Implementación/Sprint 03/evidencias/lector-pantalla-1.3.0.json>) identifica fechas, 53 comprobaciones, 74 anuncios reales y hashes de siete archivos. Los hashes se conciliaron con el código registrado en `647f0a2`, sin cambios posteriores de aplicación. El recorrido final se ejecutó aproximadamente entre las 16:58 y las 17:00 (Lima).
+El recorrido histórico registró 53 comprobaciones y 74 anuncios. Su conclusión y sus límites para la entrega oficial se resumen en el [informe WCAG](<../03 Implementación/Sprint 03/05 WCAG V_1_0_0.md>). La comprensión y aceptación de usuarios permanece pendiente.
 
 | Grupo | Comprobaciones | Resultado |
 |---|---:|---|
@@ -32,7 +32,7 @@ Son 53 comprobaciones del recorrido definido, no 53 criterios WCAG ni todas las 
 | El mensaje de registro aparecía visualmente, sin anuncio capturado | Región `status` persistente y atómica cuyo contenido se actualiza | «Cliente registrado.» anunciado sin dirigir el foco a la notificación |
 | El cierre de sesión no anunciaba el regreso al acceso | Foco al contenido al salir y región principal «Acceso» identificada | «Acceso principal región» y contenido del formulario anunciados |
 
-Se conservan el [intento inicial interrumpido](<../03 Implementación/Sprint 03/evidencias/lector-pantalla-inicial-1.3.0.json>) y el [recorrido anterior a las correcciones](<../03 Implementación/Sprint 03/evidencias/lector-pantalla-antes-correcciones-1.3.0.json>), con 50/53 comprobaciones aprobadas. Los intentos fallidos no se reescriben como aprobados.
+El intento inicial fue interrumpido y el recorrido anterior a las correcciones aprobó 50 de 53 comprobaciones. Esos intentos no se reescriben como aprobados.
 
 La repetición final con las correcciones aprobó las 53 comprobaciones. La suite de 11 pruebas frontend y la compilación aprobaron; axe repitió 13 estados, 16 interacciones y 437 comprobaciones de contraste sin fallos.
 

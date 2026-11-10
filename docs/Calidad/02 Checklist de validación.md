@@ -39,7 +39,7 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [x] Integración técnica de la base 1.2.4 con 24/10/2026; no sustituye la revisión independiente requerida.
 - [ ] Confirmación de responsables, estado de sprints y ceremonias reales en Jira; no inventar reuniones ni fechas.
 
-**Referencias:** [Informe de seguridad](<../03 Implementación/Sprint 03/Antecedentes 1.2.4/02 Informe de seguridad V_1_0_0.md>), [Integridad y auditoría](<../03 Implementación/Sprint 03/Antecedentes 1.2.4/03 Informe de integridad y auditoría V_1_0_0.md>) y [Versión 1.2.4](../Versiones/1.2.4.md).
+**Referencias:** [Informe OWASP](<../03 Implementación/Sprint 03/04 OWASP V_1_0_0.md>), [Calidad de código](<../03 Implementación/Sprint 03/03 Calidad de código V_1_0_0.md>) y [Versión 1.2.4](../Versiones/1.2.4.md).
 
 ## Adenda de Sprint 3 — estado vigente al 25/10/2026
 
@@ -60,13 +60,13 @@ Este registro distingue **implementación técnica en la rama** de **aceptación
 - [ ] Registrar comprensión y aceptación en la revisión del cliente o del usuario.
 - [x] Documentar revisión técnica de código, pruebas y evidencias, con responsables nominales.
 - [ ] Registrar revisión del cliente o del usuario, observaciones y aceptación aplicable.
-- [x] Validar el entorno local según la [adenda vigente](<../03 Implementación/Sprint 03/Alcance de validación local V_1_0_0.md>).
+- [x] Registrar el alcance técnico y los pendientes en la [Revisión del Sprint](<../03 Implementación/Sprint 03/01 Revisión del Sprint V_1_0_0.md>).
 - [x] Asignar tareas a los cinco integrantes, fijar seguimiento, replanificar Sprint 3 y vincular versión Jira 1.3.0 sin liberar.
 - [x] Jira actualizado: ECO-52 a ECO-58 Finalizada por sus entregables verificables; NVDA aprobado registrado en ECO-48 y aceptación aplicable pendiente.
 - [x] Regularizar lo verificable: Sprint 1 cerrado administrativamente con 10/10 tarjetas finalizadas y Sprint 3 activo con fecha real; evidencia antes/después conservada.
 - [ ] Mantener ECO-18 en QA y Sprint 2 sin cierre hasta la revisión del cliente o usuario.
 
-- [x] Versión del Sprint 3 corregida a 1.3.0 y [matriz de los ocho criterios](<../03 Implementación/Sprint 03/Matriz de entrega y rúbrica V_1_0_0.md>) actualizada.
+- [x] Versión del Sprint 3 corregida a 1.3.0 y cinco informes oficiales actualizados.
 - [x] Recorrido técnico grabado: once operaciones comprobadas sobre las quince historias, con capturas, observaciones y resultados.
 - [ ] Revisión del cliente o del usuario y observaciones para completar el criterio 1.
 - [ ] Aceptación e incorporación final; los resultados técnicos no sustituyen la aprobación correspondiente.

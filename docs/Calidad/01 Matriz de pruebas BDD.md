@@ -35,7 +35,7 @@
 
 El incremento 1.3.0 se conserva en la rama Sprint-3. La regresión backend comprende 36 pruebas por entorno y el frontend 11 pruebas; cuatro casos verifican cancelación sin escritura. El recorrido grabado verifica operaciones de las 15 historias, sin atribuir aceptación funcional de todos los escenarios Gherkin.
 
-El [registro de revisión preparado](<../03 Implementación/Sprint 03/Registro de revisión del cliente o del usuario V_1_0_0.md>) conserva los 30 escenarios oficiales y campos de resultado, observaciones y decisión. No se declara una aceptación recibida.
+La [Revisión del Sprint](<../03 Implementación/Sprint 03/01 Revisión del Sprint V_1_0_0.md>) conserva la aceptación de stakeholders como pendiente. No se declara una aceptación todavía no recibida.
 
 ## Aceptación adicional requerida
 

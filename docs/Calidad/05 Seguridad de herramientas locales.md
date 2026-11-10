@@ -7,7 +7,7 @@
 
 ## Hallazgos y correcciones
 
-El [corte inicial de CodeQL](<../03 Implementación/Sprint 03/evidencias/codeql-herramientas-inicial.json>) registra tres alertas abiertas en herramientas locales, aunque el workflow terminaba correctamente. Se distinguen de los cero hallazgos del análisis Sonar, cuyo alcance se concentra en el código de la aplicación.
+El corte histórico de CodeQL registró tres alertas en herramientas locales, aunque el workflow terminaba correctamente. Se distingue de los cero hallazgos del análisis SonarCloud vigente, cuyo alcance y límites se explican en el [informe OWASP](<../03 Implementación/Sprint 03/04 OWASP V_1_0_0.md>).
 
 | Alerta | Severidad del analizador | Alcance y corrección aplicada | Verificación local |
 |---|---|---|---|
@@ -17,7 +17,7 @@ El [corte inicial de CodeQL](<../03 Implementación/Sprint 03/evidencias/codeql-
 
 La comprobación de login inválido espera la pantalla de acceso y verifica HTTP 401 antes de evaluar su alerta; evita rellenar un campo de correo de la pantalla anterior durante el cambio de vista.
 
-Las [pruebas de configuración protegida](<../03 Implementación/Sprint 03/evidencias/configuracion-protegida-1.3.0.json>), el [nuevo recorrido de interfaz](<../03 Implementación/Sprint 03/evidencias/accesibilidad-cierre-herramientas.json>) y la [verificación HTTPS](<../03 Implementación/Sprint 03/evidencias/staging-local.json>) conservan los resultados sin credenciales.
+Las pruebas históricas de configuración protegida, interfaz y HTTPS conservaron resultados sin credenciales. La entrega oficial evita anexos adicionales y resume el estado aplicable en los informes OWASP y WCAG.
 
 ## Protección de configuración
 
@@ -37,7 +37,7 @@ La [API de protección de datos de Microsoft](https://learn.microsoft.com/en-us/
 node scripts/audit_accessibility.mjs cierre-herramientas edge
 ```
 
-El [reanálisis de CodeQL del commit f7b7a15](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40233142086) aprobó y la [evidencia final](<../03 Implementación/Sprint 03/evidencias/codeql-herramientas-final.json>) confirma las tres alertas en estado `fixed`, cero abiertas y ninguna descartada manualmente. No se modificó su severidad para obtener un resultado favorable. Las auditorías evalúan su alcance concreto y la revisión del cliente o del usuario permanece pendiente.
+El [reanálisis de CodeQL del commit f7b7a15](https://github.com/RodrigoAC12/Ecolog-stica_Lima/actions/runs/40233142086) aprobó. Las tres alertas quedaron corregidas, sin descartes manuales. Las auditorías evalúan su alcance concreto y la revisión del cliente o del usuario permanece pendiente.
 
 ## Control documental
 
