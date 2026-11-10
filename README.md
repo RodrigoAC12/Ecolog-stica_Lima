@@ -303,15 +303,15 @@ La lista actual de cinco integrantes fue confirmada por el usuario mediante una 
 
 ## Validación técnica del Sprint 3
 
-**Versión del proyecto:** [1.3.0 — Sprint 3 en revisión previa](docs/Versiones/1.3.0.md). La [versión 1.2.4](docs/Versiones/1.2.4.md) se conserva como base histórica.
+**Entrega del proyecto:** Sprint 3 en revisión previa. La documentación exigida está centralizada en [`docs/03 Implementación/Sprint 03`](<docs/03 Implementación/Sprint 03/>).
 
-La [matriz de trazabilidad BDD](docs/Calidad/01 Matriz de pruebas BDD.md) relaciona las historias US-001 a US-015 con pruebas y pendientes de aceptación. La [guía de staging local](docs/Despliegue/Guía de staging.md) documenta el entorno HTTP/HTTPS de localhost, verificado con sus evidencias en Sprint 3. La actualización del esquema utiliza migraciones Alembic explícitas y un índice que impide correos duplicados de clientes. El [seguimiento de correcciones](docs/Calidad/02 Checklist de validación.md) distingue entregables técnicos de aprobación humana.
+La actualización del esquema utiliza migraciones Alembic explícitas y un índice que impide correos duplicados de clientes.
 
 ## Estado
 
 ### Entrega consolidada del Sprint 3
 
-La [versión 1.3.0 del Sprint 3](docs/Versiones/1.3.0.md) reúne implementación, calidad de código y evaluación. El análisis real de SonarCloud sobre la revisión `fd9ede18` registra Quality Gate aprobado, cobertura global de 81,6 %, cobertura de código nuevo de 92,9 %, duplicación de 0,0 % y cero problemas abiertos. La captura y su interpretación están en el informe oficial de calidad.
+El [informe oficial de calidad](<docs/03 Implementación/Sprint 03/03 Calidad de código V_1_0_0.md>) reúne la evaluación del Sprint 3. El análisis real de SonarCloud sobre la revisión `fd9ede18` registra Quality Gate aprobado, cobertura global de 81,6 %, cobertura de código nuevo de 92,9 %, duplicación de 0,0 % y cero problemas abiertos.
 
 ### Entregables del Sprint 3
 

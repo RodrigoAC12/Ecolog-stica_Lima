@@ -9,7 +9,7 @@
 - Los entregables históricos están en `docs/03 Implementación/Sprint 1/` y `docs/03 Implementación/Sprint 2/`; mover un archivo no significa que su sesión o aceptación histórica haya ocurrido.
 - Los cinco informes oficiales del Sprint 3 están en `docs/03 Implementación/Sprint 03/`; conservar sus enlaces bidireccionales y evidencias, sin presentar resultados automáticos como aprobación humana.
 - Los cuatro entregables obligatorios de planificación están en `docs/02 Planificación/`; el seguimiento adicional está en `Anexos/`.
-- Registrar el Sprint 3 en [docs/Versiones/1.3.0.md](docs/Versiones/1.3.0.md); conservar [1.2.4](docs/Versiones/1.2.4.md) como antecedente. Consultar pruebas y validaciones en `docs/Calidad/`.
+- Registrar la documentación oficial del Sprint 3 en `docs/03 Implementación/Sprint 03/`.
 - El estado de Jira y las ceremonias se basan en datos reales. No inventar revisores, fechas, sesiones, aprobaciones ni despliegues de staging.
 - No agregar secretos. Archivos `.env` operativos no deben almacenarse en Git.
 
@@ -54,4 +54,4 @@ Los workflows CodeQL y auditoría de dependencias deben pasar en la **rama final
 - Reglas de negocio: `docs/01 Inicio/09. Reglas de negocio V_1_0_0.md`.
 - Planificación: `docs/02 Planificación/01 Transformando a ágil V_1_0_1.md`.
 - Diseño visual: `DESIGN.md`.
-- Entrega en revisión previa: `docs/Versiones/1.3.0.md`.
+- Entrega en revisión previa: `docs/03 Implementación/Sprint 03/`.
